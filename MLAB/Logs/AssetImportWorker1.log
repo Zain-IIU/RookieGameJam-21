@@ -1,0 +1,942 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.16f1 (049d6eca3c44) revision 302446'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19043.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 8009 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\2020.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+55998
+Successfully changed project path to: F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB
+F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 112.09 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.16f1 (049d6eca3c44)
+[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x412)
+    Vendor:   
+    VRAM:     2048 MB
+    Driver:   20.19.15.4963
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/2020.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2020.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/2020.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56420
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/2020.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002329 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 75.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.252 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2252ms)
+		BeginReloadAssembly (74ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (547ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (188ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (232ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (76ms)
+				BeforeProcessingInitializeOnLoad (20ms)
+				ProcessInitializeOnLoadAttributes (96ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003555 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 73.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.435 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1436ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (1197ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (385ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (505ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (74ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (316ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2715 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.0 MB.
+System memory in use after: 128.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3150.
+Total: 5.669800 ms (FindLiveObjects: 0.333200 ms CreateObjectMapping: 0.164700 ms MarkObjects: 5.053700 ms  DeleteObjects: 0.116200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/AssetPacks/UI_Elements
+  artifactKey: Guid(7be1c4a68238ac248ac985686ed9ee63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/UI_Elements using Guid(7be1c4a68238ac248ac985686ed9ee63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83143314789f2464640028cb517536b3') in 0.014690 seconds 
+  Import took 0.021465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 142.292768 seconds.
+  path: Assets/HyperCasual_SimpleCharacters
+  artifactKey: Guid(4ee2a0c09c24aa24989a00af5f44d81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HyperCasual_SimpleCharacters using Guid(4ee2a0c09c24aa24989a00af5f44d81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9627d30d28d4ab60ab21607e2619510') in 0.008849 seconds 
+  Import took 0.016549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.536996 seconds.
+  path: Assets/SimpleCharacters
+  artifactKey: Guid(4ee2a0c09c24aa24989a00af5f44d81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleCharacters using Guid(4ee2a0c09c24aa24989a00af5f44d81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9f9f0d893e27dce1b76728702bb7ed') in 0.009248 seconds 
+  Import took 0.016812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.707639 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45d32bb29ef9ef0d858f78e5a51564b2') in 0.023571 seconds 
+  Import took 0.029506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.614041 seconds.
+  path: Assets/Scenes/New Folder
+  artifactKey: Guid(18b91e67d4130ba4581a80ea9d258608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/New Folder using Guid(18b91e67d4130ba4581a80ea9d258608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bbb69ea09ba2eeac3eb74123d98b914') in 0.009917 seconds 
+  Import took 0.017381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.534389 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)
+  artifactKey: Guid(dcb1612d1737064409d1f10a01954435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW) using Guid(dcb1612d1737064409d1f10a01954435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4adbefc2ec1d9d59aca703d8be7c9f62') in 0.010174 seconds 
+  Import took 0.017586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.236665 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Scenes/Demo.unity
+  artifactKey: Guid(927b0899548e15743896dfbc94df72c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Scenes/Demo.unity using Guid(927b0899548e15743896dfbc94df72c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6a27742c6c7b587bc72aa815a61cb6') in 0.009801 seconds 
+  Import took 0.016722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.379900 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Prefabs/Amazon.prefab
+  artifactKey: Guid(60a8ea5616972f349866f26f658752e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Prefabs/Amazon.prefab using Guid(60a8ea5616972f349866f26f658752e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b67119aed5d70199dddaf84a0a34364a') in 0.302646 seconds 
+  Import took 0.309908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.748946 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6e6540ebe5b1b7157756056a02fde45') in 0.004464 seconds 
+  Import took 0.014626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.218019 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Scenes
+  artifactKey: Guid(d6cea6f07ae1b8543857d8330bc4bf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Scenes using Guid(d6cea6f07ae1b8543857d8330bc4bf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6811a74bd2ef04585af86a733fd15fd5') in 0.010205 seconds 
+  Import took 0.016401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.828535 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/Materials/01 - Default.mat
+  artifactKey: Guid(8a494b111a0dc3447951cf1bf2320252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/Materials/01 - Default.mat using Guid(8a494b111a0dc3447951cf1bf2320252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a8fdce514e895781434a7fd8c848931') in 0.142378 seconds 
+  Import took 0.149529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/Smoke/PolySolidSmokeGrey.mat
+  artifactKey: Guid(02af81384d31b934cacbf10edbebb53b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/Smoke/PolySolidSmokeGrey.mat using Guid(02af81384d31b934cacbf10edbebb53b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76aedf3121f3d26bb69fce9e9f4ad062') in 0.036167 seconds 
+  Import took 0.046473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_B.mat
+  artifactKey: Guid(6dc24762034203041bb9c58d4a9644a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_B.mat using Guid(6dc24762034203041bb9c58d4a9644a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd9a1e89407f85696b960355e8cc9bb8') in 0.040405 seconds 
+  Import took 0.051333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidWood.mat
+  artifactKey: Guid(a2cae8e2afe7fe84686fb26823cf20e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidWood.mat using Guid(a2cae8e2afe7fe84686fb26823cf20e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5616c23f90553661ad0412edc17b44f') in 0.023682 seconds 
+  Import took 0.030030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_Yellow.mat
+  artifactKey: Guid(f125c9243c1d3a44a9981bdce74ee439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_Yellow.mat using Guid(f125c9243c1d3a44a9981bdce74ee439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72aaddea9705ceaed326735098c70868') in 0.035285 seconds 
+  Import took 0.042531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSharp.mat
+  artifactKey: Guid(9c4a68216d311c148902811d23c483a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSharp.mat using Guid(9c4a68216d311c148902811d23c483a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3398679cdc841836b814ac641bfb4302') in 0.064702 seconds 
+  Import took 0.074728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonRed.mat
+  artifactKey: Guid(c033090f277397a4389ef0b17894adb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonRed.mat using Guid(c033090f277397a4389ef0b17894adb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e1f60c6c7a2243f6a947bcaae3196b') in 0.034831 seconds 
+  Import took 0.042397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleOuterLayer.mat
+  artifactKey: Guid(214e3b8c22cae79459c9e74027ee3d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleOuterLayer.mat using Guid(214e3b8c22cae79459c9e74027ee3d13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'defc28d88bd85e899cecc7c65e6a4b8a') in 0.020752 seconds 
+  Import took 0.029459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Translucent/PolyBubbleWater.mat
+  artifactKey: Guid(977f4281502b78d499a337519e21f97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Translucent/PolyBubbleWater.mat using Guid(977f4281502b78d499a337519e21f97a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3f0c4fbd6a83fd6499816097faa0446') in 0.020232 seconds 
+  Import took 0.029896 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidBlood.mat
+  artifactKey: Guid(3b122c457bb446848b6b4fc205751f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidBlood.mat using Guid(3b122c457bb446848b6b4fc205751f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be898482c27ae006b5d275ab40319d93') in 0.026222 seconds 
+  Import took 0.034813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteLineHighIntensity.mat
+  artifactKey: Guid(d0f04f68279b2ae4eb74da61364f4c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteLineHighIntensity.mat using Guid(d0f04f68279b2ae4eb74da61364f4c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade9b22c08c29e781008cc9e5017493a') in 0.017378 seconds 
+  Import took 0.025276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolyTransparentGlow.mat
+  artifactKey: Guid(20fbdc32471af924d825be10e0be7cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolyTransparentGlow.mat using Guid(20fbdc32471af924d825be10e0be7cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dfc4bc2cec0fc9baf9b9536f3aaa0b2') in 0.022202 seconds 
+  Import took 0.031121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidIntense.mat
+  artifactKey: Guid(4cad1959e44286842b02291790bb6793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidIntense.mat using Guid(4cad1959e44286842b02291790bb6793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ddd8be24ee5c5648963ffae749fd2bd') in 0.021243 seconds 
+  Import took 0.029917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolySpriteGlowDark.mat
+  artifactKey: Guid(d89f2a05eba30f94eb2ddf7506b6146c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolySpriteGlowDark.mat using Guid(d89f2a05eba30f94eb2ddf7506b6146c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c742ee37cf4ab7ee6a23ffaf45a4fcc') in 0.056771 seconds 
+  Import took 0.064343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_Brown.mat
+  artifactKey: Guid(ce684dca409a7bb4a9a231f01a4f82f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_Brown.mat using Guid(ce684dca409a7bb4a9a231f01a4f82f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '812bf9e0788d152278e572d28f95c38d') in 0.026930 seconds 
+  Import took 0.036606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/crate.mat
+  artifactKey: Guid(8cf213b7024c9ec4f98afa9040f2ae71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/crate.mat using Guid(8cf213b7024c9ec4f98afa9040f2ae71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cdf9979446128e02f9ef185d08abebd') in 0.039445 seconds 
+  Import took 0.046884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidGlow.mat
+  artifactKey: Guid(46c46885d5e9e194ba96e80d167e7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidGlow.mat using Guid(46c46885d5e9e194ba96e80d167e7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e919d8b113d6bec1d71c9a7420f837') in 0.041547 seconds 
+  Import took 0.050472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleYellow.mat
+  artifactKey: Guid(771bc9a064f296d46b95a50547cfba67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleYellow.mat using Guid(771bc9a064f296d46b95a50547cfba67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d6db34be91d27b51a99943cbc10d14a') in 0.022686 seconds 
+  Import took 0.031947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolyGradientMirrored.mat
+  artifactKey: Guid(c42047238c6a1ca4280abec89a518fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolyGradientMirrored.mat using Guid(c42047238c6a1ca4280abec89a518fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '346011fda758927b78e565be9d9472dd') in 0.019408 seconds 
+  Import took 0.027654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonWhite.mat
+  artifactKey: Guid(5f0330dfd65a23e44a7ae451482b33b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonWhite.mat using Guid(5f0330dfd65a23e44a7ae451482b33b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e6de128b228ea28a64079206d86a487') in 0.037755 seconds 
+  Import took 0.045571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000382 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidOil.mat
+  artifactKey: Guid(c8b2ceefd71d8224b8c06ee0ffa9adc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidOil.mat using Guid(c8b2ceefd71d8224b8c06ee0ffa9adc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b320f4bfadc91545e69acbfaef652567') in 0.025717 seconds 
+  Import took 0.033075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldBlue.mat
+  artifactKey: Guid(8e9ec0e954489d447b015864c5cce80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldBlue.mat using Guid(8e9ec0e954489d447b015864c5cce80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86548926ac4c37e67907e60fe9917c0f') in 0.021633 seconds 
+  Import took 0.029861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_Yellow.mat
+  artifactKey: Guid(8e43bef7cb505444e924ef33103303b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_Yellow.mat using Guid(8e43bef7cb505444e924ef33103303b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '835d676d5ed9bc6359809f5b9bb809ca') in 0.034479 seconds 
+  Import took 0.041718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000459 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Biohazard.fbx
+  artifactKey: Guid(79e2ed4cf04512a41b2262c70f45958d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Biohazard.fbx using Guid(79e2ed4cf04512a41b2262c70f45958d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cec93126cb2fbad9d76d06d04a854482') in 0.410738 seconds 
+  Import took 0.420067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_B.mat
+  artifactKey: Guid(eb6a430a0c146b341beac311b71fdc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_B.mat using Guid(eb6a430a0c146b341beac311b71fdc8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c13c26e89b4b8a4708dce0203d11328') in 0.038136 seconds 
+  Import took 0.043594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteLine.mat
+  artifactKey: Guid(10c02046d37107f44b69c4f1a46b785f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteLine.mat using Guid(10c02046d37107f44b69c4f1a46b785f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b6395393bc2ba133a5d201869539fb1') in 0.029292 seconds 
+  Import took 0.042912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Girl.fbx
+  artifactKey: Guid(eeb79e54bdbb67a45bf23b8ef0e08aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Girl.fbx using Guid(eeb79e54bdbb67a45bf23b8ef0e08aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8bcd62f33ecbb83f2c840f5d568be7c') in 0.085799 seconds 
+  Import took 0.098773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000452 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/walltile2.mat
+  artifactKey: Guid(73da41a9c10bf314199b7a2909680200) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/walltile2.mat using Guid(73da41a9c10bf314199b7a2909680200) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '499911ab2bcd42787318a0c582ef471a') in 0.050727 seconds 
+  Import took 0.060030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolyGlow.mat
+  artifactKey: Guid(3b74779a12f08c844a60b2a5a0079454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolyGlow.mat using Guid(3b74779a12f08c844a60b2a5a0079454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1f3af4fe0f78293809fc66bed1344d8') in 0.024696 seconds 
+  Import took 0.033591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleGreen.mat
+  artifactKey: Guid(9715a63126301c44c802305e5c9ac158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleGreen.mat using Guid(9715a63126301c44c802305e5c9ac158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e102eaebed908e9cc59b98c5e932437e') in 0.019248 seconds 
+  Import took 0.029470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldPurple.mat
+  artifactKey: Guid(4cbb6216b894c3444b23c64f01d8d9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldPurple.mat using Guid(4cbb6216b894c3444b23c64f01d8d9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2d2c72a625555c09eb3602e492140c') in 0.022268 seconds 
+  Import took 0.030853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/MusicNotes.mat
+  artifactKey: Guid(3150ebb9e0fe8304e808e02171984508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/MusicNotes.mat using Guid(3150ebb9e0fe8304e808e02171984508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f234ae27fccc9b0314530f136401e625') in 0.020552 seconds 
+  Import took 0.027183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Translucent/PolyBubbleLava.mat
+  artifactKey: Guid(4dc14b9a9eb3d17449b8bd93f4ce4654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Translucent/PolyBubbleLava.mat using Guid(4dc14b9a9eb3d17449b8bd93f4ce4654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8c6a5a2b3372ca146659c4937230c9') in 0.031878 seconds 
+  Import took 0.038178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonGreen.mat
+  artifactKey: Guid(005674afd0f78a94e88b6663207cdb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonGreen.mat using Guid(005674afd0f78a94e88b6663207cdb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '862ea27fa2d8412a5ff675e9e3915df3') in 0.024491 seconds 
+  Import took 0.032479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000433 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/PolySolidMineral.mat
+  artifactKey: Guid(52a1cc4366fd94b4e9316e4f45dede60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/PolySolidMineral.mat using Guid(52a1cc4366fd94b4e9316e4f45dede60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c943cd297e3683e1f1bdec12048c333') in 0.016674 seconds 
+  Import took 0.027365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/Smoke/PolySolidSmokePoison.mat
+  artifactKey: Guid(04b8a017f25c8ec4785a25eb04b293a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/Smoke/PolySolidSmokePoison.mat using Guid(04b8a017f25c8ec4785a25eb04b293a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec39985cc0d9371da0e6ea955ce6b18') in 0.058415 seconds 
+  Import took 0.068095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000424 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Flaty_Boss.fbx
+  artifactKey: Guid(0b844e3b408bff3418a2487f7f62c12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Flaty_Boss.fbx using Guid(0b844e3b408bff3418a2487f7f62c12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9094343dba0e6317a4da7344751afbb8') in 0.077866 seconds 
+  Import took 0.087263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Translucent/PolyBubbleAcid.mat
+  artifactKey: Guid(82bd37d3b4deb5f41a641e4cabe9c9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Translucent/PolyBubbleAcid.mat using Guid(82bd37d3b4deb5f41a641e4cabe9c9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '178d0b2b3c576859f2b1aa0367ff10b9') in 0.032414 seconds 
+  Import took 0.038291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/Materials/verticalgradient2.mat
+  artifactKey: Guid(46ff96323681f3345af1396814e6f9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/Materials/verticalgradient2.mat using Guid(46ff96323681f3345af1396814e6f9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'babf2fca114f678dc339ec0c7daaeedf') in 0.021490 seconds 
+  Import took 0.027056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_Red.mat
+  artifactKey: Guid(3c239099a59236249b16befc24331269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials/SimpleCharacter_Texture_Red.mat using Guid(3c239099a59236249b16befc24331269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a1cf1ace3e151ca0512e0fc9bbefc2') in 0.035510 seconds 
+  Import took 0.043294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Repairer.fbx
+  artifactKey: Guid(78fbd9573f7662c48a8806af66403463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Repairer.fbx using Guid(78fbd9573f7662c48a8806af66403463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d261f1c90ed472ef1a4e3e99728c39d') in 0.074732 seconds 
+  Import took 0.083841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleBlue.mat
+  artifactKey: Guid(8b67ed1b53a2fd04480c88b532880e84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleBlue.mat using Guid(8b67ed1b53a2fd04480c88b532880e84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5c3c18870c1051e5432ed00fcc3ace') in 0.021802 seconds 
+  Import took 0.028608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonPink.mat
+  artifactKey: Guid(47916e67bc02f0246ba919c230395498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonPink.mat using Guid(47916e67bc02f0246ba919c230395498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '669335ffb473860e5a0e5f1bbfc463e7') in 0.021755 seconds 
+  Import took 0.029776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSoft.mat
+  artifactKey: Guid(9536e530628cfec4094ef80a4fd71004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSoft.mat using Guid(9536e530628cfec4094ef80a4fd71004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6256b837c4b98e91b1e7809ffc0c24aa') in 0.034419 seconds 
+  Import took 0.043576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000440 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHolePink.mat
+  artifactKey: Guid(0f800fa6a92a5364e8219e32ffe7d469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHolePink.mat using Guid(0f800fa6a92a5364e8219e32ffe7d469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85de63a09c6fa15108220daff12cc4b9') in 0.035782 seconds 
+  Import took 0.043363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHolePurple.mat
+  artifactKey: Guid(aa2d87a2bcfbeeb418587b90d46b1d6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHolePurple.mat using Guid(aa2d87a2bcfbeeb418587b90d46b1d6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '791f1821beb2912be803a0cf0ea7924f') in 0.025398 seconds 
+  Import took 0.044087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_Red.mat
+  artifactKey: Guid(0d2401cce1ed5e548a781bf7ad6d750f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_Red.mat using Guid(0d2401cce1ed5e548a781bf7ad6d750f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71342314a84d58435d8d98f31aba66cb') in 0.027056 seconds 
+  Import took 0.035639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidStone.mat
+  artifactKey: Guid(fe008fa7bb51b1e408dfe888811905da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidStone.mat using Guid(fe008fa7bb51b1e408dfe888811905da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7317e402e4222a90e44cc3ef83c2a64') in 0.022278 seconds 
+  Import took 0.031265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/walltile.mat
+  artifactKey: Guid(255169097d37cf748977b6d8b0de7e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/walltile.mat using Guid(255169097d37cf748977b6d8b0de7e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b5d310e1bd42dc2cd2ef236e88ca1a') in 0.037644 seconds 
+  Import took 0.043320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/PolyTranslucentIce.mat
+  artifactKey: Guid(4e44f5d750bab88469804b6c248843cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/PolyTranslucentIce.mat using Guid(4e44f5d750bab88469804b6c248843cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6016b857889ca7ae085f8d4bfcfcb77d') in 0.026425 seconds 
+  Import took 0.035478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Trails.mat
+  artifactKey: Guid(ce452ecf7bd63a6408a8bf866da937d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Trails.mat using Guid(ce452ecf7bd63a6408a8bf866da937d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '862d2bcb00d78375bfa2ba3bef72e08d') in 0.021579 seconds 
+  Import took 0.029260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/fog.mat
+  artifactKey: Guid(427e3b6bc2556994b913866f60944d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/fog.mat using Guid(427e3b6bc2556994b913866f60944d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9278875fadd5760bc48407723719c797') in 0.059397 seconds 
+  Import took 0.078656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolySpriteGlow.mat
+  artifactKey: Guid(2f3f789aad8546a488298feff43c3082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolySpriteGlow.mat using Guid(2f3f789aad8546a488298feff43c3082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa830ae3f9ebec615017877a946671f0') in 0.020790 seconds 
+  Import took 0.029381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Clown.fbx
+  artifactKey: Guid(a7b2c425aab9e114fbb5786b40429df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Clown.fbx using Guid(a7b2c425aab9e114fbb5786b40429df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6bce3d81c220833130d0f6b77745166') in 0.088576 seconds 
+  Import took 0.098008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonPurple.mat
+  artifactKey: Guid(7e78b56ce03e07f4d80aab8c89ea720c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonPurple.mat using Guid(7e78b56ce03e07f4d80aab8c89ea720c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb7b2ab00511977f824eda269f0c378') in 0.038051 seconds 
+  Import took 0.044261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleRed.mat
+  artifactKey: Guid(d279c6dedb6e7c84ea5fbffe2a0a9349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/BlackHole/PolyBlackHoleRed.mat using Guid(d279c6dedb6e7c84ea5fbffe2a0a9349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8591efc3a86851eac0c8e70721ce25f7') in 0.015750 seconds 
+  Import took 0.025738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/PolySolidCrystalPurple.mat
+  artifactKey: Guid(c9faf21f0d7dd9e4684967bf5c6ef846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/PolySolidCrystalPurple.mat using Guid(c9faf21f0d7dd9e4684967bf5c6ef846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '249ca03dc4fef0d057774141e0cdf358') in 0.024908 seconds 
+  Import took 0.037219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Materials/Skybox/Skybox_Mat.mat
+  artifactKey: Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Skybox/Skybox_Mat.mat using Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e587b2d9f39b4a8da249a6a8f56a44') in 0.039231 seconds 
+  Import took 0.048639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldYellow.mat
+  artifactKey: Guid(5e83699ca3c514547911fd4954b67fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldYellow.mat using Guid(5e83699ca3c514547911fd4954b67fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91142d4b978cec417870bfd5e5e58fcf') in 0.036519 seconds 
+  Import took 0.045994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtilecylinder.mat
+  artifactKey: Guid(5a01d12c0610e4a4baa35e67f5b0e7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtilecylinder.mat using Guid(5a01d12c0610e4a4baa35e67f5b0e7cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '800e8098bd657552ee957a65e4d77e97') in 0.041650 seconds 
+  Import took 0.048662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/PolySolidCrystalMolten.mat
+  artifactKey: Guid(f3c28a544f639cc43a5c7b51157cf52e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Solid/PolySolidCrystalMolten.mat using Guid(f3c28a544f639cc43a5c7b51157cf52e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '466b425ee8deb66455336cb5cb749e33') in 0.035409 seconds 
+  Import took 0.043734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/Materials/No Name.mat
+  artifactKey: Guid(f5957c73401b96b45b0f1875f68df645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/Materials/No Name.mat using Guid(f5957c73401b96b45b0f1875f68df645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0bfb012d7b54ebe7ffe4dbdb1c11f50') in 0.040062 seconds 
+  Import took 0.051571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonYellow.mat
+  artifactKey: Guid(d47bd75d84d60f345aa4de9f4fb2935b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Proton/PolyProtonYellow.mat using Guid(d47bd75d84d60f345aa4de9f4fb2935b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1bd6d9dedba1fcfad0c4ae1820aaa21') in 0.029134 seconds 
+  Import took 0.037312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Man_red.fbx
+  artifactKey: Guid(cbae5dd072a54ec4490174e06c93087e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Man_red.fbx using Guid(cbae5dd072a54ec4490174e06c93087e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b9759364118cbf45e9629761be7395e') in 0.071275 seconds 
+  Import took 0.079035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtilesingle.mat
+  artifactKey: Guid(4eea9b931bbcc374aa455802fd5d91c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtilesingle.mat using Guid(4eea9b931bbcc374aa455802fd5d91c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e96bd7da80fc188332c1ea68cc657d') in 0.035000 seconds 
+  Import took 0.054460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/Circles1.mat
+  artifactKey: Guid(ad7250b02168b164487a3d6bde4c8a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/Circles1.mat using Guid(ad7250b02168b164487a3d6bde4c8a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '742d7ed854aed28897268106a5b270df') in 0.029634 seconds 
+  Import took 0.038596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Hero.fbx
+  artifactKey: Guid(9c4752fb42c360145a6cd81547e4ed51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Hero.fbx using Guid(9c4752fb42c360145a6cd81547e4ed51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed849cb735432e5e38e8a41cc21d5cd1') in 0.101788 seconds 
+  Import took 0.107755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldGreen.mat
+  artifactKey: Guid(29c883e67ee9cc04483151c00d52449d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldGreen.mat using Guid(29c883e67ee9cc04483151c00d52449d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3ab98d005f592130735a42f6f9dcc8') in 0.028670 seconds 
+  Import took 0.037414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Goalkeeper.fbx
+  artifactKey: Guid(0c161de0cf8c4f94f99663bb012f6c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Goalkeeper.fbx using Guid(0c161de0cf8c4f94f99663bb012f6c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ad8f2f183597dd7fa1581f55bb4d19') in 0.090068 seconds 
+  Import took 0.098264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidDirt.mat
+  artifactKey: Guid(65769997807a5ba4fb3621f57f121960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolySolidDirt.mat using Guid(65769997807a5ba4fb3621f57f121960) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6582d42f56ece718489415a893af252a') in 0.027758 seconds 
+  Import took 0.034925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolyGradientVertical.mat
+  artifactKey: Guid(db56ded6412dc0648895197a0bc23e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Gradients/PolyGradientVertical.mat using Guid(db56ded6412dc0648895197a0bc23e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc42400672c01f79a27b92e2ba2a7b61') in 0.027672 seconds 
+  Import took 0.035093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolyLitSurface.mat
+  artifactKey: Guid(be228499b18f1344caf9d8104b8bcd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Solids/PolyLitSurface.mat using Guid(be228499b18f1344caf9d8104b8bcd99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b6e7019ac89b46114e476ed52a73964') in 0.022819 seconds 
+  Import took 0.031550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Amazon.fbx
+  artifactKey: Guid(262e2856d00e02c47a45254553180db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Amazon.fbx using Guid(262e2856d00e02c47a45254553180db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f0d613ca485132b1ce4ac7116e6ccae') in 0.107285 seconds 
+  Import took 0.115581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/PolySolidSmokeTranslucent.mat
+  artifactKey: Guid(40e48e74d6c235040b8e202033d68edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/PolySolidSmokeTranslucent.mat using Guid(40e48e74d6c235040b8e202033d68edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d1e3307aa672a8b731e7744caeaf6c') in 0.017628 seconds 
+  Import took 0.025163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000498 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldRed.mat
+  artifactKey: Guid(150941bdbcc23674ea25ca8a497809c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldRed.mat using Guid(150941bdbcc23674ea25ca8a497809c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e2a42875f23353d1b3b9bff4f8cdbdb') in 0.020700 seconds 
+  Import took 0.032522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldPink.mat
+  artifactKey: Guid(dea69a4cc32d61a4aaaa542b5ccd7cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Materials/Rimlight/Translucent/Shield/PolyShieldPink.mat using Guid(dea69a4cc32d61a4aaaa542b5ccd7cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b4f1e901e4c498599ea33533ce1f6e7') in 0.038042 seconds 
+  Import took 0.045759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Models/Man.fbx
+  artifactKey: Guid(8bc75748f51994e4fb7a15fa82bfc2eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Models/Man.fbx using Guid(8bc75748f51994e4fb7a15fa82bfc2eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd479ac9d0d7885fa94218ac4e38da980') in 0.105019 seconds 
+  Import took 0.112801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtile_striped.mat
+  artifactKey: Guid(a9a4f6f7c9bc80e48898a2b8c67734af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtile_striped.mat using Guid(a9a4f6f7c9bc80e48898a2b8c67734af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a214a585989a9cb9bad0b472613a4117') in 0.042037 seconds 
+  Import took 0.051323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtile.mat
+  artifactKey: Guid(84a824605bad6f64698081e4506b2ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Demo/Materials/groundtile.mat using Guid(84a824605bad6f64698081e4506b2ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d5bfe180c1f3a48081cd9ee66a98c0') in 0.040479 seconds 
+  Import took 0.047976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_Brown.mat
+  artifactKey: Guid(68effe8406112e14eb89ea7a8e74c58f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/SimpleCharacters/Materials_pipelines (HD + LW)/SimpleCharacter_Texture_Brown.mat using Guid(68effe8406112e14eb89ea7a8e74c58f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0245d1159e0dbe244d4b968091bdb4cf') in 0.032314 seconds 
+  Import took 0.041362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.958340 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal 2.unitypackage
+  artifactKey: Guid(ff661fec6d8dd0e4398477f423a7702e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal 2.unitypackage using Guid(ff661fec6d8dd0e4398477f423a7702e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f6eaa3d278a4731332a1a405a35b593') in 0.012911 seconds 
+  Import took 0.020027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.546663 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/PolySphereMega.FBX
+  artifactKey: Guid(6385e85ec369bac4c8b20fdb297d102b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/PolySphereMega.FBX using Guid(6385e85ec369bac4c8b20fdb297d102b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63f15beb9207729c96adcbb3a4aa926f') in 0.053326 seconds 
+  Import took 0.060071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.473722 seconds.
+  path: Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/PolyDiamond.FBX
+  artifactKey: Guid(0191065febb0d584d8bc23b85663a44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX/particle effects/Polygon Arsenal/Models/PolyDiamond.FBX using Guid(0191065febb0d584d8bc23b85663a44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5450eec300222273f104274240a17cd0') in 0.062630 seconds 
+  Import took 0.076330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.973509 seconds.
+  path: Assets/AssetPacks/VFX
+  artifactKey: Guid(b5dfe9f2486e8194586c2c12e3665079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/VFX using Guid(b5dfe9f2486e8194586c2c12e3665079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a1621fe65164f7e75d47dc9e43fee46') in 0.009573 seconds 
+  Import took 0.016964 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003604 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.510 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1510ms)
+		BeginReloadAssembly (181ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (58ms)
+		EndReloadAssembly (1247ms)
+			LoadAssemblies (143ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (382ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (496ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (341ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2590 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.0 MB.
+System memory in use after: 141.2 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3229.
+Total: 4.404200 ms (FindLiveObjects: 0.348300 ms CreateObjectMapping: 0.139700 ms MarkObjects: 3.881300 ms  DeleteObjects: 0.033100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
