@@ -1,77 +1,713 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.16f1 (049d6eca3c44) revision 302446'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 8009 MB
+OS: 'Windows 10 Home; OS build 19043.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 16228 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\2020.3.16f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.16f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB
+D:/Unity/My Game Projects/RookieGameJam-21/MLAB
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55998
-Successfully changed project path to: F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB
-F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB
+53742
+Successfully changed project path to: D:/Unity/My Game Projects/RookieGameJam-21/MLAB
+D:/Unity/My Game Projects/RookieGameJam-21/MLAB
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 317.60 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 69.02 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.16f1 (049d6eca3c44)
-[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.16f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path F:/Game Dev Work/GitHub Clones/RookieGameJam-21/MLAB/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/My Game Projects/RookieGameJam-21/MLAB/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) HD Graphics 4600 (ID=0x412)
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f10)
     Vendor:   
-    VRAM:     2048 MB
-    Driver:   20.19.15.4963
+    VRAM:     8031 MB
+    Driver:   27.21.14.5671
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/2020.3.16f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/2020.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/2020.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56256
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56396
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/2020.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002400 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002188 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 80.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 81.96 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.679 seconds
+- Completed reload, in  1.333 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3680ms)
-		BeginReloadAssembly (69ms)
+	ReloadAssembly (1334ms)
+		BeginReloadAssembly (53ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (592ms)
-			LoadAssemblies (65ms)
+		EndReloadAssembly (536ms)
+			LoadAssemblies (51ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (207ms)
+			SetupTypeCache (188ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (253ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (235ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (80ms)
-				BeforeProcessingInitializeOnLoad (21ms)
-				ProcessInitializeOnLoadAttributes (101ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
+				RefreshPlugins (82ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (97ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.039512 seconds.
+Registered in 0.003337 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 80.00 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.544 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1544ms)
+		BeginReloadAssembly (170ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1289ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (402ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (568ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (80ms)
+				BeforeProcessingInitializeOnLoad (107ms)
+				ProcessInitializeOnLoadAttributes (361ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2712 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.5 MB.
+System memory in use after: 124.7 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3143.
+Total: 4.739300 ms (FindLiveObjects: 0.785000 ms CreateObjectMapping: 0.557700 ms MarkObjects: 3.315000 ms  DeleteObjects: 0.080100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/AssetPacks/Particle Effects
+  artifactKey: Guid(fcf6bb02894dc1241aa02f08e18a53eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects using Guid(fcf6bb02894dc1241aa02f08e18a53eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5cead2b9f57b675e9099b3b8f2a91b9') in 0.009794 seconds 
+  Import took 0.014101 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003040 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.238 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1238ms)
+		BeginReloadAssembly (126ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (1042ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (347ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (425ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (312ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2603 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.4 MB.
+System memory in use after: 117.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3145.
+Total: 3.169900 ms (FindLiveObjects: 0.307100 ms CreateObjectMapping: 0.106100 ms MarkObjects: 2.737200 ms  DeleteObjects: 0.018300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3.661576 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX
+  artifactKey: Guid(384a316e0abe0814c97b27ed6fe8932e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX using Guid(384a316e0abe0814c97b27ed6fe8932e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1afc6082c353796d07f570b0cd5abbac') in 0.008261 seconds 
+  Import took 0.011893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.377714 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs
+  artifactKey: Guid(6542b3763b8eb5045989be480649636b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs using Guid(6542b3763b8eb5045989be480649636b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ddc17bac171d2fa9daa63fe2faee6f8') in 0.004860 seconds 
+  Import took 0.009320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.936739 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment
+  artifactKey: Guid(5cd26f130e92bf54bb8869788d71cff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment using Guid(5cd26f130e92bf54bb8869788d71cff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3100dd6732415fb587daad68320e111c') in 0.007211 seconds 
+  Import took 0.011665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001522 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment
+  artifactKey: Guid(5cd26f130e92bf54bb8869788d71cff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment using Guid(5cd26f130e92bf54bb8869788d71cff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3100dd6732415fb587daad68320e111c') in 0.003148 seconds 
+  Import took 0.008311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.682109 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment/Confetti
+  artifactKey: Guid(fa49c0d2b79af2b4ea93d3d5258040e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment/Confetti using Guid(fa49c0d2b79af2b4ea93d3d5258040e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3c3a19b32d3d0f4c64be0170592f3d') in 0.007014 seconds 
+  Import took 0.011187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.727821 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment/Confetti/Directional
+  artifactKey: Guid(f8cb129cc38f29b48b64f85a3cb313e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Environment/Confetti/Directional using Guid(f8cb129cc38f29b48b64f85a3cb313e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19edc6f550ec1008779d322b72203124') in 0.007244 seconds 
+  Import took 0.011638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.556523 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Misc/Unsorted/confetti_AB.mat
+  artifactKey: Guid(3625342a449601544b410357b8e7f201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Misc/Unsorted/confetti_AB.mat using Guid(3625342a449601544b410357b8e7f201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab930f10e38e428b1cb890683ecb5dd') in 0.263353 seconds 
+  Import took 0.267425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.305411 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Upgrade
+  artifactKey: Guid(4d72081c398a58243be8a7305f3618e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Upgrade using Guid(4d72081c398a58243be8a7305f3618e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef7966b9067c92f12e2661d03258b9d9') in 0.006221 seconds 
+  Import took 0.010515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.149016 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Upgrade/ETFX 2019.3 URP Fix.unitypackage
+  artifactKey: Guid(2a7477119085c0543ab993533aa56fad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Upgrade/ETFX 2019.3 URP Fix.unitypackage using Guid(2a7477119085c0543ab993533aa56fad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0976c18dd0395fb8557ff6ed1943ce9d') in 0.012602 seconds 
+  Import took 0.017282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001142 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Upgrade/ETFX 2019.3 URP Fix.unitypackage
+  artifactKey: Guid(2a7477119085c0543ab993533aa56fad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Upgrade/ETFX 2019.3 URP Fix.unitypackage using Guid(2a7477119085c0543ab993533aa56fad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0976c18dd0395fb8557ff6ed1943ce9d') in 0.002710 seconds 
+  Import took 0.006923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.554592 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat
+  artifactKey: Guid(f1114f7879a34a342b616b575eb5ce0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat using Guid(f1114f7879a34a342b616b575eb5ce0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e8a1f4067a7ee5d6cb09f6953c2f499') in 0.006461 seconds 
+  Import took 0.010589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.768692 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/BombFuse
+  artifactKey: Guid(f34e080fc64e8284e8b2f1ce4a0b29cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/BombFuse using Guid(f34e080fc64e8284e8b2f1ce4a0b29cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae27b8a9c3a21a8e1dc5e26886e5b50') in 0.006333 seconds 
+  Import took 0.010667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.930888 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/triangle_curve_AB.mat
+  artifactKey: Guid(f49f152fbc313b14b8d4b82329b10a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/triangle_curve_AB.mat using Guid(f49f152fbc313b14b8d4b82329b10a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c84ee0f4d698cdb3bd26550f88c74543') in 0.015813 seconds 
+  Import took 0.021477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.028037 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/triangle_curve_AB.mat
+  artifactKey: Guid(f49f152fbc313b14b8d4b82329b10a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/triangle_curve_AB.mat using Guid(f49f152fbc313b14b8d4b82329b10a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c84ee0f4d698cdb3bd26550f88c74543') in 0.008304 seconds 
+  Import took 0.012719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.118125 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Interactive
+  artifactKey: Guid(c124bc3761df6b645b13327710905460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Interactive using Guid(c124bc3761df6b645b13327710905460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '650bebd136e10daba86dc2e9e0d11a00') in 0.005277 seconds 
+  Import took 0.009346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.656011 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Interactive/Cards
+  artifactKey: Guid(f8010fb0658f72a46b51510a5fc61c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Interactive/Cards using Guid(f8010fb0658f72a46b51510a5fc61c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd346c49a554bc6b00a96daa3f1a3be23') in 0.004817 seconds 
+  Import took 0.008675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.143277 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Decals
+  artifactKey: Guid(19eea75a892962c4db036163d50ae4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Decals using Guid(19eea75a892962c4db036163d50ae4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb9462482ac3bce4a31b95b318d76d0b') in 0.005811 seconds 
+  Import took 0.010526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.745703 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Decals/Bullet Decal
+  artifactKey: Guid(08afe4649d161af4cab3106385ecbc42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Decals/Bullet Decal using Guid(08afe4649d161af4cab3106385ecbc42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4da3e9ac3a2fc3b34820ecdd2e766527') in 0.004963 seconds 
+  Import took 0.008999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.576562 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Missiles
+  artifactKey: Guid(c900b0d7b64ee3845809603597ddffad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Missiles using Guid(c900b0d7b64ee3845809603597ddffad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb3ea8508410f726dc595422910a19cd') in 0.006370 seconds 
+  Import took 0.011026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.758503 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Missiles/Grenade
+  artifactKey: Guid(6ec9e19caa9e49f4a870391f7626378d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Missiles/Grenade using Guid(6ec9e19caa9e49f4a870391f7626378d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba30ac6ac4f32d39420d1de70f37fa0c') in 0.005786 seconds 
+  Import took 0.009934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.103119 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/glow1_ADD.mat
+  artifactKey: Guid(e653836c30661fe419b8992e230ca189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/glow1_ADD.mat using Guid(e653836c30661fe419b8992e230ca189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4c79bed9b4f641656d071d1eecab5b') in 0.012795 seconds 
+  Import took 0.017435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.250524 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Nova
+  artifactKey: Guid(12a90396f3cee6945a65c227275fe8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Nova using Guid(12a90396f3cee6945a65c227275fe8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ff13420f791cd580f498d80e0652f10') in 0.004711 seconds 
+  Import took 0.008881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.407079 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Blood
+  artifactKey: Guid(18507a08ddee8694a80ddd61f73323bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Blood using Guid(18507a08ddee8694a80ddd61f73323bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c671c31a18c673b4b4cb57262d8dacd8') in 0.004538 seconds 
+  Import took 0.008931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.939781 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Blood/Yellow
+  artifactKey: Guid(dc0851d5157a572479d491b8e64dfd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Blood/Yellow using Guid(dc0851d5157a572479d491b8e64dfd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf4e43a8cb056bef1903a298e003f7ab') in 0.004614 seconds 
+  Import took 0.008772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.393029 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Blood/Red
+  artifactKey: Guid(3f89934172725034d861e27c90ff5974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Prefabs/Combat/Blood/Red using Guid(3f89934172725034d861e27c90ff5974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4dd19b62511aa04cb95a337d529d335') in 0.004656 seconds 
+  Import took 0.008567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.729430 seconds.
+  path: Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/circle_AB.mat
+  artifactKey: Guid(150aee38b5d848b42b75593618992bb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPacks/Particle Effects/Epic Toon FX/Materials/Basics/circle_AB.mat using Guid(150aee38b5d848b42b75593618992bb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '306b03e4f516306db1533b602c956ab2') in 0.016158 seconds 
+  Import took 0.022840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.091094 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat
+  artifactKey: Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat using Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d3bac30e0c3da08768836858914317') in 0.012138 seconds 
+  Import took 0.016483 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002778 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.483 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1484ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1269ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (351ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (540ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (130ms)
+				ProcessInitializeOnLoadAttributes (389ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2590 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.4 MB.
+System memory in use after: 123.6 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 3215.
+Total: 3.768200 ms (FindLiveObjects: 0.273300 ms CreateObjectMapping: 0.106700 ms MarkObjects: 3.340000 ms  DeleteObjects: 0.047100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003001 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.306 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1307ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (1097ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (347ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (431ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (308ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2607 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 126.5 MB.
+System memory in use after: 125.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3229.
+Total: 4.306200 ms (FindLiveObjects: 0.244100 ms CreateObjectMapping: 0.096900 ms MarkObjects: 2.859600 ms  DeleteObjects: 1.104700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 111.754421 seconds.
+  path: Assets/_HospitalInc/ThirdParty
+  artifactKey: Guid(3860dd6c767cbd241aef52f18eb9504c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty using Guid(3860dd6c767cbd241aef52f18eb9504c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbb91be280d43e24a98ce236e1acc7cf') in 0.007498 seconds 
+  Import took 0.011667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009363 seconds.
+  path: Assets/_HospitalInc/ThirdParty
+  artifactKey: Guid(3860dd6c767cbd241aef52f18eb9504c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty using Guid(3860dd6c767cbd241aef52f18eb9504c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbb91be280d43e24a98ce236e1acc7cf') in 0.001494 seconds 
+  Import took 0.006154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.595690 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2
+  artifactKey: Guid(d4c3430f27fd34d94b27ecb2f5c3f590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2 using Guid(d4c3430f27fd34d94b27ecb2f5c3f590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80ccb4e47356886f325bdb2dbb544bf8') in 0.004617 seconds 
+  Import took 0.009083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.966888 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs
+  artifactKey: Guid(0ab7977278e4a704d8b7fe945ceca60e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs using Guid(0ab7977278e4a704d8b7fe945ceca60e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a2bbabebc632232a5d0f3f33e5c5266') in 0.004375 seconds 
+  Import took 0.008529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.659366 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive
+  artifactKey: Guid(f5aa6d521d2f02048843dc787be0feff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive using Guid(f5aa6d521d2f02048843dc787be0feff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f116eac3bde356bc2aa9618303ab8f3b') in 0.005094 seconds 
+  Import took 0.009032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.982278 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive/BeamUp
+  artifactKey: Guid(69a61502821a3904896865a1ecf11727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive/BeamUp using Guid(69a61502821a3904896865a1ecf11727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9500b29ca12b7ef8993bba1bb737df2a') in 0.004666 seconds 
+  Import took 0.008777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.695472 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive/BeamUp/Cloud
+  artifactKey: Guid(263c2b63861051144b555d34ec67b652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive/BeamUp/Cloud using Guid(263c2b63861051144b555d34ec67b652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87ad2d903a56e8ed02288cc99f397176') in 0.006947 seconds 
+  Import took 0.011750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001039 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive/BeamUp/Cloud
+  artifactKey: Guid(263c2b63861051144b555d34ec67b652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Interactive/BeamUp/Cloud using Guid(263c2b63861051144b555d34ec67b652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87ad2d903a56e8ed02288cc99f397176') in 0.001893 seconds 
+  Import took 0.005943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.129842 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Models/PolyDiamond.FBX
+  artifactKey: Guid(0191065febb0d584d8bc23b85663a44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Models/PolyDiamond.FBX using Guid(0191065febb0d584d8bc23b85663a44f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5450eec300222273f104274240a17cd0') in 0.435146 seconds 
+  Import took 0.439162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.780024 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Misc
+  artifactKey: Guid(6ed0f4f07cc409a4aaa8d9725fb5f603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Prefabs/Misc using Guid(6ed0f4f07cc409a4aaa8d9725fb5f603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd38a43a526a7374d83d699df92084a1e') in 0.004669 seconds 
+  Import took 0.008733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.422770 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Materials/Solids/PolySolidGlow.mat
+  artifactKey: Guid(46c46885d5e9e194ba96e80d167e7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Materials/Solids/PolySolidGlow.mat using Guid(46c46885d5e9e194ba96e80d167e7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e919d8b113d6bec1d71c9a7420f837') in 0.025111 seconds 
+  Import took 0.030171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005121 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Materials/Solids/PolySolidGlow.mat
+  artifactKey: Guid(46c46885d5e9e194ba96e80d167e7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Materials/Solids/PolySolidGlow.mat using Guid(46c46885d5e9e194ba96e80d167e7a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e919d8b113d6bec1d71c9a7420f837') in 0.007086 seconds 
+  Import took 0.011265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.033833 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Models/PolyRoundRock01.FBX
+  artifactKey: Guid(63950c8ea96727340a59393ea0447c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Models/PolyRoundRock01.FBX using Guid(63950c8ea96727340a59393ea0447c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0588eb7eb40566d3f6006d6b72e7c62') in 0.020042 seconds 
+  Import took 0.024692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010118 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Models/PolyRoundRock01.FBX
+  artifactKey: Guid(63950c8ea96727340a59393ea0447c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Models/PolyRoundRock01.FBX using Guid(63950c8ea96727340a59393ea0447c55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0588eb7eb40566d3f6006d6b72e7c62') in 0.013084 seconds 
+  Import took 0.017471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.246804 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Polygon Arsenal - Readme.txt
+  artifactKey: Guid(98a49eee5db6d244c89d17385a2e94aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Polygon Arsenal - Readme.txt using Guid(98a49eee5db6d244c89d17385a2e94aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e59bc9987b11444fcdef1dfa94acb5c') in 0.008785 seconds 
+  Import took 0.012715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.179519 seconds.
+  path: Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Polygon Arsenal - Readme.txt
+  artifactKey: Guid(98a49eee5db6d244c89d17385a2e94aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_HospitalInc/ThirdParty/Polygon Arsenal 2/Polygon Arsenal - Readme.txt using Guid(98a49eee5db6d244c89d17385a2e94aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e59bc9987b11444fcdef1dfa94acb5c') in 0.001496 seconds 
+  Import took 0.005755 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002667 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.270 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1270ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1064ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (410ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (294ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2606 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 127.1 MB.
+System memory in use after: 125.5 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3272.
+Total: 5.900600 ms (FindLiveObjects: 0.281200 ms CreateObjectMapping: 0.119300 ms MarkObjects: 4.320200 ms  DeleteObjects: 1.178200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
