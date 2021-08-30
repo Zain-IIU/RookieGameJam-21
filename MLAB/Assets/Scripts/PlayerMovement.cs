@@ -1,44 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     #region Variables
     [Header("Movement Variables")]
-    [SerializeField]
-    float moveSpeed;
-    [SerializeField]
-    float turningSpeed;
-    [SerializeField]
-    float rotationMultiplier;
-    [SerializeField]
-    float _timeforNormalDirection;
-
-
-    Vector3 _starttouchPos;
-    Vector3 newDirection;
-    Vector3 direction;
-    bool hasClicked;
-    Quaternion tempRotation;
+    
+    [SerializeField] float rotationSpeed = 5f;
+    [SerializeField] float moveSpeed;
+    float yRot;
+    
     #endregion
 
 
     #region Unity Functions
-    // Start is called before the first frame update
-    void Start()
-    {
-         hasClicked = false;
-        _starttouchPos = Vector3.zero;
-    }
 
     // Update is called once per frame
     void Update()
     {
         //for moving straight
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            return;
+        }
+        
+        // handling rotation
+        if (Input.GetMouseButton(0))
+        {
+            yRot += Input.GetAxis("Mouse X") * rotationSpeed;
+            yRot = Mathf.Clamp(yRot, -20f, 20f);
+            transform.DORotateQuaternion(Quaternion.Euler(0f, yRot, 0f), 0.15f);
+        }
+        else
+        {
+            transform.DORotateQuaternion(Quaternion.Euler(0f, 0f, 0f), 0.25f);
+        }
         //checking for Drag (mouse /touch)
+        /*
+        if (Input.GetMouseButtonDown(0)) return;
+        
         if (Input.GetMouseButton(0))
         {
             if (!hasClicked)
@@ -55,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
                 if (direction.x > 0 && transform.position.x<2 )
                 {
                     //turning Right
-                    transform.Translate(transform.right * turningSpeed * Time.deltaTime);
+                  //  transform.Translate(transform.right * turningSpeed * Time.deltaTime);
                     if (transform.rotation.y < 25f)
                         transform.Rotate(0, rotationMultiplier * Time.deltaTime, 0);
 
@@ -64,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
                 else if (direction.x < 0  && transform.position.x > -2)
                 {
                     //turning Left
-                    transform.Translate(transform.right * -turningSpeed * Time.deltaTime);
+                  //  transform.Translate(transform.right * -turningSpeed * Time.deltaTime);
                     if (transform.rotation.y > -25f)
                         transform.Rotate(0, -rotationMultiplier * Time.deltaTime, 0);
 
@@ -90,8 +94,7 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
-
-
+        */
     }
     #endregion
 
