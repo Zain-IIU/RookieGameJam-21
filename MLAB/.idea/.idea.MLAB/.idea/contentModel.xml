@@ -55,7 +55,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="PlayerMovement.cs" t="Include" />
+          <e p="FollowTarget.cs" t="Include" />
+          <e p="ModifierSystem" t="Include">
+            <e p="Pickup.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="PlayerAnimationEvents.cs" t="Include" />
+            <e p="PlayerAttacking.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Cinemachine.csproj" t="IncludeRecursive" />
