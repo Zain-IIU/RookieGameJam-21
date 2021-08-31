@@ -35,7 +35,13 @@ public class UIManager : MonoBehaviour
         hasPressedPanel = false;
         hasPressedPlay = false;
         childCount = settingsPanel.transform.childCount - 1;
-        
+        GameManager.instance.OnGameStart += OnGameStart;
+    }
+
+    private void OnGameStart()
+    {
+        // todo : Later
+        playPanel.gameObject.SetActive(false);
     }
 
 

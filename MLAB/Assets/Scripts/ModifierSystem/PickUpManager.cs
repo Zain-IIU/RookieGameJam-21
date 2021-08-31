@@ -7,23 +7,24 @@ using DG.Tweening;
 public class PickUpManager : MonoBehaviour
 {
     public static PickUpManager instance;
-
-
+    
     public string CurPower;
 
 
-   public static float speedVal;
+    public static float speedVal;
    
 
-   public static Vector3 CurSize;
- 
+    public static Vector3 CurSize;
+
+    private PlayerMovement playerMovement;
+    
     private void Awake()
     {
-       
         instance = this;
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
-    public void setPower(string newPower)
+    public void SetPower(string newPower)
     {
         CurPower = newPower;
     }
@@ -33,22 +34,22 @@ public class PickUpManager : MonoBehaviour
         switch(CurPower)
         {
             case "Speed":
-                speedVal = GetComponent<PlayerMovement>().GetMoveSpeed();
+                speedVal = playerMovement.GetMoveSpeed();
                 speedVal -= decrementSpeed;
                 speedVal = Mathf.Clamp(speedVal, 10f, 15f);
-                GetComponent<PlayerMovement>().SetMoveSpeed(speedVal);
+                playerMovement.SetMoveSpeed(speedVal);
                 break;
             case "Size":
 
-                CurSize = transform.localScale;
+                /*CurSize = transform.localScale;
                 CurSize.x -= decrementSize;
                 CurSize.y -= decrementSize;
                 CurSize.z -= decrementSize;
                 Debug.Log(CurSize);
                 CurSize.x = Mathf.Clamp(CurSize.x, 1f, 2f);
                 CurSize.y = Mathf.Clamp(CurSize.x, 1f, 2f);
-                CurSize.z = Mathf.Clamp(CurSize.x, 1f, 2f);
-                transform.DOScale(CurSize, 0.25f);
+                CurSize.z = Mathf.Clamp(CurSize.x, 1f, 2f);*/
+                transform.DOScale(Vector3.one, 0.5f);
                 
                 break;
             default:

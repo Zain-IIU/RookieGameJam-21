@@ -6,7 +6,6 @@ public class Pickup : MonoBehaviour
 {
     private PlayerMovement playerMovement;
    
-    
     public enum ModifierTypes
     {
         Size,
@@ -20,9 +19,10 @@ public class Pickup : MonoBehaviour
     public enum PowerType
     {
         GroundAttack,
-        KnifeThrow,
+        MageGroundAttack,
         MagicAttack
     }
+    
     public PowerType powerType;
 
     public GameObject pickupFx;
@@ -66,22 +66,19 @@ public class Pickup : MonoBehaviour
                     playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2f);
                     
                     playerModifier.transform.DOScale(playerSize, easeTimer).SetEase(scaleEase);
-                   
-                    
-                 }
+                }
 
                 else if (modifierTypes == ModifierTypes.Speed)
                 {
                     PlayerAttacking.instance.hasConsumed = false;
                     speedVal = playerModifier.GetMoveSpeed();
                     speedVal += modifiedSpeed;
-                    Debug.Log(speedVal);
                     speedVal = Mathf.Clamp(speedVal, 10, 15);
                     playerModifier.SetMoveSpeed(speedVal);
 
                     playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 }
-                PickUpManager.instance.setPower(modifierTypes.ToString());
+                PickUpManager.instance.SetPower(modifierTypes.ToString());
             }
             else if (isConsumable && modifierTypes == ModifierTypes.ConsumableModifier)
             {
@@ -90,7 +87,7 @@ public class Pickup : MonoBehaviour
 
                 PlayerAttacking.instance.hasConsumed = true;
                 PlayerAttacking.instance.animationTrigger = powerType.ToString();
-                Debug.Log("Player Power Attack");
+              
             }
         }
          

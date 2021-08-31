@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -24,6 +25,16 @@ public class PlayerAttacking : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        GameManager.instance.OnGameStart += OnGameStart;
+    }
+
+    private void OnGameStart()
+    {
+       animator.SetBool("hasStarted", true);
+    }
+
     private void Update()
     {
         RaycastHit hitInfo;
@@ -36,6 +47,15 @@ public class PlayerAttacking : MonoBehaviour
                 hasConsumed = false;
                 animator.SetTrigger(animationTrigger);
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (transform.localScale != Vector3.one && other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("size is larger than 1");
+            other.collider.attachedRigidbody.AddForce(Vector3.forward * 30 + Vector3.up * 16f, ForceMode.Impulse);
         }
     }
 }

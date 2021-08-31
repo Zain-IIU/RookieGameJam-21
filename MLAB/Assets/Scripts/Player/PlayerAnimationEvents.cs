@@ -1,32 +1,23 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerAnimationEvents : MonoBehaviour
 {
     [SerializeField] private GameObject groundPunchPowerEffects;
     [SerializeField] private GameObject magicPunchPowerEffects;
-
+    [SerializeField] private GameObject mageGroundStonePowerEffect;
+   
     [SerializeField] GameObject magicProjectile;
 
-    [SerializeField] Transform magicPoint;
+    [SerializeField] Transform projectilePoints;
     [SerializeField] private float radius = 5f;
     [SerializeField] private LayerMask enemyLayerMask;
 
     
     [SerializeField] private float forceAmount = 10f;
     
-    private PlayerMovement playerMovement;
-
-    private void Awake()
-    {
-        playerMovement = GetComponent<PlayerMovement>();
-    }
-
-    public void AnimationEventSpeed(float newSpeed)
-    {
-        playerMovement.SetMoveSpeed(newSpeed);
-    }
-
+ 
     public void DetectEnemiesInRange()
     {
         groundPunchPowerEffects.SetActive(true);
@@ -37,7 +28,6 @@ public class PlayerAnimationEvents : MonoBehaviour
         {
             if (collider != null)
             {
-                Debug.Log(collider.gameObject.name);
                 collider.attachedRigidbody.AddForce(Vector3.forward * forceAmount + Vector3.up * forceAmount, ForceMode.Impulse);
             }
         }
@@ -62,13 +52,14 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     public void MagicAttackProjectile()
     {
-        GameObject prohjectile = Instantiate(magicProjectile, magicPoint.transform.position, Quaternion.identity);
-        prohjectile.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 50f);
+        GameObject prohjectile = Instantiate(magicProjectile, projectilePoints.transform.position, Quaternion.identity);
     }
-    public void EnableAnimation()
+
+    public void MagicGroundPowerAttack()
     {
-        PlayerAttacking.runOnce = false;
+        mageGroundStonePowerEffect.SetActive(true);
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

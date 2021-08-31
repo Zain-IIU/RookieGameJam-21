@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.instance.isGameStarted || GameManager.instance.isGameOver) return;
+        
         //for moving straight
         transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
 
