@@ -4,7 +4,11 @@ using UnityEngine;
 public class PlayerAnimationEvents : MonoBehaviour
 {
     [SerializeField] private GameObject groundPunchPowerEffects;
-    
+    [SerializeField] private GameObject magicPunchPowerEffects;
+
+    [SerializeField] GameObject magicProjectile;
+
+    [SerializeField] Transform magicPoint;
     [SerializeField] private float radius = 5f;
     [SerializeField] private LayerMask enemyLayerMask;
 
@@ -39,7 +43,28 @@ public class PlayerAnimationEvents : MonoBehaviour
         }
       
     }
+    public void MagicRangeAttack()
+    {
+        magicPunchPowerEffects.SetActive(true);
 
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius*2, enemyLayerMask);
+
+        foreach (Collider collider in colliders)
+        {
+            if (collider != null)
+            {
+                Debug.Log(collider.gameObject.name);
+                collider.attachedRigidbody.AddForce(Vector3.forward * forceAmount + Vector3.up * forceAmount, ForceMode.Impulse);
+            }
+        }
+
+    }
+
+    public void MagicAttackProjectile()
+    {
+        GameObject prohjectile = Instantiate(magicProjectile, magicPoint.transform.position, Quaternion.identity);
+        prohjectile.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 50f);
+    }
     public void EnableAnimation()
     {
         PlayerAttacking.runOnce = false;

@@ -102349,8 +102349,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.06666667
+    functionName: ActionCamEnable
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.0166667
     functionName: DetectEnemiesInRange
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.1666667
+    functionName: FollowCamEnable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -102367,6 +102381,6 @@ AnimationClip:
     functionName: AnimationEventSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 5
+    floatParameter: 10
     intParameter: 0
     messageOptions: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     private PlayerMovement playerMovement;
-    [SerializeField] private float modifiedSpeed = 15f;
+   
     
     public enum ModifierTypes
     {
@@ -20,7 +20,8 @@ public class Pickup : MonoBehaviour
     public enum PowerType
     {
         GroundAttack,
-        KnifeThrow
+        KnifeThrow,
+        MagicAttack
     }
     public PowerType powerType;
 
@@ -32,7 +33,11 @@ public class Pickup : MonoBehaviour
     public float easeTimer;
 
     private Vector3 playerSize;
-    private static float sizeVal = 0.15f;
+
+    private static float sizeVal = 1f;
+    private static float speedVal;
+    [SerializeField] private float modifiedSpeed;
+
     public float increment;
     private void Awake()
     {
@@ -52,30 +57,45 @@ public class Pickup : MonoBehaviour
             {
                 if (modifierTypes == ModifierTypes.Size)
                 {
-                    playerSize += new Vector3(sizeVal, sizeVal, sizeVal);
+                    PlayerAttacking.instance.hasConsumed = false;
+                    playerModifier.SetMoveSpeed(10);
+                    sizeVal += increment;
+                    playerSize = new Vector3(sizeVal, sizeVal, sizeVal);
                     playerSize.x = Mathf.Clamp(playerSize.x, 1f, 2f);
                     playerSize.y = Mathf.Clamp(playerSize.x, 1f, 2f);
                     playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2f);
                     
                     playerModifier.transform.DOScale(playerSize, easeTimer).SetEase(scaleEase);
-                    sizeVal += increment;
-                    Debug.Log("Size" + sizeVal);
-                }
+                   
+                    
+                 }
 
                 else if (modifierTypes == ModifierTypes.Speed)
                 {
-                    playerModifier.SetMoveSpeed(modifiedSpeed);
+                    PlayerAttacking.instance.hasConsumed = false;
+                    speedVal = playerModifier.GetMoveSpeed();
+                    speedVal += modifiedSpeed;
+                    Debug.Log(speedVal);
+                    speedVal = Mathf.Clamp(speedVal, 10, 15);
+                    playerModifier.SetMoveSpeed(speedVal);
+
                     playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 }
+                PickUpManager.instance.setPower(modifierTypes.ToString());
             }
             else if (isConsumable && modifierTypes == ModifierTypes.ConsumableModifier)
             {
+                playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
+                playerModifier.SetMoveSpeed(10);
+
+                PlayerAttacking.instance.hasConsumed = true;
                 PlayerAttacking.instance.animationTrigger = powerType.ToString();
+                Debug.Log("Player Power Attack");
             }
         }
          
         
-        //  pickupFx.SetActive(true);
+        pickupFx.SetActive(true);
         Destroy(gameObject);
     }
 }

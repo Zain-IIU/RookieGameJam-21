@@ -15,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
 
 
     public void SetMoveSpeed(float newSpeed) => moveSpeed = newSpeed;
-
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
     #region Unity Functions
 
   
