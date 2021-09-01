@@ -235,7 +235,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: GroundAttack
+  - m_Name: GroundHammerAttack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -297,7 +297,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: GroundAttack
+    m_ConditionEvent: GroundHammerAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9193807376030230470}
@@ -393,7 +393,7 @@ AnimatorStateMachine:
     m_Position: {x: 310, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9193807376030230470}
-    m_Position: {x: 310, y: 10, z: 0}
+    m_Position: {x: 200, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2918182363583008771}
     m_Position: {x: 560, y: 120, z: 0}
@@ -432,7 +432,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9b1aecfafbdecff418e052d736b33cc9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1e97e5e71fa13734e94e119c9f74c9ed, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

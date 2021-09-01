@@ -13,10 +13,10 @@ public class PlayerAnimationEvents : MonoBehaviour
     [SerializeField] Transform projectilePoints;
     [SerializeField] private float radius = 5f;
     [SerializeField] private LayerMask enemyLayerMask;
-
     
     [SerializeField] private float forceAmount = 10f;
-    
+
+
  
     public void DetectEnemiesInRange()
     {
@@ -43,7 +43,6 @@ public class PlayerAnimationEvents : MonoBehaviour
         {
             if (collider != null)
             {
-                Debug.Log(collider.gameObject.name);
                 collider.attachedRigidbody.AddForce(Vector3.forward * forceAmount + Vector3.up * forceAmount, ForceMode.Impulse);
             }
         }

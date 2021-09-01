@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     float yRot;
 
+    public static bool isPerformingAttack;
+    
     #endregion
 
 
@@ -26,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (!GameManager.instance.isGameStarted || GameManager.instance.isGameOver) return;
+        if (isPerformingAttack) return;
         
         //for moving straight
         transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));

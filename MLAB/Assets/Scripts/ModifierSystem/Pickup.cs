@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -18,7 +17,8 @@ public class Pickup : MonoBehaviour
     
     public enum PowerType
     {
-        GroundAttack,
+        Null,
+        GroundHammerAttack,
         MageGroundAttack,
         MagicAttack
     }
@@ -39,6 +39,13 @@ public class Pickup : MonoBehaviour
     [SerializeField] private float modifiedSpeed;
 
     public float increment;
+
+
+    [Header("Player Accessory")] 
+    [SerializeField] private GameObject playerHammer;
+    [SerializeField] private GameObject lightingTrail;
+    [SerializeField] private GameObject footTrail;
+    
     private void Awake()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
@@ -65,6 +72,8 @@ public class Pickup : MonoBehaviour
                     playerSize.y = Mathf.Clamp(playerSize.x, 1f, 2f);
                     playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2f);
                     
+                    footTrail.SetActive(true);
+                    lightingTrail.SetActive(false);
                     playerModifier.transform.DOScale(playerSize, easeTimer).SetEase(scaleEase);
                 }
 
@@ -75,22 +84,37 @@ public class Pickup : MonoBehaviour
                     speedVal += modifiedSpeed;
                     speedVal = Mathf.Clamp(speedVal, 10, 15);
                     playerModifier.SetMoveSpeed(speedVal);
-
+                    
+                    footTrail.SetActive(false);
+                    lightingTrail.SetActive(true);
                     playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 }
+                
                 PickUpManager.instance.SetPower(modifierTypes.ToString());
+                PlayerAttacking.instance.animationTrigger = "";
             }
             else if (isConsumable && modifierTypes == ModifierTypes.ConsumableModifier)
             {
                 playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 playerModifier.SetMoveSpeed(10);
 
+                footTrail.SetActive(true);
+                lightingTrail.SetActive(false);
+                
                 PlayerAttacking.instance.hasConsumed = true;
                 PlayerAttacking.instance.animationTrigger = powerType.ToString();
-              
             }
         }
-         
+
+
+        if (powerType.ToString() == "GroundHammerAttack")
+        {
+            playerHammer.SetActive(true);
+        }
+        else
+        {
+            playerHammer.SetActive(false);
+        }
         
         pickupFx.SetActive(true);
         Destroy(gameObject);

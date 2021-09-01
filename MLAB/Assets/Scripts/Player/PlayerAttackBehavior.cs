@@ -9,6 +9,7 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        PlayerMovement.isPerformingAttack = true;
         if (!enableActionCam2)
         {
             CameraManager.instance.ToggleActionCam_01(true);
@@ -24,6 +25,7 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        PlayerMovement.isPerformingAttack = false;
         PlayerAttacking.runOnce = false;
         
         CameraManager.instance.ToggleFollowCam(true);

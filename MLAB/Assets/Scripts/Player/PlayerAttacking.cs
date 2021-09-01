@@ -46,15 +46,15 @@ public class PlayerAttacking : MonoBehaviour
                 runOnce = true;
                 hasConsumed = false;
                 animator.SetTrigger(animationTrigger);
+               
             }
-        }
+        } 
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (transform.localScale != Vector3.one && other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("size is larger than 1");
             other.collider.attachedRigidbody.AddForce(Vector3.forward * 30 + Vector3.up * 16f, ForceMode.Impulse);
         }
     }
