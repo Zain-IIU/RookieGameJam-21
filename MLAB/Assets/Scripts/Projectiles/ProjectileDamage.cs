@@ -14,6 +14,6 @@ public class ProjectileDamage : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * forceAmount + Vector3.up * forceAmount, ForceMode.Impulse);
             
         }
-        Destroy(gameObject);
+        Destroy(gameObject);    
     }
 }

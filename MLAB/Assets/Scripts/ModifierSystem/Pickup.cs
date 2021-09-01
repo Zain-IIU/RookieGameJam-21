@@ -63,10 +63,15 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
         {
+            //normalizing sizeVal
+            if (sizeVal > 2)
+                sizeVal = 1;
+
             if (!isConsumable)
             {
                 if (modifierTypes == ModifierTypes.Size)
                 {
+                    
                     PlayerAttackSystem.instance.hasConsumed = false;
                     playerModifier.SetMoveSpeed(10);
                     sizeVal += increment;
@@ -74,7 +79,7 @@ public class Pickup : MonoBehaviour
                     playerSize.x = Mathf.Clamp(playerSize.x, 1f, 2f);
                     playerSize.y = Mathf.Clamp(playerSize.x, 1f, 2f);
                     playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2f);
-                    
+                    Debug.Log(playerSize+ "    "+ sizeVal);
                     footTrail.SetActive(true);
                     lightingTrail.SetActive(false);
                     playerModifier.transform.DOScale(playerSize, easeTimer).SetEase(scaleEase);

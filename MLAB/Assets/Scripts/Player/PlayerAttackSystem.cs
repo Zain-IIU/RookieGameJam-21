@@ -54,16 +54,7 @@ public class PlayerAttackSystem : MonoBehaviour
             }
         }
         
-        /*
-        if(Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, singleEnemyDistance, singleEnemyMask))
-        {
-            if (hitInfo.collider != null && !runOnce)
-            {
-                runOnce = true;
-                animator.SetTrigger("ThrowAttack");
-            }
-        } */
-
+       
  
     }
 

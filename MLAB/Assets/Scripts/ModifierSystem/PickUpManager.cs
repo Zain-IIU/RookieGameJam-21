@@ -40,17 +40,8 @@ public class PickUpManager : MonoBehaviour
                 playerMovement.SetMoveSpeed(speedVal);
                 break;
             case "Size":
-
-                /*CurSize = transform.localScale;
-                CurSize.x -= decrementSize;
-                CurSize.y -= decrementSize;
-                CurSize.z -= decrementSize;
-                Debug.Log(CurSize);
-                CurSize.x = Mathf.Clamp(CurSize.x, 1f, 2f);
-                CurSize.y = Mathf.Clamp(CurSize.x, 1f, 2f);
-                CurSize.z = Mathf.Clamp(CurSize.x, 1f, 2f);*/
+               
                 transform.DOScale(Vector3.one, 0.5f);
-                
                 break;
             default:
                 break;
