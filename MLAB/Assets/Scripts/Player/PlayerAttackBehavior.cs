@@ -5,10 +5,17 @@ using UnityEngine;
 public class PlayerAttackBehavior : StateMachineBehaviour
 {
     public bool enableActionCam2;
+    public bool performNoAction;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (performNoAction)
+        {
+            animator.GetComponent<PlayerMovement>().SetMoveSpeed(7f); 
+            return;
+        }
+        
         PlayerMovement.isPerformingAttack = true;
         if (!enableActionCam2)
         {
@@ -25,9 +32,11 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        PlayerAttackSystem.runOnce = false;
+
+        if (performNoAction) return;
         PlayerMovement.isPerformingAttack = false;
-        PlayerAttacking.runOnce = false;
-        
+       
         CameraManager.instance.ToggleFollowCam(true);
         CameraManager.instance.ToggleActionCam_01(false);
         CameraManager.instance.ToggleActionCam_02(false);

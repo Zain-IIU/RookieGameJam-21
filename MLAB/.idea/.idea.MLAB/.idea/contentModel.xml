@@ -8,6 +8,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AssetPacks" t="Include">
+          <e p="Accessories" t="Include">
+            <e p="Meshtint Free Knight" t="Include">
+              <e p="Read me.txt" t="Include" />
+              <e p="www.meshtint.com.txt" t="Include" />
+            </e>
+          </e>
           <e p="Particle Effects" t="Include">
             <e p="Polygon Arsenal 2" t="Include">
               <e p="Demo" t="Include">
@@ -35,6 +41,11 @@
                 <e p="PolyRimLightTransparent.shader" t="Include" />
               </e>
             </e>
+            <e p="SimpleFX" t="Include">
+              <e p="Materials" t="Include">
+                <e p="UnlitVertexColour_Alpha.shader" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="Plugins" t="Include">
@@ -55,6 +66,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Enemy" t="Include">
+            <e p="EnemyTest.cs" t="Include" />
+          </e>
           <e p="FollowTarget.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
@@ -73,7 +87,7 @@
           <e p="Player" t="Include">
             <e p="PlayerAnimationEvents.cs" t="Include" />
             <e p="PlayerAttackBehavior.cs" t="Include" />
-            <e p="PlayerAttacking.cs" t="Include" />
+            <e p="PlayerAttackSystem.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerRunBehavior.cs" t="Include" />
           </e>

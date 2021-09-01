@@ -1,6 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
+
 public class Pickup : MonoBehaviour
 {
     private PlayerMovement playerMovement;
@@ -20,7 +21,8 @@ public class Pickup : MonoBehaviour
         Null,
         GroundHammerAttack,
         MageGroundAttack,
-        MagicAttack
+        MagicAttack,
+        SwordAttack
     }
     
     public PowerType powerType;
@@ -42,7 +44,8 @@ public class Pickup : MonoBehaviour
 
 
     [Header("Player Accessory")] 
-    [SerializeField] private GameObject playerHammer;
+    [SerializeField] private GameObject[] playerWaeponType;
+
     [SerializeField] private GameObject lightingTrail;
     [SerializeField] private GameObject footTrail;
     
@@ -64,7 +67,7 @@ public class Pickup : MonoBehaviour
             {
                 if (modifierTypes == ModifierTypes.Size)
                 {
-                    PlayerAttacking.instance.hasConsumed = false;
+                    PlayerAttackSystem.instance.hasConsumed = false;
                     playerModifier.SetMoveSpeed(10);
                     sizeVal += increment;
                     playerSize = new Vector3(sizeVal, sizeVal, sizeVal);
@@ -75,11 +78,13 @@ public class Pickup : MonoBehaviour
                     footTrail.SetActive(true);
                     lightingTrail.SetActive(false);
                     playerModifier.transform.DOScale(playerSize, easeTimer).SetEase(scaleEase);
+                    
+                    PlayerAttackSystem.instance.animationTrigger = "";
                 }
 
                 else if (modifierTypes == ModifierTypes.Speed)
                 {
-                    PlayerAttacking.instance.hasConsumed = false;
+                    PlayerAttackSystem.instance.hasConsumed = false;
                     speedVal = playerModifier.GetMoveSpeed();
                     speedVal += modifiedSpeed;
                     speedVal = Mathf.Clamp(speedVal, 10, 15);
@@ -88,33 +93,43 @@ public class Pickup : MonoBehaviour
                     footTrail.SetActive(false);
                     lightingTrail.SetActive(true);
                     playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
+                    
+                    PlayerAttackSystem.instance.animationTrigger = "";
                 }
                 
                 PickUpManager.instance.SetPower(modifierTypes.ToString());
-                PlayerAttacking.instance.animationTrigger = "";
+               
             }
             else if (isConsumable && modifierTypes == ModifierTypes.ConsumableModifier)
             {
                 playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 playerModifier.SetMoveSpeed(10);
 
+                foreach (var playerWeapon in playerWaeponType)
+                {
+                    if (playerWeapon.name == powerType.ToString())
+                    {
+                        playerWeapon.SetActive(true);
+                    }
+                    else
+                    {
+                        playerWeapon.SetActive(false);
+                    }
+                }
+                
                 footTrail.SetActive(true);
                 lightingTrail.SetActive(false);
                 
-                PlayerAttacking.instance.hasConsumed = true;
-                PlayerAttacking.instance.animationTrigger = powerType.ToString();
+                
+                
+                
+                PlayerAttackSystem.instance.hasConsumed = true;
+                PlayerAttackSystem.instance.animationTrigger = powerType.ToString();
             }
         }
 
 
-        if (powerType.ToString() == "GroundHammerAttack")
-        {
-            playerHammer.SetActive(true);
-        }
-        else
-        {
-            playerHammer.SetActive(false);
-        }
+       
         
         pickupFx.SetActive(true);
         Destroy(gameObject);

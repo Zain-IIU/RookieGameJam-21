@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerRunBehavior : StateMachineBehaviour
 {
- 
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -18,6 +18,5 @@ public class PlayerRunBehavior : StateMachineBehaviour
     {
         CameraManager.instance.ToggleFollowCam(false);
         animator.GetComponent<PlayerMovement>().SetMoveSpeed(0f);
-       
     }
 }
