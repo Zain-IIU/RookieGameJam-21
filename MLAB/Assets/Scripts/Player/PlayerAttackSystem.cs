@@ -28,6 +28,7 @@ public class PlayerAttackSystem : MonoBehaviour
     static int  magicPickUps=0;
     static int  swordPickUps=0;
     static int hammerPickUps =0;
+    static int speedPickUps;
 
 
     private void Awake()
@@ -64,7 +65,16 @@ public class PlayerAttackSystem : MonoBehaviour
             {
                 runOnce = true;
                 // hasConsumed = false;
-                animator.SetTrigger(animationTrigger);
+                if (animationTrigger != "Speed")
+                {
+                    animator.SetTrigger(animationTrigger);
+                }
+               
+                if (animationTrigger == "MagicAttack")
+                {
+                    Debug.Log(animationTrigger);
+                    PlayerAnimationsHandler.instance.MageFellowAnimations("MagicAttack");
+                }
             }
         }
         
@@ -78,8 +88,7 @@ public class PlayerAttackSystem : MonoBehaviour
                 PlayerAnimationsHandler.instance.SetTransitions(animationTrigger);
                 //````````
 
-
-
+            
                 // todo setup all normal attacks in a nice way
                 //animator.SetTrigger("SwordNormalAttack");
                // animator.SetTrigger("HammerProjectileAttack");
@@ -123,6 +132,11 @@ public class PlayerAttackSystem : MonoBehaviour
     {
         return swordPickUps;
     }
+
+    public int totalSpeed()
+    {
+        return speedPickUps;
+    }
     
     //reseting them when player picks other power
     public void SetMagicCount(int amount)
@@ -137,6 +151,12 @@ public class PlayerAttackSystem : MonoBehaviour
     {
         swordPickUps = amount;
     }
+
+    public void SetSpeedCount(int amount)
+    {
+        speedPickUps = amount;
+    }
+    
     //incrementing each power
     public void incrementPowers()
     {
@@ -145,17 +165,24 @@ public class PlayerAttackSystem : MonoBehaviour
             case "MagicAttack":
                 if(magicPickUps<3)
                      magicPickUps++;
+                footDustFx.SetActive(false);
                 break;
             case "SwordAttack":
                 if(swordPickUps<3)
                     swordPickUps++;
+                footDustFx.SetActive(true);
                 break;
             case "GroundHammerAttack":
                 if(hammerPickUps<3)
                    hammerPickUps++;
+                footDustFx.SetActive(true);
                 break;
             case "MageAttack":
-
+                footDustFx.SetActive(true);
+                break;
+            case "Speed":
+                speedPickUps++;
+                footDustFx.SetActive(false);
                 break;
         }
         Debug.Log(hammerPickUps + "     " + swordPickUps + "    " + magicPickUps);

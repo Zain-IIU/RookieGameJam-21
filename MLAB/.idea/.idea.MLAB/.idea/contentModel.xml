@@ -86,11 +86,14 @@
           </e>
           <e p="Player" t="Include">
             <e p="MageRunBehavior.cs" t="Include" />
+            <e p="PlayerAccessoriesHolder.cs" t="Include" />
             <e p="PlayerAnimationEvents.cs" t="Include" />
+            <e p="PlayerAnimationsHandler.cs" t="Include" />
             <e p="PlayerAttackBehavior.cs" t="Include" />
             <e p="PlayerAttackSystem.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerRunBehavior.cs" t="Include" />
+            <e p="PlayerSpeedAttack.cs" t="Include" />
           </e>
           <e p="Projectiles" t="Include">
             <e p="Projectile.cs" t="Include" />

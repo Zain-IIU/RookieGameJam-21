@@ -47,12 +47,8 @@ public class PlayerAnimationsHandler : MonoBehaviour
         switch (playerState)
         {
             case "MagicAttack":
-
                 Anim.SetTrigger("MageProjectileAttack");
-                foreach (var mageAnim in mageFellows)
-                {
-                    mageAnim.SetTrigger("MageProjectileAttack");
-                }
+                MageFellowAnimations("MageProjectileAttack");
                 break;
             case "SwordAttack":
                 Anim.SetTrigger("SwordNormalAttack");
@@ -69,5 +65,16 @@ public class PlayerAnimationsHandler : MonoBehaviour
     {
         curPlayerState = newState;
 
-     }
+    }
+
+    public void MageFellowAnimations(string animTrigger)
+    {
+        foreach (var mageAnim in mageFellows)
+        {
+            if (mageAnim.gameObject.activeInHierarchy)
+            {
+                mageAnim.SetTrigger(animTrigger);
+            }
+        }
+    }
 }

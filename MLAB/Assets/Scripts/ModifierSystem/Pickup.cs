@@ -54,7 +54,7 @@ public class Pickup : MonoBehaviour
     private void Awake()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
-        
+        isConsumable = false;
     }
 
     private void Start()
@@ -65,6 +65,7 @@ public class Pickup : MonoBehaviour
         {
             isConsumable = true;
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,7 +73,7 @@ public class Pickup : MonoBehaviour
        
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
         {
-            Debug.Log("Collision");
+          
             //normalizing sizeVal
             if (sizeVal > 2)
                 sizeVal = 1;
@@ -102,18 +103,18 @@ public class Pickup : MonoBehaviour
                     PlayerAttackSystem.instance.hasConsumed = false;
                     speedVal = playerModifier.GetMoveSpeed();
                     speedVal += modifiedSpeed;
-                    speedVal = Mathf.Clamp(speedVal, 10, 15);
+                    speedVal = Mathf.Clamp(speedVal, 10, 13);
                     playerModifier.SetMoveSpeed(speedVal);
                     
                     footTrail.SetActive(false);
                     lightingTrail.SetActive(true);
                     playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                     
-                    PlayerAttackSystem.instance.animationTrigger = "";
+                    PlayerAttackSystem.instance.animationTrigger = "Speed";
                 }
 
                 PlayerAccessoriesHolder.instance.SetAccesories(modifierTypes.ToString());
-
+                PlayerAttackSystem.instance.incrementPowers();
                 PickUpManager.instance.SetPower(modifierTypes.ToString());
                 Debug.Log("Speed or Size");
             }
@@ -137,18 +138,21 @@ public class Pickup : MonoBehaviour
                 
                 footTrail.SetActive(true);
                 lightingTrail.SetActive(false);
-                
+              
                 PlayerAttackSystem.instance.hasConsumed = true;
                 PlayerAttackSystem.instance.animationTrigger = powerType.ToString();
+               
                 PlayerAccessoriesHolder.instance.SetAccesories(powerType.ToString());
                 PlayerAttackSystem.instance.incrementPowers();
-                
-                
             }
+            
+            Debug.Log("Collision");
+            Destroy(gameObject);
+
         }
         // todo add better pickups
         // pickupFx.SetActive(true);
-        Destroy(gameObject);
+       
     }
 }
 
