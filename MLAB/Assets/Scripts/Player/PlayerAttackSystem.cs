@@ -19,12 +19,17 @@ public class PlayerAttackSystem : MonoBehaviour
     public string animationTrigger;
 
     private Animator animator;
-    public Animator[] mageAnimators;
+    
     
     public static bool runOnce;
 
     public bool hasConsumed;
-    
+
+    static int  magicPickUps=0;
+    static int  swordPickUps=0;
+    static int hammerPickUps =0;
+
+
     private void Awake()
     {
         instance = this;
@@ -34,6 +39,7 @@ public class PlayerAttackSystem : MonoBehaviour
 
     private void Start()
     {
+
         GameManager.instance.OnGameStart += OnGameStart;
     }
 
@@ -42,8 +48,14 @@ public class PlayerAttackSystem : MonoBehaviour
        animator.SetBool("hasStarted", true);
     }
 
+
+   
     private void Update()
     {
+
+        PlayerAnimationsHandler.instance.SetPlayerState(animationTrigger);
+
+
         RaycastHit hitInfo;
 
         if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, rangeEnemyDistance, enemyMask))
@@ -62,8 +74,14 @@ public class PlayerAttackSystem : MonoBehaviour
             if (hitInfo.collider != null && !runOnce)
             {
                 runOnce = true;
+                //````````
+                PlayerAnimationsHandler.instance.SetTransitions(animationTrigger);
+                //````````
+
+
+
                 // todo setup all normal attacks in a nice way
-                animator.SetTrigger("SwordNormalAttack");
+                //animator.SetTrigger("SwordNormalAttack");
                // animator.SetTrigger("HammerProjectileAttack");
 
                /*if (animationTrigger is "MagicAttack")
@@ -90,6 +108,57 @@ public class PlayerAttackSystem : MonoBehaviour
             footDustFx.SetActive(true);
             animator.SetBool("MageRun", false);
         }*/
+    }
+
+    //for Counting total Attacks for accesorires placement as per need
+    public int totalMagic()
+    {
+        return magicPickUps;
+    }
+    public int totalHammer()
+    {
+        return hammerPickUps;
+    }
+    public int totalSword()
+    {
+        return swordPickUps;
+    }
+    
+    //reseting them when player picks other power
+    public void SetMagicCount(int amount)
+    {
+        magicPickUps = amount;
+    }
+    public void SetHammerCount(int amount)
+    {
+        hammerPickUps = amount;
+    }
+    public void SetSwordCount(int amount)
+    {
+        swordPickUps = amount;
+    }
+    //incrementing each power
+    public void incrementPowers()
+    {
+        switch(animationTrigger)
+        {
+            case "MagicAttack":
+                if(magicPickUps<3)
+                     magicPickUps++;
+                break;
+            case "SwordAttack":
+                if(swordPickUps<3)
+                    swordPickUps++;
+                break;
+            case "GroundHammerAttack":
+                if(hammerPickUps<3)
+                   hammerPickUps++;
+                break;
+            case "MageAttack":
+
+                break;
+        }
+        Debug.Log(hammerPickUps + "     " + swordPickUps + "    " + magicPickUps);
     }
 
 

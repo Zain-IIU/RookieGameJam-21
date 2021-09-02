@@ -44,8 +44,9 @@ public class Pickup : MonoBehaviour
     public float increment;
 
 
-    [Header("Player Accessory")] 
-    [SerializeField] private GameObject[] playerWaeponType;
+    
+    //[Header("Player Accessory")] 
+    //[SerializeField] private GameObject[] playerWaeponType;
 
     [SerializeField] private GameObject lightingTrail;
     [SerializeField] private GameObject footTrail;
@@ -53,13 +54,14 @@ public class Pickup : MonoBehaviour
     private void Awake()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
+        
     }
 
     private void Start()
     {
         playerSize = playerMovement.transform.localScale;
 
-        if (powerType != PowerType.Null)
+        if (powerType != PowerType.Null && modifierTypes==ModifierTypes.ConsumableModifier)
         {
             isConsumable = true;
         }
@@ -67,8 +69,10 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+       
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
         {
+            Debug.Log("Collision");
             //normalizing sizeVal
             if (sizeVal > 2)
                 sizeVal = 1;
@@ -107,32 +111,39 @@ public class Pickup : MonoBehaviour
                     
                     PlayerAttackSystem.instance.animationTrigger = "";
                 }
-                
+
+                PlayerAccessoriesHolder.instance.SetAccesories(modifierTypes.ToString());
+
                 PickUpManager.instance.SetPower(modifierTypes.ToString());
-               
+                Debug.Log("Speed or Size");
             }
             else if (isConsumable && modifierTypes == ModifierTypes.ConsumableModifier)
             {
+                Debug.Log("Power Picked");
                 playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 playerModifier.SetMoveSpeed(10);
 
-                foreach (var playerWeapon in playerWaeponType)
-                {
-                    if (playerWeapon.name == powerType.ToString())
-                    {
-                        playerWeapon.SetActive(true);
-                    }
-                    else
-                    {
-                        playerWeapon.SetActive(false);
-                    }
-                }
+                //foreach (var playerWeapon in playerWaeponType)
+                //{
+                //    if (playerWeapon.name == powerType.ToString())
+                //    {
+                //        playerWeapon.SetActive(true);
+                //    }
+                //    else
+                //    {
+                //        playerWeapon.SetActive(false);
+                //    }
+                //}
                 
                 footTrail.SetActive(true);
                 lightingTrail.SetActive(false);
                 
                 PlayerAttackSystem.instance.hasConsumed = true;
                 PlayerAttackSystem.instance.animationTrigger = powerType.ToString();
+                PlayerAccessoriesHolder.instance.SetAccesories(powerType.ToString());
+                PlayerAttackSystem.instance.incrementPowers();
+                
+                
             }
         }
         // todo add better pickups
