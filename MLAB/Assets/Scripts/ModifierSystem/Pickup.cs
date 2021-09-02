@@ -93,8 +93,8 @@ public class Pickup : MonoBehaviour
                     footTrail.SetActive(true);
                     lightingTrail.SetActive(false);
                     playerModifier.transform.DOScale(playerSize, easeTimer).SetEase(scaleEase);
-                    
-                    PlayerAttackSystem.instance.animationTrigger = "";
+                    PlayerAttackSystem.instance.animationTrigger = modifierTypes.ToString();
+                   // PlayerAttackSystem.instance.animationTrigger = "";
                 }
 
                 else if (modifierTypes == ModifierTypes.Speed)
