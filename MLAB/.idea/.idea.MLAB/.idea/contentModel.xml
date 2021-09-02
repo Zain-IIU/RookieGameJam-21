@@ -85,6 +85,7 @@
             <e p="Obstacle.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="MageRunBehavior.cs" t="Include" />
             <e p="PlayerAnimationEvents.cs" t="Include" />
             <e p="PlayerAttackBehavior.cs" t="Include" />
             <e p="PlayerAttackSystem.cs" t="Include" />
@@ -92,8 +93,7 @@
             <e p="PlayerRunBehavior.cs" t="Include" />
           </e>
           <e p="Projectiles" t="Include">
-            <e p="ProjectileDamage.cs" t="Include" />
-            <e p="ProjectileInitForce.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

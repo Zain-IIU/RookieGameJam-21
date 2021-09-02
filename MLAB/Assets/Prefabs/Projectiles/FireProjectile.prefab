@@ -9770,7 +9770,6 @@ GameObject:
   - component: {fileID: 8240507657694759787}
   - component: {fileID: 8113904748486623988}
   - component: {fileID: 8113904748486623989}
-  - component: {fileID: -8830594913448439401}
   - component: {fileID: 1816334686293880884}
   m_Layer: 7
   m_Name: FireProjectile
@@ -14675,18 +14674,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.119661555
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8830594913448439401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8115240113916685623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d52815c0ca64ecc47bf710d9264a71c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1816334686293880884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14700,3 +14687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAmount: 20
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  timeToDestroyBullet: 1.5

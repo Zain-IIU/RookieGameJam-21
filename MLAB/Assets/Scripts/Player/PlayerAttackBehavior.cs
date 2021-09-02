@@ -5,16 +5,22 @@ using UnityEngine;
 public class PlayerAttackBehavior : StateMachineBehaviour
 {
     public bool enableActionCam2;
-    public bool performNoAction;
+    public bool performNormalAttack;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (performNormalAttack) return;
+        
+        animator.GetComponent<PlayerMovement>().SetMoveSpeed(0f);
+        CameraManager.instance.ToggleFollowCam(false);
+        /*
         if (performNoAction)
         {
             animator.GetComponent<PlayerMovement>().SetMoveSpeed(7f); 
             return;
         }
+        */
         
         PlayerMovement.isPerformingAttack = true;
         if (!enableActionCam2)
@@ -34,7 +40,7 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     {
         PlayerAttackSystem.runOnce = false;
 
-        if (performNoAction) return;
+        if (performNormalAttack) return;
         PlayerMovement.isPerformingAttack = false;
        
         CameraManager.instance.ToggleFollowCam(true);

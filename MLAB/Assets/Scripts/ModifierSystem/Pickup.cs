@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -57,6 +58,11 @@ public class Pickup : MonoBehaviour
     private void Start()
     {
         playerSize = playerMovement.transform.localScale;
+
+        if (powerType != PowerType.Null)
+        {
+            isConsumable = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -125,18 +131,13 @@ public class Pickup : MonoBehaviour
                 footTrail.SetActive(true);
                 lightingTrail.SetActive(false);
                 
-                
-                
-                
                 PlayerAttackSystem.instance.hasConsumed = true;
                 PlayerAttackSystem.instance.animationTrigger = powerType.ToString();
             }
         }
-
-
-       
-        
-        pickupFx.SetActive(true);
+        // todo add better pickups
+        // pickupFx.SetActive(true);
         Destroy(gameObject);
     }
 }
+

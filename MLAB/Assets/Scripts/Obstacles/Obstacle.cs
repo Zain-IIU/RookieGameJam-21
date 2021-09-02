@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
   
     private void Update()
     {
-        /*time += Time.deltaTime;
+        time += Time.deltaTime;
         
         if (isMoveable)
         {
@@ -27,7 +27,7 @@ public class Obstacle : MonoBehaviour
             moveX.x = x;
 
             transform.localPosition = moveX;
-        }*/
+        }
     }
 
     private void OnTriggerEnter(Collider other)

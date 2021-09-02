@@ -7,8 +7,9 @@ public class PlayerAnimationEvents : MonoBehaviour
     [SerializeField] private GameObject groundPunchPowerEffects;
     [SerializeField] private GameObject magicPunchPowerEffects;
     [SerializeField] private GameObject mageGroundStonePowerEffect;
-   
+
     [SerializeField] GameObject magicProjectile;
+    [SerializeField] GameObject hammerProjectile;
 
     [SerializeField] Transform projectilePoints;
     [SerializeField] private float radius = 5f;
@@ -51,12 +52,17 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     public void MagicAttackProjectile()
     {
-        GameObject prohjectile = Instantiate(magicProjectile, projectilePoints.transform.position, Quaternion.identity);
+       Instantiate(magicProjectile, projectilePoints.transform.position, Quaternion.identity);
     }
 
     public void MagicGroundPowerAttack()
     {
         mageGroundStonePowerEffect.SetActive(true);
+    }
+
+    void HammerThrowAttack()
+    {
+        Instantiate(hammerProjectile, projectilePoints.transform.position, Quaternion.identity);
     }
 
     private void OnDrawGizmosSelected()
