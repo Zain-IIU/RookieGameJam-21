@@ -16,6 +16,8 @@ public class EnemyTest : MonoBehaviour
     private Animator animator;
     private Rigidbody rb;
 
+    private bool isDestroyed;
+    
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -46,9 +48,11 @@ public class EnemyTest : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.CompareTag("Sword"))
+        if (!isDestroyed && other.gameObject.CompareTag("MiniPlayers"))
         {
-            rb.AddForce(new Vector3(Random.Range(-1f, 1f) * 5f, 5f, 5f), ForceMode.Impulse);
+            isDestroyed = true;
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }

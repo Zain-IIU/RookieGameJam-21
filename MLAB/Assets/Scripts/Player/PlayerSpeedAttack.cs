@@ -1,20 +1,57 @@
 using System;
+using DG.Tweening;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerSpeedAttack : MonoBehaviour
 {
+    [SerializeField] private float maxDistanceRangeToDetectEnemy = 15f;
+    private float distanceToEnemy;
     [SerializeField] private float speed = 15f;
     private GameObject[] enemies;
+
+    private Vector3 startPos;
+
+    private bool isEnemyInRange;
     
     private void Awake()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
+    private void OnEnable()
+    {
+        startPos = transform.localPosition;
+    }
+
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, ClosestEnemy().position, speed * Time.deltaTime);
-        transform.LookAt(ClosestEnemy());
+        if (ClosestEnemy() != null)
+        {
+            distanceToEnemy = Vector3.Distance(transform.position, ClosestEnemy().position);
+
+            if (distanceToEnemy < maxDistanceRangeToDetectEnemy)
+            {
+                transform.position =
+                    Vector3.MoveTowards(transform.position, ClosestEnemy().position, speed * Time.deltaTime);
+                transform.LookAt(ClosestEnemy());
+                isEnemyInRange = true;
+            }
+            else if(isEnemyInRange && (distanceToEnemy > maxDistanceRangeToDetectEnemy))
+            {
+                transform.LookAt(startPos);
+                transform.DOLocalMove(startPos, 1.5f).
+                    OnComplete(() => transform.DORotate(Vector3.zero, 0.01f));
+            
+                isEnemyInRange = false;
+            }
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    
+       
     }
 
     Transform ClosestEnemy()
@@ -41,12 +78,14 @@ public class PlayerSpeedAttack : MonoBehaviour
         return targetEnemy;
     }
 
+    private bool hitOnce;
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (!hitOnce && other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            hitOnce = true;
             Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }

@@ -33,7 +33,7 @@ public class PickUpManager : MonoBehaviour
     {
         switch(CurPower)
         {
-            case "Speed":
+            case "SpeedAttack":
                 speedVal = playerMovement.GetMoveSpeed();
                 speedVal -= decrementSpeed;
                 speedVal = Mathf.Clamp(speedVal, 10f, 15f);

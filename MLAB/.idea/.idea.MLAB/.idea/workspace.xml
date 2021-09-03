@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2168c89-45b1-4ca8-95c6-e1ffb3abf542" name="Default Changelist" comment="" />
+    <list default="true" id="d2168c89-45b1-4ca8-95c6-e1ffb3abf542" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animators/PlayerAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/PlayerAnimationController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Animations/AnimationToExport/Attack/Skills_Mage_01.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Animations/AnimationToExport/Attack/Skills_Mage_01.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelDesigning/Level Experiment 01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelDesigning/Level Experiment 01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PickUpManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PickUpManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/Pickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +61,6 @@
       <option value="$PROJECT_DIR$/Assets/PlayerRunBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CameraManager.cs" />
       <option value="$PROJECT_DIR$/Assets/PlayerAttackBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PickUpManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Sounds.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
@@ -52,18 +71,19 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/FollowTarget.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/MageRunBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/ProjectileDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/ProjectileInitForce.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationsHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedyProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveTowardsClosestTarget.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PickUpManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/Pickup.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xMRqEIaGrUq3ImaU9kluJUa5oR" />
@@ -124,6 +144,8 @@
       <workItem from="1630545496232" duration="6914000" />
       <workItem from="1630582858966" duration="5013000" />
       <workItem from="1630588942590" duration="4970000" />
+      <workItem from="1630632780441" duration="6986000" />
+      <workItem from="1630640764241" duration="1131000" />
     </task>
     <servers />
   </component>

@@ -65,12 +65,8 @@ public class PlayerAttackSystem : MonoBehaviour
             {
                 runOnce = true;
                 
-               
-                if (animationTrigger != "Speed")
-                {
-                    animator.SetTrigger(animationTrigger);
-                }
-               
+                animator.SetTrigger(animationTrigger);
+  
                 if (animationTrigger == "MagicAttack")
                 {
                     Debug.Log(animationTrigger);
@@ -88,36 +84,9 @@ public class PlayerAttackSystem : MonoBehaviour
                 //````````
                 PlayerAnimationsHandler.instance.SetTransitions(animationTrigger);
                 //````````
-
-            
-                // todo setup all normal attacks in a nice way
-                //animator.SetTrigger("SwordNormalAttack");
-               // animator.SetTrigger("HammerProjectileAttack");
-
-               /*if (animationTrigger is "MagicAttack")
-               {
-                   animator.SetTrigger("MageProjectileAttack");
-
-                   foreach (var mageAnim in mageAnimators)
-                   {
-                       mageAnim.SetTrigger("MageProjectileAttack");
-                   }
-               }*/
             }
         }
 
-        /*if (animationTrigger == "MagicAttack")
-        {
-            singleEnemyDistance = 12f;
-            animator.SetBool("MageRun", true);
-            footDustFx.SetActive(false);
-        }
-        else
-        {
-            singleEnemyDistance = 5f;
-            footDustFx.SetActive(true);
-            animator.SetBool("MageRun", false);
-        }*/
     }
 
     //for Counting total Attacks for accesorires placement as per need
@@ -181,7 +150,8 @@ public class PlayerAttackSystem : MonoBehaviour
             case "MageAttack":
                 footDustFx.SetActive(true);
                 break;
-            case "Speed":
+            // todo resume it later
+            case "SpeedAttack":
                 speedPickUps++;
                 footDustFx.SetActive(false);
                 break;

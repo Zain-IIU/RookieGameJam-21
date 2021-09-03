@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Sword
+  - MiniPlayers
   layers:
   - Default
   - TransparentFX
@@ -13,9 +14,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemy
+  - Boss
   - Projectile
-  - SingleEnemy
+  - Enemy
   - Player
   - IgnoreCollision
   - 

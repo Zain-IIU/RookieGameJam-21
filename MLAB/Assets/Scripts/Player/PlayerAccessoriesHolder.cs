@@ -86,13 +86,10 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                 PlayerAttackSystem.instance.SetSwordCount(0);
                 PlayerAttackSystem.instance.SetSpeedCount(0);
                 break;
-            case "MageAttack":
-                
-                break;
             case "Size":
                 //todo finding accesories for both size and speed
                 break;
-            case "Speed":
+            case "SpeedAttack":
                 speedFellows[PlayerAttackSystem.instance.totalSpeed()].SetActive(true);
                 for(int i=0;i<3;i++)
                 {

@@ -9,7 +9,6 @@ public class Pickup : MonoBehaviour
     public enum ModifierTypes
     {
         Size,
-        Speed,
         ConsumableModifier,
     }
 
@@ -20,7 +19,7 @@ public class Pickup : MonoBehaviour
     {
         Null,
         GroundHammerAttack,
-        MageGroundAttack,
+        SpeedAttack,
         MagicAttack,
         SwordAttack
     }
@@ -93,11 +92,11 @@ public class Pickup : MonoBehaviour
                     footTrail.SetActive(true);
                     lightingTrail.SetActive(false);
                     playerModifier.transform.DOScale(playerSize, easeTimer).SetEase(scaleEase);
-                    PlayerAttackSystem.instance.animationTrigger = modifierTypes.ToString();
+                  //  PlayerAttackSystem.instance.animationTrigger = modifierTypes.ToString();
                    // PlayerAttackSystem.instance.animationTrigger = "";
                 }
 
-                else if (modifierTypes == ModifierTypes.Speed)
+                /*else if (modifierTypes == ModifierTypes.SpeedAttack)
                 {
                     PlayerAttackSystem.instance.hasConsumed = false;
                     speedVal = playerModifier.GetMoveSpeed();
@@ -109,8 +108,8 @@ public class Pickup : MonoBehaviour
                     lightingTrail.SetActive(true);
                     playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                     
-                    PlayerAttackSystem.instance.animationTrigger = "Speed";
-                }
+                    PlayerAttackSystem.instance.animationTrigger = "SpeedAttack";
+                }*/
 
                 PlayerAccessoriesHolder.instance.SetAccesories(modifierTypes.ToString());
                 PlayerAttackSystem.instance.incrementPowers();
@@ -123,18 +122,6 @@ public class Pickup : MonoBehaviour
                 playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 playerModifier.SetMoveSpeed(10);
 
-                //foreach (var playerWeapon in playerWaeponType)
-                //{
-                //    if (playerWeapon.name == powerType.ToString())
-                //    {
-                //        playerWeapon.SetActive(true);
-                //    }
-                //    else
-                //    {
-                //        playerWeapon.SetActive(false);
-                //    }
-                //}
-                
                 footTrail.SetActive(true);
                 lightingTrail.SetActive(false);
               

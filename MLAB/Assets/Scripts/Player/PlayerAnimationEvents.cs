@@ -6,7 +6,7 @@ public class PlayerAnimationEvents : MonoBehaviour
 {
     [SerializeField] private GameObject groundPunchPowerEffects;
     [SerializeField] private GameObject magicPunchPowerEffects;
-    [SerializeField] private GameObject mageGroundStonePowerEffect;
+    [SerializeField] private GameObject speedEnableJuniorPlayers;
 
     [SerializeField] GameObject magicProjectile;
     [SerializeField] GameObject hammerProjectile;
@@ -66,9 +66,9 @@ public class PlayerAnimationEvents : MonoBehaviour
        Instantiate(magicProjectile, projectilePoints.transform.position, Quaternion.identity);
     }
 
-    public void MagicGroundPowerAttack()
+    public void SpeedPowerAttack()
     {
-        mageGroundStonePowerEffect.SetActive(true);
+        speedEnableJuniorPlayers.SetActive(true);
     }
 
     void HammerThrowAttack()
