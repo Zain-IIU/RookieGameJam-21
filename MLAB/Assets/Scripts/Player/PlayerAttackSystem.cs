@@ -58,13 +58,14 @@ public class PlayerAttackSystem : MonoBehaviour
 
 
         RaycastHit hitInfo;
-
+        Debug.DrawRay(raypoint.position, raypoint.forward*rangeEnemyDistance,Color.red);
         if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, rangeEnemyDistance, enemyMask))
         {
             if (hitInfo.collider != null && !runOnce)
             {
                 runOnce = true;
-                // hasConsumed = false;
+                
+               
                 if (animationTrigger != "Speed")
                 {
                     animator.SetTrigger(animationTrigger);

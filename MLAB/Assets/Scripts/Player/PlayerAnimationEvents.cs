@@ -17,8 +17,15 @@ public class PlayerAnimationEvents : MonoBehaviour
     
     [SerializeField] private float forceAmount = 10f;
 
+    [SerializeField] private float jumpForce;
 
- 
+    Rigidbody RB;
+
+
+    private void Start()
+    {
+        RB = GetComponent<Rigidbody>();
+    }
     public void DetectEnemiesInRange()
     {
         groundPunchPowerEffects.SetActive(true);
@@ -33,6 +40,10 @@ public class PlayerAnimationEvents : MonoBehaviour
             }
         }
       
+    }
+    public void JumpAttack()
+    {
+        RB.AddForce(Vector3.forward * jumpForce/2 + Vector3.up * jumpForce,ForceMode.Impulse);
     }
     public void MagicRangeAttack()
     {
