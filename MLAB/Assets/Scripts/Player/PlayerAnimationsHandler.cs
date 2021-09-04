@@ -56,6 +56,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
                 Anim.SetTrigger("HammerProjectileAttack");
                 break;
             case PowerType.SpeedAttack:
+             
                 break;
         }
     }

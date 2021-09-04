@@ -11,6 +11,7 @@ public class Pickup : MonoBehaviour
     public PowerType powerType;
 
     public Ease scaleEase;
+
     public float easeTimer;
 
     private Vector3 playerSize;
@@ -36,14 +37,15 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
         {
-           
-            PlayerAccessoriesHolder.instance.SetAccesories(powerType);
-            
+
             PlayerAttackSystem.instance.SetCurPower(powerType);
-            
-            PlayerAttackSystem.instance.incrementPowers();
-           // PickUpManager.instance.SetPower(powerType.ToString());
-            
+
+            PlayerAccessoriesHolder.instance.SetAccesories(powerType);
+           
+            PlayerAttackSystem.instance.SetPowerTrailEffect();
+           
+
+
             //normalizing sizeVal
             if (powerType == PowerType.SizeAttack)
             {
