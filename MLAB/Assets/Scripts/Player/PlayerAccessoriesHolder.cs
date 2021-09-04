@@ -1,106 +1,97 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAccessoriesHolder : MonoBehaviour
 {
     public static PlayerAccessoriesHolder instance;
 
-    [Header("Magic Attack")]
-    [SerializeField]
-    GameObject[] magicitems;
-
-    [Header("Sword Attack")]
-    [SerializeField]
-    GameObject[] swordItems;
-
-    [Header("Hammer Attack")]
-    [SerializeField]
-    GameObject[] hammerItems;
-
-    [Header("Speed Attack")]
-    [SerializeField]
-    GameObject[] speedItems;
-
-    [Header("Size Attack")]
-    [SerializeField]
-    GameObject[] sizeItems;
-
-    [Header("Mage Fellow")] 
-    [SerializeField]
-    private GameObject[] mageFellows;
     
-    [Header("Speed Fellow")] 
-    [SerializeField]
-    private GameObject[] speedFellows;
+    [SerializeField] private PlayerAccessories playerAccessories;
     
-
     private void Awake()
     {
         instance = this;
     }
     
 
-    public void SetAccesories(string powerType)
+    public void SetAccesories(PowerType powerType)
     {
         switch (powerType)
         {
-            case "MagicAttack":
-                magicitems[PlayerAttackSystem.instance.totalMagic()].SetActive(true);
-                mageFellows[PlayerAttackSystem.instance.totalMagic()].SetActive(true);
+            case PowerType.MagicAttack:
+              
+                playerAccessories.magicitems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                playerAccessories.mageFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 for(int i=0;i<3;i++)
                 {
-                    swordItems[i].SetActive(false);
-                    hammerItems[i].SetActive(false);
-                    speedFellows[i].SetActive(false);
+                    playerAccessories.speedItems[i].SetActive(false);
+                    playerAccessories.swordItems[i].SetActive(false);
+                    playerAccessories.hammerItems[i].SetActive(false);
+                    playerAccessories.speedFellows[i].SetActive(false);
+                    playerAccessories.sizeItems[i].SetActive(false);
                 }
-                PlayerAttackSystem.instance.SetHammerCount(0);
-                PlayerAttackSystem.instance.SetSwordCount(0);
-                PlayerAttackSystem.instance.SetSpeedCount(0);
                 break;
-            case "SwordAttack":
-                Debug.Log("Sword " + PlayerAttackSystem.instance.totalSword());
-                swordItems[PlayerAttackSystem.instance.totalSword()].SetActive(true);
+            
+            case PowerType.SwordAttack:
+                playerAccessories.swordItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 for (int i = 0; i < 3; i++)
                 {
-                    magicitems[i].SetActive(false);
-                    hammerItems[i].SetActive(false);
-                    speedFellows[i].SetActive(false);
+                    playerAccessories.magicitems[i].SetActive(false);
+                    playerAccessories.hammerItems[i].SetActive(false);
+                    playerAccessories.sizeItems[i].SetActive(false);
+                    playerAccessories.speedItems[i].SetActive(false);
+
+                    playerAccessories.mageFellows[i].SetActive(false);
+                    playerAccessories.speedFellows[i].SetActive(false);
                 }
-                PlayerAttackSystem.instance.SetMagicCount(0);
-                PlayerAttackSystem.instance.SetHammerCount(0);
-                PlayerAttackSystem.instance.SetSpeedCount(0);
-                
-                Debug.Log("Sword " + PlayerAttackSystem.instance.totalSword());
+              
                 break;
-            case "GroundHammerAttack":
-                hammerItems[PlayerAttackSystem.instance.totalHammer()].SetActive(true);
+            case PowerType.GroundHammerAttack:
+                playerAccessories.hammerItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 for (int i = 0; i < 3; i++)
                 {
-                    magicitems[i].SetActive(false);
-                    swordItems[i].SetActive(false);
-                    speedFellows[i].SetActive(false);
+                    playerAccessories.magicitems[i].SetActive(false);
+                    playerAccessories.swordItems[i].SetActive(false);
+                    playerAccessories.sizeItems[i].SetActive(false);
+                    playerAccessories.speedItems[i].SetActive(false);
+
+                    playerAccessories.mageFellows[i].SetActive(false);
+                    playerAccessories.speedFellows[i].SetActive(false);
                 }
-                PlayerAttackSystem.instance.SetMagicCount(0);
-                PlayerAttackSystem.instance.SetSwordCount(0);
-                PlayerAttackSystem.instance.SetSpeedCount(0);
                 break;
-            case "Size":
+            
+            /*case :
                 //todo finding accesories for both size and speed
-                break;
-            case "SpeedAttack":
-                speedFellows[PlayerAttackSystem.instance.totalSpeed()].SetActive(true);
+                break;*/
+            
+            case PowerType.SpeedAttack:
+                playerAccessories.speedFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                playerAccessories.speedItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 for(int i=0;i<3;i++)
                 {
-                    swordItems[i].SetActive(false);
-                    hammerItems[i].SetActive(false);
-                    magicitems[i].SetActive(false);
+                    playerAccessories.swordItems[i].SetActive(false);
+                    playerAccessories.hammerItems[i].SetActive(false);
+                    playerAccessories.magicitems[i].SetActive(false);
+                    playerAccessories.sizeItems[i].SetActive(false);
+                    playerAccessories.mageFellows[i].SetActive(false);
                 }
-                PlayerAttackSystem.instance.SetHammerCount(0);
-                PlayerAttackSystem.instance.SetSwordCount(0);
-                PlayerAttackSystem.instance.SetMagicCount(0);
+               
+               
+                break;
+            
+            case PowerType.SizeAttack:
+                playerAccessories.sizeItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                for(int i=0;i<3;i++)
+                {
+                    playerAccessories.swordItems[i].SetActive(false);
+                    playerAccessories.hammerItems[i].SetActive(false);
+                    playerAccessories.magicitems[i].SetActive(false);
+                    playerAccessories.speedItems[i].SetActive(false);
+                    
+                    playerAccessories.speedFellows[i].SetActive(false);
+                    playerAccessories.mageFellows[i].SetActive(false);
+                }
                 break;
         }
+        
     }
 }

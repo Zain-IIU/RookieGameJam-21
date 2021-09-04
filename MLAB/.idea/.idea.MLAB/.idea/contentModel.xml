@@ -48,7 +48,6 @@
             </e>
           </e>
         </e>
-        <e p="JumpAttackBehaviour.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -80,20 +79,24 @@
           </e>
           <e p="ModifierSystem" t="Include">
             <e p="Pickup.cs" t="Include" />
-            <e p="PickUpManager.cs" t="Include" />
+            <e p="PowerType.cs" t="Include" />
           </e>
           <e p="Obstacles" t="Include">
             <e p="Obstacle.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
-            <e p="MageRunBehavior.cs" t="Include" />
+            <e p="AnimationBehavior" t="Include">
+              <e p="JumpAttackBehaviour.cs" t="Include" />
+              <e p="MageRunBehavior.cs" t="Include" />
+              <e p="PlayerAttackBehavior.cs" t="Include" />
+              <e p="PlayerRunBehavior.cs" t="Include" />
+            </e>
+            <e p="PlayerAccessories.cs" t="Include" />
             <e p="PlayerAccessoriesHolder.cs" t="Include" />
             <e p="PlayerAnimationEvents.cs" t="Include" />
             <e p="PlayerAnimationsHandler.cs" t="Include" />
-            <e p="PlayerAttackBehavior.cs" t="Include" />
             <e p="PlayerAttackSystem.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
-            <e p="PlayerRunBehavior.cs" t="Include" />
             <e p="PlayerSpeedAttack.cs" t="Include" />
           </e>
           <e p="Projectiles" t="Include">

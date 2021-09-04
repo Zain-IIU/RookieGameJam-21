@@ -1,8 +1,7 @@
-using System;
-using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class PlayerAttackSystem : MonoBehaviour
+ public class PlayerAttackSystem : MonoBehaviour
 {
     public static PlayerAttackSystem instance;
 
@@ -10,31 +9,27 @@ public class PlayerAttackSystem : MonoBehaviour
     [SerializeField] private float rangeEnemyDistance;
 
     [SerializeField] private GameObject footDustFx;
+    [SerializeField] private GameObject lightningFootFx;
     
     [SerializeField] private float singleEnemyDistance;
     
+    [SerializeField] private LayerMask bossMask;
     [SerializeField] private LayerMask enemyMask;
-    [SerializeField] private LayerMask singleEnemyMask;
     
-    public string animationTrigger;
-
+    
     private Animator animator;
-    
     
     public static bool runOnce;
 
-    public bool hasConsumed;
-
-    static int  magicPickUps=0;
-    static int  swordPickUps=0;
-    static int hammerPickUps =0;
-    static int speedPickUps;
-
+    static int  pickupCount = 0;
+    
+    //custom class for handling curPower State
+    
+   public PowerType curPower;
 
     private void Awake()
     {
         instance = this;
-        hasConsumed = false;
         animator = GetComponent<Animator>();
     }
 
@@ -53,111 +48,95 @@ public class PlayerAttackSystem : MonoBehaviour
    
     private void Update()
     {
-
-        PlayerAnimationsHandler.instance.SetPlayerState(animationTrigger);
-
-
+        PlayerAnimationsHandler.instance.SetPlayerState(curPower);
         RaycastHit hitInfo;
-        Debug.DrawRay(raypoint.position, raypoint.forward*rangeEnemyDistance,Color.red);
-        if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, rangeEnemyDistance, enemyMask))
+       
+        if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, rangeEnemyDistance, bossMask))
         {
             if (hitInfo.collider != null && !runOnce)
             {
                 runOnce = true;
-                
-                animator.SetTrigger(animationTrigger);
+                animator.SetTrigger(curPower.ToString());
   
-                if (animationTrigger == "MagicAttack")
+                if (curPower.ToString() == "MagicAttack")
                 {
-                    Debug.Log(animationTrigger);
                     PlayerAnimationsHandler.instance.MageFellowAnimations("MagicAttack");
                 }
             }
         }
         
         
-        if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, singleEnemyDistance, singleEnemyMask))
+        if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, singleEnemyDistance, enemyMask))
         {
-            if (hitInfo.collider != null && !runOnce)
+            if (hitInfo.collider != null && !runOnce  && curPower.ToString() != "SizeAttack")
             {
                 runOnce = true;
                 //````````
-                PlayerAnimationsHandler.instance.SetTransitions(animationTrigger);
+                PlayerAnimationsHandler.instance.SetTransitions(curPower);
                 //````````
             }
         }
 
     }
 
-    //for Counting total Attacks for accesorires placement as per need
-    public int totalMagic()
-    {
-        return magicPickUps;
-    }
-    public int totalHammer()
-    {
-        return hammerPickUps;
-    }
-    public int totalSword()
-    {
-        return swordPickUps;
+
+    // todo : will check it later
+    private PowerType oldPower;
+    public void SetCurPower(PowerType newPower)
+    {  
+         if (oldPower != newPower) 
+         {
+             pickupCount = 0;
+         }
+         else
+         {
+            oldPower = newPower;
+            pickupCount++;
+         } 
+         curPower = newPower;
     }
 
-    public int totalSpeed()
-    {
-        return speedPickUps;
-    }
-    
-    //reseting them when player picks other power
-    public void SetMagicCount(int amount)
-    {
-        magicPickUps = amount;
-    }
-    public void SetHammerCount(int amount)
-    {
-        hammerPickUps = amount;
-    }
-    public void SetSwordCount(int amount)
-    {
-        swordPickUps = amount;
-    }
-
-    public void SetSpeedCount(int amount)
-    {
-        speedPickUps = amount;
-    }
     
     //incrementing each power
     public void incrementPowers()
     {
-        switch(animationTrigger)
+        switch(curPower)
         {
-            case "MagicAttack":
-                if(magicPickUps<3)
-                     magicPickUps++;
-                footDustFx.SetActive(false);
+            case PowerType.MagicAttack:
+              
+                EnableFootTrailEffects(false, false);
                 break;
-            case "SwordAttack":
-                if(swordPickUps<3)
-                    swordPickUps++;
-                footDustFx.SetActive(true);
+            case PowerType.SwordAttack:
+               
+                EnableFootTrailEffects(true, false);
                 break;
-            case "GroundHammerAttack":
-                if(hammerPickUps<3)
-                   hammerPickUps++;
-                footDustFx.SetActive(true);
+            case PowerType.GroundHammerAttack:
+             
+                EnableFootTrailEffects(true, false);
                 break;
-            case "MageAttack":
-                footDustFx.SetActive(true);
+            case PowerType.SpeedAttack:
+               
+                EnableFootTrailEffects(false, true);
                 break;
-            // todo resume it later
-            case "SpeedAttack":
-                speedPickUps++;
-                footDustFx.SetActive(false);
+            
+            case PowerType.SizeAttack:
+             
+                EnableFootTrailEffects(true, false);
                 break;
         }
-        Debug.Log(hammerPickUps + "     " + swordPickUps + "    " + magicPickUps);
     }
+
+    public int GetPickupCount()
+    {
+        return pickupCount;
+    }
+    
+    void EnableFootTrailEffects(bool isDustEnable, bool isLightingEnable)
+    {
+        footDustFx.SetActive(isDustEnable);
+        lightningFootFx.SetActive(isLightingEnable);
+    }
+
 
 
 }

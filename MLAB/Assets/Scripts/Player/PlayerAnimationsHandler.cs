@@ -10,7 +10,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
     [SerializeField]
     Animator[] mageFellows;
     [SerializeField]
-    string curPlayerState;
+    PowerType curPlayerState;
     private void Awake()
     {
         instance = this;
@@ -29,9 +29,9 @@ public class PlayerAnimationsHandler : MonoBehaviour
 
     }
 
-    void SetMoveAnimation(string state)
+    void SetMoveAnimation(PowerType powerType)
     {
-        if(state=="MagicAttack")
+        if(powerType == PowerType.MagicAttack)
         {
             Anim.SetBool("MageRun", true);
         }
@@ -41,27 +41,25 @@ public class PlayerAnimationsHandler : MonoBehaviour
         }
     }
 
-
-    public void SetTransitions(string playerState)
+    public void SetTransitions(PowerType playerState)
     {
         switch (playerState)
         {
-            case "MagicAttack":
+            case PowerType.MagicAttack:
                 Anim.SetTrigger("MageProjectileAttack");
                 MageFellowAnimations("MageProjectileAttack");
                 break;
-            case "SwordAttack":
+            case PowerType.SwordAttack:
                 Anim.SetTrigger("SwordNormalAttack");
                 break;
-            case "GroundHammerAttack":
+            case PowerType.GroundHammerAttack:
                 Anim.SetTrigger("HammerProjectileAttack");
                 break;
-            case "MageAttack":
-
+            case PowerType.SpeedAttack:
                 break;
         }
     }
-    public void SetPlayerState(string newState)
+    public void SetPlayerState(PowerType newState)
     {
         curPlayerState = newState;
 

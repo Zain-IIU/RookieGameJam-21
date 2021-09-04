@@ -30,11 +30,4 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            PickUpManager.instance.DecrementPower(speedDecrement,sizeDecrement);
-        }
-    }
 }
