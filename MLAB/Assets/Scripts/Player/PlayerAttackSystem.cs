@@ -35,12 +35,11 @@ using UnityEngine;
 
     private void Start()
     {
-
         GameManager.instance.OnGameStart += OnGameStart;
     }
 
     private void OnGameStart()
-    {
+    { 
        animator.SetBool("hasStarted", true);
     }
 
@@ -86,19 +85,15 @@ using UnityEngine;
     
     public void SetCurPower(PowerType newPower)
     {
-        Debug.Log (newPower.ToString() + "         " + curPower.ToString());
-
-         if (curPower != newPower) 
-         {
+        if (curPower != newPower) 
+        {
              pickupCount = 0;
-         }
-         else
-         {             
+        }
+        else
+        {    
             pickupCount++;
-         } 
-
-         curPower = newPower;
-        Debug.Log(pickupCount);
+        } 
+        curPower = newPower;
     }
 
     

@@ -9,6 +9,9 @@
       <e p="Assets" t="Include">
         <e p="AssetPacks" t="Include">
           <e p="Accessories" t="Include">
+            <e p="3D Items - Wand Pack" t="Include">
+              <e p="Read me.txt" t="Include" />
+            </e>
             <e p="Meshtint Free Knight" t="Include">
               <e p="Read me.txt" t="Include" />
               <e p="www.meshtint.com.txt" t="Include" />

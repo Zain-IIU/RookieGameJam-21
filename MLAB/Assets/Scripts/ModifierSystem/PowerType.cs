@@ -1,5 +1,6 @@
 ﻿public enum PowerType
 {
+    Null,
     SizeAttack,
     GroundHammerAttack,
     SpeedAttack,

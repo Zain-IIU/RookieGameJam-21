@@ -36,16 +36,12 @@ public class Pickup : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
-        {
-
+        {   
             PlayerAttackSystem.instance.SetCurPower(powerType);
-
             PlayerAccessoriesHolder.instance.SetAccesories(powerType);
-           
+          
             PlayerAttackSystem.instance.SetPowerTrailEffect();
-           
-
-
+         
             //normalizing sizeVal
             if (powerType == PowerType.SizeAttack)
             {
@@ -62,8 +58,6 @@ public class Pickup : MonoBehaviour
                   
                 playerModifier.transform.DOScale(playerSize, easeTimer).From(lastSize).SetEase(scaleEase);
                 lastSize = playerSize;
-
-                
             }
             
             else
@@ -72,10 +66,12 @@ public class Pickup : MonoBehaviour
                 playerModifier.SetMoveSpeed(10);
             }
             
-            Destroy(gameObject);
+          
         }
         // todo add better pickups
         // pickupFx.SetActive(true);
-       
+     
+      
+        Destroy(gameObject);
     }
 }

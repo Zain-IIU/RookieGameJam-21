@@ -49,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.DORotateQuaternion(Quaternion.Euler(0f, 0f, 0f), 0.25f);
         }
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.3f, 2.3f), transform.position.y,
+            transform.position.z);
     }
 
 

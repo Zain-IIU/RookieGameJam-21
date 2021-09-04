@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerAccessoriesHolder : MonoBehaviour
 {
     public static PlayerAccessoriesHolder instance;
-
     
     [SerializeField] private PlayerAccessories playerAccessories;
 
@@ -15,11 +14,14 @@ public class PlayerAccessoriesHolder : MonoBehaviour
 
     public void SetAccesories(PowerType powerType)
     {
-        ResetOtherAccessories(true,powerType);
+        
         switch (powerType)
         {
+            case PowerType.SizeAttack:
+                playerAccessories.sizeItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                break;
+            
             case PowerType.MagicAttack:
-              
                 playerAccessories.magicitems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 playerAccessories.mageFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 break;
@@ -30,20 +32,14 @@ public class PlayerAccessoriesHolder : MonoBehaviour
 
             case PowerType.GroundHammerAttack:
                 playerAccessories.hammerItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                
                 break;
 
             case PowerType.SpeedAttack:
                 playerAccessories.speedFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 playerAccessories.speedItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);               
                 break;
-
-            case PowerType.SizeAttack:
-                playerAccessories.sizeItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                break;
-
         }
-        
+        ResetOtherAccessories(true,powerType);
     }
     void ResetOtherAccessories(bool toEnable,PowerType curPower)
     {
