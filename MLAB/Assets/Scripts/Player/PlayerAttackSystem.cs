@@ -6,7 +6,7 @@ using UnityEngine;
     public static PlayerAttackSystem instance;
 
     [SerializeField] private Transform raypoint;
-    [SerializeField] private float rangeEnemyDistance;
+    [SerializeField] private float BossEnemyDistance;
 
     [SerializeField] private GameObject footDustFx;
     [SerializeField] private GameObject lightningFootFx;
@@ -50,8 +50,9 @@ using UnityEngine;
     {
         PlayerAnimationsHandler.instance.SetPlayerState(curPower);
         RaycastHit hitInfo;
+
        
-        if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, rangeEnemyDistance, bossMask))
+        if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, BossEnemyDistance, bossMask))
         {
             if (hitInfo.collider != null && !runOnce)
             {
@@ -60,7 +61,7 @@ using UnityEngine;
   
                 if (curPower.ToString() == "MagicAttack")
                 {
-                    PlayerAnimationsHandler.instance.MageFellowAnimations("MagicAttack");
+                    PlayerAnimationsHandler.instance.MageFellowAnimations(curPower.ToString());
                 }
             }
         }
@@ -81,24 +82,28 @@ using UnityEngine;
 
 
     // todo : will check it later
-    private PowerType oldPower;
+    
+    
     public void SetCurPower(PowerType newPower)
-    {  
-         if (oldPower != newPower) 
+    {
+        Debug.Log (newPower.ToString() + "         " + curPower.ToString());
+
+         if (curPower != newPower) 
          {
              pickupCount = 0;
          }
          else
-         {
-            oldPower = newPower;
+         {             
             pickupCount++;
          } 
+
          curPower = newPower;
+        Debug.Log(pickupCount);
     }
 
     
     //incrementing each power
-    public void incrementPowers()
+    public void SetPowerTrailEffect()
     {
         switch(curPower)
         {

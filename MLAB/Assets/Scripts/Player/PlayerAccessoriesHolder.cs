@@ -6,7 +6,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
 
     
     [SerializeField] private PlayerAccessories playerAccessories;
-    
+
     private void Awake()
     {
         instance = this;
@@ -15,83 +15,80 @@ public class PlayerAccessoriesHolder : MonoBehaviour
 
     public void SetAccesories(PowerType powerType)
     {
+        ResetOtherAccessories(true,powerType);
         switch (powerType)
         {
             case PowerType.MagicAttack:
               
                 playerAccessories.magicitems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 playerAccessories.mageFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                for(int i=0;i<3;i++)
-                {
-                    playerAccessories.speedItems[i].SetActive(false);
-                    playerAccessories.swordItems[i].SetActive(false);
-                    playerAccessories.hammerItems[i].SetActive(false);
-                    playerAccessories.speedFellows[i].SetActive(false);
-                    playerAccessories.sizeItems[i].SetActive(false);
-                }
                 break;
-            
+
             case PowerType.SwordAttack:
                 playerAccessories.swordItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                for (int i = 0; i < 3; i++)
-                {
-                    playerAccessories.magicitems[i].SetActive(false);
-                    playerAccessories.hammerItems[i].SetActive(false);
-                    playerAccessories.sizeItems[i].SetActive(false);
-                    playerAccessories.speedItems[i].SetActive(false);
-
-                    playerAccessories.mageFellows[i].SetActive(false);
-                    playerAccessories.speedFellows[i].SetActive(false);
-                }
-              
                 break;
+
             case PowerType.GroundHammerAttack:
                 playerAccessories.hammerItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                for (int i = 0; i < 3; i++)
-                {
-                    playerAccessories.magicitems[i].SetActive(false);
-                    playerAccessories.swordItems[i].SetActive(false);
-                    playerAccessories.sizeItems[i].SetActive(false);
-                    playerAccessories.speedItems[i].SetActive(false);
-
-                    playerAccessories.mageFellows[i].SetActive(false);
-                    playerAccessories.speedFellows[i].SetActive(false);
-                }
+                
                 break;
-            
-            /*case :
-                //todo finding accesories for both size and speed
-                break;*/
-            
+
             case PowerType.SpeedAttack:
                 playerAccessories.speedFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                playerAccessories.speedItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                for(int i=0;i<3;i++)
-                {
-                    playerAccessories.swordItems[i].SetActive(false);
-                    playerAccessories.hammerItems[i].SetActive(false);
-                    playerAccessories.magicitems[i].SetActive(false);
-                    playerAccessories.sizeItems[i].SetActive(false);
-                    playerAccessories.mageFellows[i].SetActive(false);
-                }
-               
-               
+                playerAccessories.speedItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);               
                 break;
-            
+
             case PowerType.SizeAttack:
                 playerAccessories.sizeItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                for(int i=0;i<3;i++)
-                {
-                    playerAccessories.swordItems[i].SetActive(false);
-                    playerAccessories.hammerItems[i].SetActive(false);
-                    playerAccessories.magicitems[i].SetActive(false);
-                    playerAccessories.speedItems[i].SetActive(false);
-                    
-                    playerAccessories.speedFellows[i].SetActive(false);
-                    playerAccessories.mageFellows[i].SetActive(false);
-                }
                 break;
+
         }
         
+    }
+    void ResetOtherAccessories(bool toEnable,PowerType curPower)
+    {
+        for(int i=0;i<3;i++)
+        {
+            switch (curPower)
+            {
+                case PowerType.MagicAttack:
+                    playerAccessories.swordItems[i].SetActive(!toEnable);
+                    playerAccessories.hammerItems[i].SetActive(!toEnable);
+                    playerAccessories.speedItems[i].SetActive(!toEnable);
+                    playerAccessories.speedFellows[i].SetActive(!toEnable);
+                   
+                    break;
+                case PowerType.SwordAttack:
+                    playerAccessories.hammerItems[i].SetActive(!toEnable);
+                    playerAccessories.magicitems[i].SetActive(!toEnable);
+                    playerAccessories.speedItems[i].SetActive(!toEnable);
+                    playerAccessories.speedFellows[i].SetActive(!toEnable);
+                    playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    break;
+                case PowerType.GroundHammerAttack:
+                    playerAccessories.swordItems[i].SetActive(!toEnable);
+                    playerAccessories.magicitems[i].SetActive(!toEnable);
+                    playerAccessories.speedItems[i].SetActive(!toEnable);
+                    playerAccessories.speedFellows[i].SetActive(!toEnable);
+                    playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    break;
+                case PowerType.SpeedAttack:
+                    playerAccessories.swordItems[i].SetActive(!toEnable);
+                    playerAccessories.hammerItems[i].SetActive(!toEnable);
+                    playerAccessories.magicitems[i].SetActive(!toEnable);
+                    playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    break;
+                case PowerType.SizeAttack:
+                    playerAccessories.swordItems[i].SetActive(!toEnable);
+                    playerAccessories.hammerItems[i].SetActive(!toEnable);
+                    playerAccessories.magicitems[i].SetActive(!toEnable);
+                    playerAccessories.speedItems[i].SetActive(!toEnable);
+                    playerAccessories.speedFellows[i].SetActive(!toEnable);
+                    playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    break;
+
+            }
+            
+        }
     }
 }
