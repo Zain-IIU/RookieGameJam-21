@@ -38,10 +38,11 @@ public class Pickup : MonoBehaviour
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
         {   
             PlayerAttackSystem.instance.SetCurPower(powerType);
-            PlayerAccessoriesHolder.instance.SetAccesories(powerType);
-          
+            
             PlayerAttackSystem.instance.SetPowerTrailEffect();
-         
+
+            PlayerAccessoriesHolder.instance.SetAccesories(powerType);
+            
             //normalizing sizeVal
             if (powerType == PowerType.SizeAttack)
             {
@@ -51,9 +52,9 @@ public class Pickup : MonoBehaviour
                 playerModifier.SetMoveSpeed(10);
                 sizeVal += increment;
                 playerSize = new Vector3(sizeVal, sizeVal, sizeVal);
-                playerSize.x = Mathf.Clamp(playerSize.x, 1f, 2f);
-                playerSize.y = Mathf.Clamp(playerSize.x, 1f, 2f);
-                playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2f);
+                playerSize.x = Mathf.Clamp(playerSize.x, 1f, 2.5f);
+                playerSize.y = Mathf.Clamp(playerSize.x, 1f, 2.5f);
+                playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2.5f);
 
                   
                 playerModifier.transform.DOScale(playerSize, easeTimer).From(lastSize).SetEase(scaleEase);
@@ -66,12 +67,12 @@ public class Pickup : MonoBehaviour
                 playerModifier.SetMoveSpeed(10);
             }
             
-          
+            Destroy(gameObject);
         }
         // todo add better pickups
         // pickupFx.SetActive(true);
      
       
-        Destroy(gameObject);
+      
     }
 }

@@ -50,9 +50,9 @@ public class EnemyTest : MonoBehaviour
 
         if (!isDestroyed && other.gameObject.CompareTag("MiniPlayers"))
         {
-            isDestroyed = true;
+            /*isDestroyed = true;
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            Destroy(gameObject);*/
         }
     }
 }

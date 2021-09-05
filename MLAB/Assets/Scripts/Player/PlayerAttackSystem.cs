@@ -16,12 +16,11 @@ using UnityEngine;
     [SerializeField] private LayerMask bossMask;
     [SerializeField] private LayerMask enemyMask;
     
-    
     private Animator animator;
     
     public static bool runOnce;
 
-    static int  pickupCount = 0;
+    private static int pickupCount;
     
     //custom class for handling curPower State
     
@@ -82,18 +81,19 @@ using UnityEngine;
 
     // todo : will check it later
     
-    
     public void SetCurPower(PowerType newPower)
     {
         if (curPower != newPower) 
         {
-             pickupCount = 0;
+            pickupCount = 0;
         }
         else
-        {    
+        {
             pickupCount++;
-        } 
+        }
+
         curPower = newPower;
+       
     }
 
     
@@ -120,7 +120,6 @@ using UnityEngine;
                 break;
             
             case PowerType.SizeAttack:
-             
                 EnableFootTrailEffects(true, false);
                 break;
         }

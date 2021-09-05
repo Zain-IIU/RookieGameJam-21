@@ -14,7 +14,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
 
     public void SetAccesories(PowerType powerType)
     {
-        
+      
         switch (powerType)
         {
             case PowerType.SizeAttack:
@@ -47,6 +47,16 @@ public class PlayerAccessoriesHolder : MonoBehaviour
         {
             switch (curPower)
             {
+                case PowerType.SizeAttack:
+                    playerAccessories.swordItems[i].SetActive(!toEnable);
+                    playerAccessories.hammerItems[i].SetActive(!toEnable);
+                    playerAccessories.magicitems[i].SetActive(!toEnable);
+                    playerAccessories.speedItems[i].SetActive(!toEnable);
+                    playerAccessories.speedFellows[i].SetActive(!toEnable);
+                    playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    break;
+
+                
                 case PowerType.MagicAttack:
                     playerAccessories.swordItems[i].SetActive(!toEnable);
                     playerAccessories.hammerItems[i].SetActive(!toEnable);
@@ -74,15 +84,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                     playerAccessories.magicitems[i].SetActive(!toEnable);
                     playerAccessories.mageFellows[i].SetActive(!toEnable);
                     break;
-                case PowerType.SizeAttack:
-                    playerAccessories.swordItems[i].SetActive(!toEnable);
-                    playerAccessories.hammerItems[i].SetActive(!toEnable);
-                    playerAccessories.magicitems[i].SetActive(!toEnable);
-                    playerAccessories.speedItems[i].SetActive(!toEnable);
-                    playerAccessories.speedFellows[i].SetActive(!toEnable);
-                    playerAccessories.mageFellows[i].SetActive(!toEnable);
-                    break;
-
+             
             }
             
         }

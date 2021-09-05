@@ -2,73 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2168c89-45b1-4ca8-95c6-e1ffb3abf542" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Materials/Rimlight/Proton/PolyProtonRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Materials/Rimlight/Proton/PolyProtonRed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Shaders/DreamTeamMobile/Materials/DynamicVerticalFogMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Shaders/DreamTeamMobile/Materials/DynamicVerticalFogMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/source/crashtest_obj.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/source/crashtest_obj.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_AO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_AO.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Emissive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Emissive.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Glossiness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Glossiness.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Specular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/corrupted-boots/textures/clothing_boots_Specular.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/source/textured helmet.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/source/textured helmet.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Albedo.tga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Albedo.tga.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Emission.tga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Emission.tga.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Height.tga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Height.tga.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Metallic.tga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Metallic.tga.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Normal.tga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Normal.tga.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Occlusion.tga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/viking-helmet/textures/textured_helmet_Occlusion.tga.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/Materials/internal_ground_ao_texture.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/Materials/internal_ground_ao_texture.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/source/Staff.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/source/Staff.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/source/Wizard Staff3.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/source/Wizard Staff3.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/textures/StaffMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/textures/StaffMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/textures/internal_ground_ao_texture.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/wizard-staff/textures/internal_ground_ao_texture.jpeg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickups/PickupGame.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickups/PickupGame.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basic/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basic/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Backup/Camera_Setup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Backup/Camera_Setup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Backup/EventSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Backup/EventSystem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Backup/FollowParticleEffects.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Backup/FollowParticleEffects.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Backup/Lighting.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Backup/Lighting.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Backup/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Backup/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Backup/Test.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Backup/Test.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickups/HammerPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/HammerPickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickups/MagicPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/MagicPickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickups/SizePickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/SizePickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickups/SpeedPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/SpeedPickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickups/SwordPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pickups/SwordPickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Design Experiment 01.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Design Experiment 01.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/Pickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,19 +96,19 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedyProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/MoveTowardsClosestTarget.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ApplyRandomRotAndScale.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxEffect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessories.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationsHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Obstacle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PickUpManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/Pickup.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/Pickup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xMRqEIaGrUq3ImaU9kluJUa5oR" />
@@ -199,7 +173,9 @@
       <workItem from="1630640764241" duration="1131000" />
       <workItem from="1630709526268" duration="2505000" />
       <workItem from="1630764533804" duration="9982000" />
-      <workItem from="1630786313558" duration="3044000" />
+      <workItem from="1630786313558" duration="3285000" />
+      <workItem from="1630848806785" duration="4123000" />
+      <workItem from="1630875698050" duration="5167000" />
     </task>
     <servers />
   </component>
