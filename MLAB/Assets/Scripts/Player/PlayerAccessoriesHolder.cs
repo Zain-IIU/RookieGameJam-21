@@ -89,4 +89,19 @@ public class PlayerAccessoriesHolder : MonoBehaviour
             
         }
     }
+
+    public void ResetAllAcessories()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            playerAccessories.swordItems[i].SetActive(false);
+            playerAccessories.hammerItems[i].SetActive(false);
+            playerAccessories.magicitems[i].SetActive(false);
+            playerAccessories.speedItems[i].SetActive(false);
+            playerAccessories.speedFellows[i].SetActive(false);
+            playerAccessories.mageFellows[i].SetActive(false);
+        }
+    }
 }
+
+

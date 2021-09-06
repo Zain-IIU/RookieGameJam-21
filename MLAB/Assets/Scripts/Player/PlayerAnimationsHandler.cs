@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerAnimationsHandler : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class PlayerAnimationsHandler : MonoBehaviour
     Animator[] mageFellows;
     [SerializeField]
     PowerType curPlayerState;
+    [SerializeField]
+    LayerMask groundLayer;
+    [SerializeField]
+    Transform groundCheckPoint;
+
+    bool isGrounded;
     private void Awake()
     {
         instance = this;
@@ -26,7 +33,8 @@ public class PlayerAnimationsHandler : MonoBehaviour
     void Update()
     {
         SetMoveAnimation(curPlayerState);
-
+        isGrounded = Physics.CheckSphere(groundCheckPoint.position, 0.4f, groundLayer);
+        Anim.SetBool("inAir", !isGrounded);
     }
 
     void SetMoveAnimation(PowerType powerType)
@@ -75,5 +83,19 @@ public class PlayerAnimationsHandler : MonoBehaviour
                 mageAnim.SetTrigger(animTrigger);
             }
         }
+    }
+
+    public void ResetPlayerSize()
+    {
+        this.transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
+    }
+
+    public void ResetPlayerPowers(PowerType newPower)
+    {
+        PlayerAccessoriesHolder.instance.ResetAllAcessories();
+        if (curPlayerState==PowerType.SizeAttack)
+            this.transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
+        curPlayerState = newPower;
+
     }
 }

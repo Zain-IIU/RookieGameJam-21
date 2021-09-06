@@ -13,7 +13,8 @@ public class FollowTarget : MonoBehaviour
     {
         if (isMageFollow)
         {
-            transform.position = new Vector3(0f, 0f, target.position.z);
+            transform.position = new Vector3(0f,target.position.y, target.position.z);
+            transform.localRotation = Quaternion.Euler(target.rotation.x, 0, 0);
         }
         else
         {

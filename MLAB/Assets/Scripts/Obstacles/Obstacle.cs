@@ -12,7 +12,8 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField]
     bool isMoveable;
-
+    [SerializeField]
+    PowerType power;
     private float time = 0;
     public float amplitude = 2;
     public float occilation = 0.5f;
@@ -33,15 +34,21 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!PlayerAttackSystem.runOnce && other.gameObject.CompareTag("Player") && other.transform.localScale != Vector3.one)
+        bool playerTag = other.gameObject.CompareTag("Player");
+
+        if (!PlayerAttackSystem.runOnce && playerTag)
         {
             PlayerAttackSystem.runOnce = true;
             other.gameObject.GetComponent<Animator>().SetTrigger("ObstacleSize");
             other.gameObject.GetComponent<PlayerMovement>().SetMoveSpeed(0f);
-           
-           // StartCoroutine(ResumeSpeed(other));
+            PlayerAnimationsHandler.instance.ResetPlayerPowers(power);
         }
+        else
+        {
+            // todo put game over logic
+        }
+
     }
 
-    
+
 }
