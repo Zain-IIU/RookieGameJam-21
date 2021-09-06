@@ -120,7 +120,7 @@ using UnityEngine;
                 break;
             
             case PowerType.SizeAttack:
-                EnableFootTrailEffects(true, false);
+                EnableFootTrailEffects(false, false);
                 break;
         }
     }

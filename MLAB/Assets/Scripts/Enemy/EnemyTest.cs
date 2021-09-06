@@ -44,7 +44,7 @@ public class EnemyTest : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && other.transform.localScale != Vector3.one)
         {
             // todo add crushing sound
-            Instantiate(enemyDeadFX, transform.position, Quaternion.identity);
+            Instantiate(enemyDeadFX, transform.position, enemyDeadFX.transform.rotation);
             Destroy(gameObject);
         }
 
