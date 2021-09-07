@@ -91,15 +91,14 @@ public class PlayerMovement : MonoBehaviour
             isClimbing = true;
             RB.useGravity = false;
             xRot = -90f;
+            CameraManager.instance.PrioritizeWallCam(10, 15);
         }
         if(collision.gameObject == runPoint)
         {
             isClimbing = false;
             RB.useGravity = true;
             xRot = 0f;
-          
-         
-
+            CameraManager.instance.PrioritizeWallCam(15, 10);
         }
     }
 
