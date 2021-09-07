@@ -5,10 +5,6 @@ using UnityEngine;
 using DG.Tweening;
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField]
-    float speedDecrement;
-    [SerializeField]
-    float sizeDecrement;
 
     [SerializeField]
     bool isMoveable;

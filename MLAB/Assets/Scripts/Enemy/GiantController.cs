@@ -19,7 +19,7 @@ public class GiantController : MonoBehaviour
 
    void ActivateAnimator(int id)
     {
-        if(id==this.ID)
+        if(id == ID)
          Anim.enabled = true;
     }
 }

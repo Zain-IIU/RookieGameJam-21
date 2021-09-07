@@ -95,7 +95,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
         PlayerAccessoriesHolder.instance.ResetAllAcessories();
         PlayerAttackSystem.instance.SetCurPower(newPower);
         if (curPlayerState==PowerType.SizeAttack)
-            this.transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
+           transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
         curPlayerState = newPower;
 
     }

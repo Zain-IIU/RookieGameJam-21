@@ -4,6 +4,8 @@ using Random = UnityEngine.Random;
 
 public class Projectile : MonoBehaviour
 {
+    // todo attach hit effect later 
+    
     [SerializeField] private float forceAmount = 30f;
     [SerializeField] private LayerMask enemyLayerMask;
 
@@ -12,6 +14,7 @@ public class Projectile : MonoBehaviour
     
     private Rigidbody rigidbody;
 
+    public bool isInverted;
     
     private void Awake()
     {
@@ -21,7 +24,16 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         timeCounter = timeToDestroyBullet;
-        rigidbody.AddForce(transform.forward * forceAmount, ForceMode.Impulse);
+
+        if (!isInverted)
+        {
+            rigidbody.AddForce(transform.forward * forceAmount, ForceMode.Impulse);
+        }
+        else
+        {
+            rigidbody.AddForce(-transform.forward * forceAmount, ForceMode.Impulse);
+        }
+       
     }
 
     private void Update()
@@ -55,6 +67,12 @@ public class Projectile : MonoBehaviour
            {
                collider.attachedRigidbody.AddForce(new Vector3(Random.Range(-1f, 1f) * 4f, 4f, 4f), ForceMode.Impulse);;
            }
+        }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // todo attach player damage stuff later
+            Debug.Log("Player got hit");
         }
     }
 }

@@ -16,9 +16,6 @@ public class EventManager : MonoBehaviour
 
     public void PlayerEntered(int id)
     {
-        if(OnPlayerEnter!=null)
-        {
-            OnPlayerEnter(id);
-        }
+        OnPlayerEnter?.Invoke(id);
     }
 }

@@ -14,22 +14,10 @@ public class PlayerSpeedAttack : MonoBehaviour
 
     private bool isEnemyInRange;
 
-    private Transform playerTarget;
-    
+   
     private void Awake()
     {
-        playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    }
-
-    private void OnEnable()
-    {
-        startPos = transform.localPosition;
-        Vector3 playerPos = playerTarget.localPosition;
-        Vector3 scaleVal = transform.localScale;
-       
-        transform.DOLocalMove(startPos, 0.5f).From(-playerPos);
-        transform.DOScale(scaleVal, 1f).From(Vector3.zero).SetEase(Ease.InOutBounce);
     }
 
     void Update()

@@ -9,6 +9,11 @@
       <e p="Assets" t="Include">
         <e p="AssetPacks" t="Include">
           <e p="Accessories" t="Include">
+            <e p="10WeaponsPack" t="Include">
+              <e p="Documentation" t="Include">
+                <e p="Documentation.txt" t="Include" />
+              </e>
+            </e>
             <e p="3D Items - Wand Pack" t="Include">
               <e p="Read me.txt" t="Include" />
             </e>
@@ -70,12 +75,17 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Enemy" t="Include">
-            <e p="EnemyTest.cs" t="Include" />
+            <e p="EnemyAnimationEvents.cs" t="Include" />
+            <e p="EnemyController.cs" t="Include" />
+            <e p="GiantController.cs" t="Include" />
+            <e p="GiantTrigger.cs" t="Include" />
           </e>
+          <e p="FadeInMiniPlayerEffects.cs" t="Include" />
           <e p="FollowTarget.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="CameraManager.cs" t="Include" />
+            <e p="EventManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="Sounds.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
@@ -90,7 +100,6 @@
           <e p="Player" t="Include">
             <e p="AnimationBehavior" t="Include">
               <e p="JumpAttackBehaviour.cs" t="Include" />
-              <e p="MageRunBehavior.cs" t="Include" />
               <e p="PlayerAttackBehavior.cs" t="Include" />
               <e p="PlayerRunBehavior.cs" t="Include" />
             </e>
