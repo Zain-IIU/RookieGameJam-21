@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
@@ -14,10 +15,16 @@ public class PlayerSpeedAttack : MonoBehaviour
 
     private bool isEnemyInRange;
 
-   
+    private static bool isMoved;
+
     private void Awake()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+    }
+
+    private void OnEnable()
+    {
+        startPos = transform.localPosition;
     }
 
     void Update()
@@ -28,25 +35,25 @@ public class PlayerSpeedAttack : MonoBehaviour
 
             if (distanceToEnemy < maxDistanceRangeToDetectEnemy)
             {
+                isMoved = true;
                 transform.position =
                     Vector3.MoveTowards(transform.position, ClosestEnemy().position, speed * Time.deltaTime);
                 transform.LookAt(ClosestEnemy());
                 isEnemyInRange = true;
             }
-            else if(isEnemyInRange && (distanceToEnemy > maxDistanceRangeToDetectEnemy))
+            else if (isEnemyInRange && (distanceToEnemy > maxDistanceRangeToDetectEnemy))
             {
                 transform.LookAt(startPos);
-                transform.DOLocalMove(startPos, 1.5f).
-                    OnComplete(() => transform.DORotate(Vector3.zero, 0.01f));
-            
+                transform.DOLocalMove(startPos, 1.5f).OnComplete(() => transform.DORotate(Vector3.zero, 0.01f));
+
                 isEnemyInRange = false;
             }
         }
         else
         {
-          //  gameObject.SetActive(false);
+            //  gameObject.SetActive(false);
         }
-  
+
     }
 
     Transform ClosestEnemy()
@@ -74,7 +81,8 @@ public class PlayerSpeedAttack : MonoBehaviour
     }
 
     private bool hitOnce;
-    private void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter(Collider other)
     {
         if (!hitOnce && other.gameObject.CompareTag("Enemy"))
         {
@@ -83,4 +91,17 @@ public class PlayerSpeedAttack : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.collider.isTrigger) return;
+
+        if (!hitOnce && other.gameObject.CompareTag("Enemy"))
+        {
+            hitOnce = true;
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+    }
+
 }

@@ -116,7 +116,7 @@ using UnityEngine;
                 break;
             case PowerType.SpeedAttack:
                
-                EnableFootTrailEffects(false, true);
+                EnableFootTrailEffects(false, false);
                 break;
             
             case PowerType.SizeAttack:

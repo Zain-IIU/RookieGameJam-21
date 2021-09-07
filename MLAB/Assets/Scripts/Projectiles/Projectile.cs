@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     // todo attach hit effect later 
     
     [SerializeField] private float forceAmount = 30f;
+    [SerializeField] private float enemyDamangeForceAmount = 7f;
     [SerializeField] private LayerMask enemyLayerMask;
 
     [SerializeField] private float timeToDestroyBullet = 1.5f;
@@ -65,7 +66,11 @@ public class Projectile : MonoBehaviour
 
            foreach (var collider in colliders)
            {
-               collider.attachedRigidbody.AddForce(new Vector3(Random.Range(-1f, 1f) * 4f, 4f, 4f), ForceMode.Impulse);;
+               if (collider != null)
+               {
+                   collider.attachedRigidbody.AddForce(new Vector3(Random.Range(-1f, 1f) * enemyDamangeForceAmount, enemyDamangeForceAmount, enemyDamangeForceAmount), ForceMode.Impulse);
+               }
+              
            }
         }
 

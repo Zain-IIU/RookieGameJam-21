@@ -1,4 +1,6 @@
 using System;
+using DG.Tweening;
+using Unity.Mathematics;
 using UnityEngine;
 
 
@@ -27,7 +29,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float timeToAttack = 3f;
     private float timerCounter;
     
-    
+    bool isGiantPlayer;
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -69,9 +71,10 @@ public class EnemyController : MonoBehaviour
                     transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
                 }
                 break;
-            
+               
             case EnemyType.Shooters:
-                if (DistanceCheck(minDistanceRange))
+          
+                if (!isGiantPlayer && DistanceCheck(minDistanceRange))
                 {
                     timerCounter -= Time.deltaTime;
                     if (timerCounter < 0f)
@@ -80,9 +83,14 @@ public class EnemyController : MonoBehaviour
                         animator.SetTrigger("Shoot");
                     }
                 } 
-                else if (playerTransform.localScale != Vector3.one && DistanceCheck(6f))
+                
+                if (playerTransform.localScale != Vector3.one && DistanceCheck(10f))
                 {
+                    isGiantPlayer = true;
+                    transform.rotation = Quaternion.Euler(0,0,0);
+                    Debug.Log("start runn");
                     animator.SetTrigger("StartRun");
+                    transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
                 }
                 break;
         }
