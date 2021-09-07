@@ -14687,7 +14687,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAmount: 20
+  enemyDamangeForceAmount: 7
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
   timeToDestroyBullet: 1.5
+  isInverted: 0
+  isEnemyBullet: 0
+  projectileDirection: 2

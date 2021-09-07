@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class EnemyController : MonoBehaviour
@@ -18,6 +19,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private GameObject enemyDeadFX;
     
     [SerializeField] private float enemyRunSpeed = 6f;
+    [SerializeField] private float enemyDamageForce = 20f;
     [SerializeField] private float minDistanceRange;
     
     private Transform playerTransform;
@@ -123,6 +125,11 @@ public class EnemyController : MonoBehaviour
             /*isDestroyed = true;
             Destroy(other.gameObject);
             Destroy(gameObject);*/
+        }
+
+        if (other.gameObject.CompareTag("Sword"))
+        {
+            rb.AddForce(new Vector3(Random.Range(-1f, 1f), 1f,0f) * enemyDamageForce, ForceMode.Impulse);
         }
     }
 }

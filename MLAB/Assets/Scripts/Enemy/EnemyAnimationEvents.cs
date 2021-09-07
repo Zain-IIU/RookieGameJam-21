@@ -9,6 +9,6 @@ public class EnemyAnimationEvents : MonoBehaviour
     
     void Shoot()
     {
-        Instantiate(enemyBullet, firePoint.position, Quaternion.identity);
+        Instantiate(enemyBullet, firePoint.position, enemyBullet.transform.rotation);
     }
 }
