@@ -93,6 +93,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
     public void ResetPlayerPowers(PowerType newPower)
     {
         PlayerAccessoriesHolder.instance.ResetAllAcessories();
+        PlayerAttackSystem.instance.SetCurPower(newPower);
         if (curPlayerState==PowerType.SizeAttack)
             this.transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
         curPlayerState = newPower;
