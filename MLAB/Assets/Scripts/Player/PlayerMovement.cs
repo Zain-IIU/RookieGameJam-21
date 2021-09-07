@@ -14,7 +14,10 @@ public class PlayerMovement : MonoBehaviour
 
     float xRot;
     float yRot;
-    
+
+
+    bool isClimbing;
+
     public static bool isPerformingAttack;
     Rigidbody RB;
     #endregion
@@ -49,14 +52,27 @@ public class PlayerMovement : MonoBehaviour
         
             if (Input.GetMouseButton(0) )
             {
+            if (!isClimbing)
+            {
                 yRot += Input.GetAxis("Mouse X") * rotationSpeed;
                 yRot = Mathf.Clamp(yRot, -20f, 20f);
-                transform.DORotateQuaternion(Quaternion.Euler(transform.rotation.x, yRot, 0f), 0.15f);
+                transform.DORotateQuaternion(Quaternion.Euler(0f, yRot, 0f), 0.15f);
             }
+
             else
             {
-              transform.DORotateQuaternion(Quaternion.Euler(transform.rotation.x, 0f, 0f), 0.25f);
+                xRot -= Input.GetAxis("Mouse X") * rotationSpeed;
+                xRot = Mathf.Clamp(xRot, -115f, -65f);
+                transform.DORotateQuaternion(Quaternion.Euler(xRot, -90, 90f), 0.15f);
             }
+        }
+            else
+            {
+             if(!isClimbing)
+                transform.DORotateQuaternion(Quaternion.Euler(0f, 0f, 0f), 0.25f);
+             else
+                transform.DORotateQuaternion(Quaternion.Euler(-90f, -90f, 90f), 0.25f);
+        }
 
       
 
@@ -72,18 +88,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject==climbPoint)
         {
+            isClimbing = true;
             RB.useGravity = false;
-            transform.localRotation = Quaternion.Euler(-90, 0, 0);
-            
-           // transform.DORotateQuaternion(Quaternion.Euler(xRot, 0, 0f), 0.15f);
-            
+            xRot = -90f;
         }
         if(collision.gameObject == runPoint)
         {
+            isClimbing = false;
             RB.useGravity = true;
             xRot = 0f;
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-            // transform.DORotateQuaternion(Quaternion.Euler(xRot, 0, 0f), 0.15f);
+          
+         
 
         }
     }
