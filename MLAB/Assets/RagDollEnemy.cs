@@ -1,41 +1,59 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RagDollEnemy : MonoBehaviour
 {
+    private Animator animator;
+    
+    private Rigidbody[] rigidBodies;
+    private Collider[] colliders;
+    
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        rigidBodies = GetComponentsInChildren<Rigidbody>();
+        colliders = GetComponentsInChildren<Collider>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Animator>().SetTrigger("CowardEnemy");
-        ResetColliders(false);
-        ResetRigidBody(true);
-        
-    }
-
-
-    public void ResetRigidBody(bool state)
-    {
-        
-        Rigidbody[] rb = GetComponentsInChildren<Rigidbody>();
-
-        foreach (Rigidbody rigidbody in rb)
+        animator.SetTrigger("CowardEnemy");
+        foreach (Rigidbody rb in rigidBodies)
         {
-            rigidbody.isKinematic = state;
+            rb.isKinematic = true;
         }
         
-    }
-
-
-    public void ResetColliders(bool state)
-    {
-        Collider[] col = GetComponentsInChildren<Collider>();
-
-        foreach (Collider collider in col)
+        foreach (Collider col in colliders)
         {
-         
-            collider.enabled = state;
+            col.enabled = false;
         }
-        GetComponent<Collider>().enabled = !state;
+
+        animator.enabled = true;
+        GetComponent<Collider>().enabled = true;
+        GetComponent<Rigidbody>().isKinematic = false;
     }
+
+
+    public void EnableRagdoll()
+    {
+        animator.enabled = false;
+      
+        foreach (Rigidbody rb in rigidBodies)
+        {
+            rb.isKinematic = false;
+            rb.AddForce((Vector3.up + Vector3.forward) * 10f, ForceMode.Impulse);
+        }
+        
+        foreach (Collider col in colliders)
+        {
+            col.enabled = true;
+        }
+
+      
+    }
+
+
 }

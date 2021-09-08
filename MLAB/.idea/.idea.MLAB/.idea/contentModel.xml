@@ -56,6 +56,7 @@
             </e>
           </e>
         </e>
+        <e p="BarrelRole.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -73,6 +74,7 @@
             </e>
           </e>
         </e>
+        <e p="RagDollEnemy.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemy" t="Include">
             <e p="EnemyAnimationEvents.cs" t="Include" />
