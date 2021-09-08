@@ -16,6 +16,8 @@ using UnityEngine;
     [SerializeField] private LayerMask bossMask;
     [SerializeField] private LayerMask enemyMask;
    
+    
+   
     private Animator animator;
     
     public static bool runOnce;
@@ -75,7 +77,7 @@ using UnityEngine;
                 //````````
             }
         }
-
+       
     }
 
 
