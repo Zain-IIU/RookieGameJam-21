@@ -6,6 +6,8 @@ public class PlayerAccessoriesHolder : MonoBehaviour
     
     [SerializeField] private PlayerAccessories playerAccessories;
 
+    [SerializeField] private GameObject accessoryPickFX;
+
     private void Awake()
     {
         instance = this;
@@ -14,7 +16,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
 
     public void SetAccesories(PowerType powerType)
     {
-      
+        accessoryPickFX.SetActive(true);
         switch (powerType)
         {
             case PowerType.SizeAttack:

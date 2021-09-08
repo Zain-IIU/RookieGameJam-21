@@ -11,7 +11,8 @@ public class EnemyController : MonoBehaviour
     enum EnemyType
     {
         CowardEnemy,
-        Shooters
+        Shooters,
+        BarrelThrower
     }
 
     [SerializeField] private EnemyType enemyType;
@@ -58,6 +59,9 @@ public class EnemyController : MonoBehaviour
       
                  animator.SetTrigger("ShooterEnemy");
                  break;
+            case EnemyType.BarrelThrower:
+                animator.SetTrigger("ThrowerEnemy");
+                break;
         }
     }
 
@@ -75,28 +79,39 @@ public class EnemyController : MonoBehaviour
                 break;
                
             case EnemyType.Shooters:
-          
-                if (!isGiantPlayer && DistanceCheck(minDistanceRange))
-                {
-                    timerCounter -= Time.deltaTime;
-                    if (timerCounter < 0f)
-                    {
-                        timerCounter = timeToAttack;
-                        animator.SetTrigger("Shoot");
-                    }
-                } 
-                
-                if (playerTransform.localScale != Vector3.one && DistanceCheck(10f))
-                {
-                    isGiantPlayer = true;
-                    transform.rotation = Quaternion.Euler(0,0,0);
-                    Debug.Log("start runn");
-                    animator.SetTrigger("StartRun");
-                    transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
-                }
+                EnemyAttack("Shoot");
+                break;
+            case EnemyType.BarrelThrower:
+                EnemyAttack("Throw");
                 break;
         }
     
+    }
+
+
+
+
+
+    void EnemyAttack(string trigger)
+    {
+        if (!isGiantPlayer && DistanceCheck(minDistanceRange))
+        {
+            timerCounter -= Time.deltaTime;
+            if (timerCounter < 0f)
+            {
+                timerCounter = timeToAttack;
+                animator.SetTrigger(trigger);
+            }
+        }
+
+        if (playerTransform.localScale != Vector3.one && DistanceCheck(10f))
+        {
+            isGiantPlayer = true;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            Debug.Log("start runn");
+            animator.SetTrigger("StartRun");
+            transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
+        }
     }
 
     bool DistanceCheck(float minRangeDist)
