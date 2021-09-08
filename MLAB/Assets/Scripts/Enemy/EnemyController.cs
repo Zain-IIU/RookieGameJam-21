@@ -17,18 +17,15 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private EnemyType enemyType;
     
-    [SerializeField] private GameObject enemyDeadFX;
-    
+   
     [SerializeField] private float enemyRunSpeed = 6f;
-    [SerializeField] private float enemyDamageForce = 20f;
+ 
     [SerializeField] private float minDistanceRange;
     
     private Transform playerTransform;
     private Animator animator;
-    private Rigidbody rb;
-
-    private bool isDestroyed;
-
+   
+   
     [SerializeField] private float timeToAttack = 3f;
     private float timerCounter;
     
@@ -37,8 +34,7 @@ public class EnemyController : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
-
+       
         timerCounter = timeToAttack;
     }
 
@@ -87,11 +83,7 @@ public class EnemyController : MonoBehaviour
         }
     
     }
-
-
-
-
-
+    
     void EnemyAttack(string trigger)
     {
         if (!isGiantPlayer && DistanceCheck(minDistanceRange))
@@ -108,7 +100,7 @@ public class EnemyController : MonoBehaviour
         {
             isGiantPlayer = true;
             transform.rotation = Quaternion.Euler(0, 0, 0);
-            Debug.Log("start runn");
+           
             animator.SetTrigger("StartRun");
             transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
         }
@@ -126,25 +118,5 @@ public class EnemyController : MonoBehaviour
         return false;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player") && other.transform.localScale != Vector3.one)
-        {
-            // todo add crushing sound
-            Instantiate(enemyDeadFX, transform.position, enemyDeadFX.transform.rotation);
-            Destroy(gameObject);
-        }
-
-        if (!isDestroyed && other.gameObject.CompareTag("MiniPlayers"))
-        {
-            /*isDestroyed = true;
-            Destroy(other.gameObject);
-            Destroy(gameObject);*/
-        }
-
-        if (other.gameObject.CompareTag("Sword"))
-        {
-            rb.AddForce(new Vector3(Random.Range(-1f, 1f), 1f,0f) * enemyDamageForce, ForceMode.Impulse);
-        }
-    }
+  
 }

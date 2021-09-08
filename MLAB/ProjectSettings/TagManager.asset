@@ -9,6 +9,8 @@ TagManager:
   - MiniPlayers
   - Building
   - Barrel
+  - RagDollEnemy
+  - Projectile
   layers:
   - Default
   - TransparentFX

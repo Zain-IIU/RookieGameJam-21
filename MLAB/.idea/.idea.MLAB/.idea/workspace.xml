@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2168c89-45b1-4ca8-95c6-e1ffb3abf542" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDamage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDamage.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RagDollEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RagDollEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BarrelRole.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BarrelRole.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/FireProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/FireProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/HammerProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/HammerProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RagDollEnemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RagDollEnemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +87,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimationEvents.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/RagDollEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDamageSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDamage.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xMRqEIaGrUq3ImaU9kluJUa5oR" />
@@ -152,6 +166,7 @@
       <workItem from="1631029912334" duration="1864000" />
       <workItem from="1631047587480" duration="4733000" />
       <workItem from="1631116333267" duration="1898000" />
+      <workItem from="1631140238895" duration="3238000" />
     </task>
     <servers />
   </component>

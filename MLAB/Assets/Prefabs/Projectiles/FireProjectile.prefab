@@ -9773,7 +9773,7 @@ GameObject:
   - component: {fileID: 1816334686293880884}
   m_Layer: 7
   m_Name: FireProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14687,11 +14687,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAmount: 20
-  enemyDamangeForceAmount: 7
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
   timeToDestroyBullet: 1.5
-  isInverted: 0
-  isEnemyBullet: 0
   projectileDirection: 2
