@@ -9,9 +9,12 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] float rotationSpeed = 5f;
     [SerializeField] float moveSpeed;
+    
     [SerializeField] GameObject climbPoint;
     [SerializeField] GameObject runPoint;
 
+
+   
     float xRot;
     float yRot;
 
@@ -37,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         if (!GameManager.instance.isGameStarted || GameManager.instance.isGameOver) return;
         if (isPerformingAttack) return;
         

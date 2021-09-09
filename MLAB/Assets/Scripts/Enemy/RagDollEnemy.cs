@@ -19,7 +19,7 @@ public class RagDollEnemy : MonoBehaviour
         colliders = GetComponentsInChildren<Collider>();
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
     }
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +48,7 @@ public class RagDollEnemy : MonoBehaviour
         foreach (Rigidbody rb in rigidBodies)
         {
             rb.isKinematic = false;
-            rb.AddForce((-direction) * 15f + Vector3.up * 10f, ForceMode.Impulse);
+            rb.AddForce((-direction) * 20f + Vector3.up * 20f, ForceMode.Impulse);
         }
         
         foreach (Collider col in colliders)

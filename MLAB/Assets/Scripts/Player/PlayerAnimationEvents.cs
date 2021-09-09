@@ -36,20 +36,17 @@ public class PlayerAnimationEvents : MonoBehaviour
         {
             if (collider != null)
             {
-                collider.GetComponent<Collider>().enabled = false;
-                collider.GetComponent<Rigidbody>().isKinematic = true;
                 if (collider.GetComponent<RagDollEnemy>() != null)
                 {
                     Debug.Log("Detected");
+                    collider.GetComponent<Collider>().enabled = false;
+                    collider.GetComponent<Rigidbody>().isKinematic = true;
                     collider.GetComponent<RagDollEnemy>().EnableRagdoll();
-                   
                 }
-
-                /*
-                if (collider.attachedRigidbody != null)
+                if (collider.GetComponent<RagDollEnemy>() == null)
                 {
                     collider.attachedRigidbody.AddForce((Vector3.forward + Vector3.up) * forceAmount, ForceMode.Impulse);
-                }*/
+                }
                
             }
         }
@@ -57,7 +54,7 @@ public class PlayerAnimationEvents : MonoBehaviour
     }
     public void JumpAttack()
     {
-        RB.AddForce(Vector3.forward * jumpForce/2 + Vector3.up * jumpForce,ForceMode.Impulse);
+        RB.AddForce(Vector3.forward * jumpForce/2 + Vector3.up * jumpForce/2,ForceMode.Impulse);
     }
     public void MagicRangeAttack()
     {
