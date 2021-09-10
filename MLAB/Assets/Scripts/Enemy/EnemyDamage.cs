@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    [SerializeField] private float enemyDamangeForceAmount = 7f;
     //[SerializeField] private LayerMask enemyLayerMask;
 
     [SerializeField] private float enemyDamageForce = 20f;
@@ -22,9 +21,15 @@ public class EnemyDamage : MonoBehaviour
     {
         if (GetComponent<RagDollEnemy>() != null)
         {
-            rb = GetComponent<Rigidbody>();
+
             ragDollEnemy = GetComponent<RagDollEnemy>();
+            isTrigger = true;
         }
+        else
+            GetComponent<Collider>().isTrigger = true;
+
+        rb = GetComponent<Rigidbody>();
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,6 +41,7 @@ public class EnemyDamage : MonoBehaviour
             ragDollEnemy.EnableRagdoll();
         }
 
+        
         if (collision.gameObject.CompareTag("Player") && collision.transform.localScale != Vector3.one)
         {
             // todo add crushing sound
@@ -55,9 +61,23 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sword"))
         {
-            ragDollEnemy.EnableRagdoll();
-            //  rb.AddForce(new Vector3(Random.Range(-1f, 1f), 1f,0f) * enemyDamageForce, ForceMode.Impulse);
+            if(ragDollEnemy!=null)
+                 ragDollEnemy.EnableRagdoll();
+            else
+              rb.AddForce(new Vector3(UnityEngine.Random.Range(-1f, 1f), 1f,0f) * enemyDamageForce, ForceMode.Impulse);
         }
+
+        if (other.gameObject.CompareTag("Player") && other.transform.localScale != Vector3.one)
+        {
+            // todo add crushing sound
+            Instantiate(enemyDeadFX, transform.position, enemyDeadFX.transform.rotation);
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            rb.AddForce(new Vector3(UnityEngine.Random.Range(-1f, 1f), 1f, 0f) * enemyDamageForce, ForceMode.Impulse);
+        }
+
     }
 
 
