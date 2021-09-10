@@ -48,7 +48,7 @@ public class RagDollEnemy : MonoBehaviour
         foreach (Rigidbody rb in rigidBodies)
         {
             rb.isKinematic = false;
-            rb.AddForce((-direction) * 20f + Vector3.up * 20f, ForceMode.Impulse);
+            rb.AddForce(new Vector3(UnityEngine.Random.Range(-1f, 1f), 0f ,0f) + (-direction) * 15f + Vector3.up * 10f, ForceMode.Impulse);
         }
         
         foreach (Collider col in colliders)
@@ -56,7 +56,9 @@ public class RagDollEnemy : MonoBehaviour
             col.enabled = true;
         }
 
-      
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+
     }
 
 

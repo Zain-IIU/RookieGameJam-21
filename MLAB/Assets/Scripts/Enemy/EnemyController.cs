@@ -40,11 +40,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.OnGameStart += OnGameStart;
-    }
-
-    void OnGameStart()
-    {
+       // GameManager.instance.OnGameStart += OnGameStart;
         switch (enemyType)
         {
             case EnemyType.CowardEnemy:
@@ -52,9 +48,8 @@ public class EnemyController : MonoBehaviour
                 break;
             
             case EnemyType.Shooters:
-      
-                 animator.SetTrigger("ShooterEnemy");
-                 break;
+                animator.SetTrigger("ShooterEnemy");
+                break;
 
             case EnemyType.BarrelThrower:
                 animator.SetTrigger("ThrowerEnemy");
@@ -62,15 +57,23 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    /*
+    void OnGameStart()
+    {
+        animator.SetTrigger("StartGame");
+
+    }*/
+
     void Update()
     {
+        if (!GameManager.instance.isGameStarted) return;
+        
         switch (enemyType)
         {
             case EnemyType.CowardEnemy:
 
                 if (playerTransform.localScale != Vector3.one && DistanceCheck(minDistanceRange))
                 {
-                    Debug.Log("Player is Near");
                     animator.SetTrigger("StartRun");
 
                     if (isRagdoll)
@@ -80,6 +83,10 @@ public class EnemyController : MonoBehaviour
                     }
 
                     transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
+                }
+                else
+                {
+                    animator.SetTrigger("StopRun");
                 }
                 break;
 
@@ -113,13 +120,17 @@ public class EnemyController : MonoBehaviour
             animator.SetTrigger("StartRun");
             transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
         }
+        else
+        {
+            animator.SetTrigger("StopRun");
+        }
     }
 
     bool DistanceCheck(float minRangeDist)
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
-        if (distanceToPlayer < minRangeDist)
+        if (distanceToPlayer <= minRangeDist)
         {
             return true;
         }

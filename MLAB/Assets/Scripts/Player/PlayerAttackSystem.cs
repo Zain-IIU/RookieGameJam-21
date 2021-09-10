@@ -105,23 +105,24 @@ using UnityEngine;
         switch(curPower)
         {
             case PowerType.MagicAttack:
-              
+                SetRaycastDistance(15f);
                 EnableFootTrailEffects(false, false);
                 break;
             case PowerType.SwordAttack:
-               
+                SetRaycastDistance(7f);
                 EnableFootTrailEffects(true, false);
                 break;
             case PowerType.GroundHammerAttack:
-             
+                SetRaycastDistance(13f);
                 EnableFootTrailEffects(true, false);
                 break;
             case PowerType.SpeedAttack:
-               
+                SetRaycastDistance(7f);
                 EnableFootTrailEffects(false, false);
                 break;
             
             case PowerType.SizeAttack:
+                SetRaycastDistance(7f);
                 EnableFootTrailEffects(false, false);
                 break;
         }
@@ -139,5 +140,10 @@ using UnityEngine;
     }
 
 
+    private void SetRaycastDistance(float newDistance)
+    {
+        singleEnemyDistance = newDistance;
+    }
+    
 
 }
