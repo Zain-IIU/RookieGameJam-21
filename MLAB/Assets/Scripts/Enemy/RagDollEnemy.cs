@@ -11,7 +11,8 @@ public class RagDollEnemy : MonoBehaviour
     private Collider[] colliders;
 
     private Transform playerTarget;
-    
+    [SerializeField]
+    bool isBoss;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -23,6 +24,7 @@ public class RagDollEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(!isBoss)
         animator.SetTrigger("CowardEnemy");
         foreach (Rigidbody rb in rigidBodies)
         {

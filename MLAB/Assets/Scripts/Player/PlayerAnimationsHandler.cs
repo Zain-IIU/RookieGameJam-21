@@ -63,9 +63,6 @@ public class PlayerAnimationsHandler : MonoBehaviour
             case PowerType.GroundHammerAttack:
                 Anim.SetTrigger("HammerProjectileAttack");
                 break;
-            case PowerType.SpeedAttack:
-             
-                break;
         }
     }
     public void SetPlayerState(PowerType newState)

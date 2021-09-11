@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9213933852632474142}
   - component: {fileID: 2882873588201821592}
   - component: {fileID: 4787585797647462827}
+  - component: {fileID: 423795252852271804}
   m_Layer: 0
   m_Name: TornadoProjectile
   m_TagString: Untagged
@@ -4945,13 +4946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAmount: 5
-  enemyDamangeForceAmount: 7
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
   timeToDestroyBullet: 10
-  isInverted: 0
-  isEnemyBullet: 1
   projectileDirection: 4
 --- !u!54 &2882873588201821592
 Rigidbody:
@@ -4982,6 +4977,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1751866, y: 0.91669077, z: 1.8223329}
   m_Center: {x: 0.002226919, y: -0.023334295, z: 0.9879122}
+--- !u!114 &423795252852271804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166697705615292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df141c343618834c9bba75a6b3c655b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMoveable: 0
+  power: 0
+  amplitude: 2
+  occilation: 0.5
 --- !u!1 &1442534876973244
 GameObject:
   m_ObjectHideFlags: 0

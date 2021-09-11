@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float timeToDestroyBullet = 1.5f;
     private float timeCounter;
     
-    private Rigidbody rigidbody;
+    private Rigidbody RB;
     
     enum ProjectileDirection
     {
@@ -27,12 +27,12 @@ public class Projectile : MonoBehaviour
     
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        RB = GetComponent<Rigidbody>();
     }
 
     void AddProjectileForce(Vector3 direction)
     {
-        rigidbody.AddForce(direction * forceAmount, ForceMode.Impulse);
+        RB.AddForce(direction * forceAmount, ForceMode.Impulse);
     }
 
     void Start()

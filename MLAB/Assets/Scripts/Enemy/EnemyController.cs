@@ -40,7 +40,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-       // GameManager.instance.OnGameStart += OnGameStart;
+       
         switch (enemyType)
         {
             case EnemyType.CowardEnemy:

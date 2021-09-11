@@ -19,15 +19,15 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Projectile") && ragDollEnemy!=null)
+        if ((collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Sword")) && ragDollEnemy!=null)
         {
             ragDollEnemy.EnableRagdoll();
         }
 
-        if (collision.gameObject.CompareTag("Sword"))
-        {
-            ragDollEnemy.EnableRagdoll();
-        }
+        //if (collision.gameObject.CompareTag("Sword"))
+        //{
+        //    ragDollEnemy.EnableRagdoll();
+        //}
 
         if (collision.gameObject.CompareTag("Player") && collision.transform.localScale != Vector3.one)
         {

@@ -46,7 +46,7 @@ public class Pickup : MonoBehaviour
             //normalizing sizeVal
             if (powerType == PowerType.SizeAttack)
             {
-                if (sizeVal > 2)
+                if (sizeVal > 2.5)
                     sizeVal = 1;
 
                 playerModifier.SetMoveSpeed(10);

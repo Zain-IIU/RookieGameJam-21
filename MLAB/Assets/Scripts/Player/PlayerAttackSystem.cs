@@ -58,7 +58,7 @@ using UnityEngine;
             {
                 runOnce = true;
                 animator.SetTrigger(curPower.ToString());
-  
+                
                 if (curPower.ToString() == "MagicAttack")
                 {
                     PlayerAnimationsHandler.instance.MageFellowAnimations(curPower.ToString());
@@ -116,7 +116,7 @@ using UnityEngine;
                 SetRaycastDistance(13f);
                 EnableFootTrailEffects(true, false);
                 break;
-            case PowerType.SpeedAttack:
+            case PowerType.MultiplierAttack:
                 SetRaycastDistance(7f);
                 EnableFootTrailEffects(false, false);
                 break;

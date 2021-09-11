@@ -3,7 +3,7 @@
     Null,
     SizeAttack,
     GroundHammerAttack,
-    SpeedAttack,
+    MultiplierAttack,
     MagicAttack,
     SwordAttack
 }

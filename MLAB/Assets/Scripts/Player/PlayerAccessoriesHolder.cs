@@ -36,7 +36,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                 playerAccessories.hammerItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 break;
 
-            case PowerType.SpeedAttack:
+            case PowerType.MultiplierAttack:
                 playerAccessories.speedFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
                 playerAccessories.speedItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);               
                 break;
@@ -80,7 +80,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                     playerAccessories.speedFellows[i].SetActive(!toEnable);
                     playerAccessories.mageFellows[i].SetActive(!toEnable);
                     break;
-                case PowerType.SpeedAttack:
+                case PowerType.MultiplierAttack:
                     playerAccessories.swordItems[i].SetActive(!toEnable);
                     playerAccessories.hammerItems[i].SetActive(!toEnable);
                     playerAccessories.magicitems[i].SetActive(!toEnable);
