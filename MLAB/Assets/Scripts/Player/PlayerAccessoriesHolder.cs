@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class PlayerAccessoriesHolder : MonoBehaviour
@@ -6,9 +7,12 @@ public class PlayerAccessoriesHolder : MonoBehaviour
     
     [SerializeField] private PlayerAccessories playerAccessories;
 
+    private PlayerAttackSystem playerAttackSystem;
+    
     private void Awake()
     {
         instance = this;
+        playerAttackSystem = GetComponent<PlayerAttackSystem>();
     }
     
 
@@ -17,26 +21,29 @@ public class PlayerAccessoriesHolder : MonoBehaviour
         switch (powerType)
         {
             case PowerType.SizeAttack:
-                playerAccessories.sizeItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                playerAccessories.sizeItems[playerAttackSystem.GetPickupCount()].SetActive(true);
                 break;
             
             case PowerType.MagicAttack:
-                playerAccessories.magicitems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                playerAccessories.mageFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                playerAccessories.magicitems[playerAttackSystem.GetPickupCount()].SetActive(true);
+                AccessoryPositioningEffect(playerAccessories.magicitems[playerAttackSystem.GetPickupCount()].transform);
+                playerAccessories.mageFellows[playerAttackSystem.GetPickupCount()].SetActive(true);
                 break;
 
             case PowerType.SwordAttack:
-                playerAccessories.swordItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                playerAccessories.swordItems[playerAttackSystem.GetPickupCount()].SetActive(true);
+                AccessoryPositioningEffect(playerAccessories.swordItems[playerAttackSystem.GetPickupCount()].transform);
                 break;
 
             case PowerType.GroundHammerAttack:
-                playerAccessories.hammerItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                playerAccessories.hammerFX[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
+                playerAccessories.hammerItems[playerAttackSystem.GetPickupCount()].SetActive(true);
+                AccessoryPositioningEffect(playerAccessories.hammerItems[playerAttackSystem.GetPickupCount()].transform);
+                playerAccessories.hammerFX[playerAttackSystem.GetPickupCount()].SetActive(true);
                 break;
 
             case PowerType.MultiplierAttack:
-                playerAccessories.speedFellows[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);
-                playerAccessories.speedItems[PlayerAttackSystem.instance.GetPickupCount()].SetActive(true);               
+                playerAccessories.speedFellows[playerAttackSystem.GetPickupCount()].SetActive(true);
+                playerAccessories.speedItems[playerAttackSystem.GetPickupCount()].SetActive(true);               
                 break;
         }
         ResetOtherAccessories(true,powerType);
@@ -101,6 +108,13 @@ public class PlayerAccessoriesHolder : MonoBehaviour
             playerAccessories.speedFellows[i].SetActive(false);
             playerAccessories.mageFellows[i].SetActive(false);
         }
+    }
+
+    void AccessoryPositioningEffect(Transform itemPos)
+    {
+        Vector3 equippedPos =  itemPos.localPosition;
+        itemPos.transform
+            .DOLocalMove(equippedPos, 0.75f).From(new Vector3(10, -10f, 10f));
     }
 }
 

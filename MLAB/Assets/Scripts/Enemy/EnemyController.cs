@@ -97,7 +97,12 @@ public class EnemyController : MonoBehaviour
                 EnemyAttack("Throw");
                 break;
         }
-    
+
+        if (transform.position.z + 3f< playerTransform.transform.position.z)
+        {
+            Destroy(gameObject);
+        }
+        
     }
     
     void EnemyAttack(string trigger)
@@ -134,7 +139,6 @@ public class EnemyController : MonoBehaviour
         {
             return true;
         }
-
         return false;
     }
 

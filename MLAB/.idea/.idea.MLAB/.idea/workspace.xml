@@ -2,49 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2168c89-45b1-4ca8-95c6-e1ffb3abf542" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animators/Animations/Player/Attacks/HammerPowerAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/Animations/Player/Attacks/HammerPowerAttack.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animators/Animations/Player/Attacks/MagePowerAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/Animations/Player/Attacks/MagePowerAttack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animators/Animations/Player/Attacks/SwordPowerAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/Animations/Player/Attacks/SwordPowerAttack.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animators/Controllers/PlayerAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/Controllers/PlayerAnimationController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Prefabs/Interactive/Trails/FloorTrails/LightningFloorTrail.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Prefabs/Interactive/Trails/FloorTrails/LightningFloorTrail.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Prefabs/Misc/LightningFan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Prefabs/Misc/LightningFan.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/source/barrel01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/source/barrel01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/Barrel.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/Barrel.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/ao.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/ao.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_R.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_R.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_barrel_BaseColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_barrel_BaseColor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_barrel_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_barrel_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/barrel/textures/barrel01_metallic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ParticleEffects/SpawnGreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ParticleEffects/SpawnGreen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/MageFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/MageFire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Materials/Rimlight/Translucent/PolyTranslucentIce.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Materials/Rimlight/Translucent/PolyTranslucentIce.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessories.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessories.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationBehavior/PlayerAttackBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationBehavior/PlayerAttackBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,20 +92,21 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationsHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationBehavior/MageRunBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTest.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimationEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/RagDollEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDamageSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessories.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationBehavior/PlayerAttackBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xMRqEIaGrUq3ImaU9kluJUa5oR" />
@@ -197,6 +183,7 @@
       <workItem from="1631309172689" duration="3001000" />
       <workItem from="1631380924932" duration="2687000" />
       <workItem from="1631394441447" duration="5203000" />
+      <workItem from="1631466800212" duration="11197000" />
     </task>
     <servers />
   </component>

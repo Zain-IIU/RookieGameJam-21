@@ -4,6 +4,7 @@
     SizeAttack,
     GroundHammerAttack,
     MultiplierAttack,
+    SwordAttack,
     MagicAttack,
-    SwordAttack
+   
 }

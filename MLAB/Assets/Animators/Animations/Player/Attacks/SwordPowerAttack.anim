@@ -94543,7 +94543,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.8888889
+  - time: 0.7777778
+    functionName: EnableGroundLighting
+    data: 
+    objectReferenceParameter: {fileID: 1637377403823693841, guid: 550736c204c9c6441a5b65303c3b12e8, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.7111111
     functionName: DetectEnemiesInRange
     data: 
     objectReferenceParameter: {fileID: 0}

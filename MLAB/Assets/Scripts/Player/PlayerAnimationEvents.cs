@@ -31,7 +31,6 @@ public class PlayerAnimationEvents : MonoBehaviour
     }
     public void DetectEnemiesInRange()
     {
-        groundPunchPowerEffects.SetActive(true);
         
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius, enemyLayerMask);
 
@@ -89,9 +88,11 @@ public class PlayerAnimationEvents : MonoBehaviour
         Instantiate(hammerProjectile, projectilePoints.transform.position, Quaternion.identity);
     }
 
-    void EnableGroundLighting()
+    void EnableGroundLighting(GameObject powerAttackEffect)
     {
-        Transform lightingTrial = Instantiate(groundHammerAttackMoveFX, transform.position, Quaternion.identity).transform;
+        groundPunchPowerEffects.SetActive(true);
+
+        Transform lightingTrial = Instantiate(powerAttackEffect, transform.position, Quaternion.identity).transform;
         lightingTrial.DOMove(bossTransform.position, 2f);
     }
     

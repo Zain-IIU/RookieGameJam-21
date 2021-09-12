@@ -12,9 +12,7 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] GameObject climbPoint;
     [SerializeField] GameObject runPoint;
-
-
-   
+    
     float xRot;
     float yRot;
 
@@ -105,7 +103,5 @@ public class PlayerMovement : MonoBehaviour
             CameraManager.instance.PrioritizeWallCam(15, 10);
         }
     }
-
-
-
+    
 }

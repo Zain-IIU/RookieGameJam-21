@@ -108144,7 +108144,7 @@ AnimationClip:
   - time: 1.8
     functionName: EnableGroundLighting
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 1810092578768278, guid: 7defb460755a4ad458330606f9e9fc00, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using DG.Tweening;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerSpeedAttack : MonoBehaviour
@@ -10,16 +8,18 @@ public class PlayerSpeedAttack : MonoBehaviour
     private float distanceToEnemy;
     [SerializeField] private float speed = 15f;
     private GameObject[] enemies;
+    private GameObject boss;
 
     private Vector3 startPos;
 
     private bool isEnemyInRange;
 
-    private static bool isMoved;
-
+    public bool miniPlayerForBoss;
+   
     private void Awake()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        boss = GameObject.FindGameObjectWithTag("Boss");
     }
 
     private void OnEnable()
@@ -29,29 +29,37 @@ public class PlayerSpeedAttack : MonoBehaviour
 
     void Update()
     {
-        if (ClosestEnemy() != null)
-        {
-            distanceToEnemy = Vector3.Distance(transform.position, ClosestEnemy().position);
-
-            if (distanceToEnemy < maxDistanceRangeToDetectEnemy)
+        if(!miniPlayerForBoss){
+            if (ClosestEnemy() != null)
             {
-                isMoved = true;
-                transform.position =
-                    Vector3.MoveTowards(transform.position, ClosestEnemy().position, speed * Time.deltaTime);
-                transform.LookAt(ClosestEnemy());
-                isEnemyInRange = true;
+                distanceToEnemy = Vector3.Distance(transform.position, ClosestEnemy().position);
+
+                if (distanceToEnemy < maxDistanceRangeToDetectEnemy)
+                {
+                    transform.position =
+                        Vector3.MoveTowards(transform.position, ClosestEnemy().position, speed * Time.deltaTime);
+                    transform.LookAt(ClosestEnemy());
+                    isEnemyInRange = true;
+                }
+                else if (isEnemyInRange && (distanceToEnemy > maxDistanceRangeToDetectEnemy))
+                {
+                    transform.LookAt(startPos);
+                    transform.DOLocalMove(startPos, 0.5f).OnComplete(() => transform.DORotate(Vector3.zero, 0.01f));
+
+                    isEnemyInRange = false;
+                }
             }
-            else if (isEnemyInRange && (distanceToEnemy > maxDistanceRangeToDetectEnemy))
+            else if (ClosestEnemy() == null)
             {
-                transform.LookAt(startPos);
-                transform.DOLocalMove(startPos, 1.5f).OnComplete(() => transform.DORotate(Vector3.zero, 0.01f));
-
-                isEnemyInRange = false;
+                transform.DOLocalMove(startPos, 0.5f).OnComplete(()=>gameObject.SetActive(false));
             }
         }
-        else
+
+        if (Vector3.Distance(transform.position, boss.transform.position) < 20f && miniPlayerForBoss)
         {
-            //  gameObject.SetActive(false);
+            transform.DOMove(boss.transform.position, 5f)
+                .OnComplete(() => gameObject.SetActive(false));
+            transform.LookAt(boss.transform);
         }
 
     }
@@ -90,6 +98,11 @@ public class PlayerSpeedAttack : MonoBehaviour
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
+        
+        if (other.gameObject.CompareTag("Boss"))
+        {
+            boss.GetComponent<RagDollEnemy>().EnableRagdoll();
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -103,5 +116,13 @@ public class PlayerSpeedAttack : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    /*
+    void OnBossCollision(Collision other)
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
+    }
+    */
 
 }

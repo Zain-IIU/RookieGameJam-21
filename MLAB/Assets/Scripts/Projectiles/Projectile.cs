@@ -71,5 +71,16 @@ public class Projectile : MonoBehaviour
         }
     }
 
-   
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Boss"))
+        {
+            other.gameObject.GetComponent<RagDollEnemy>().EnableRagdoll();
+        }
+        
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

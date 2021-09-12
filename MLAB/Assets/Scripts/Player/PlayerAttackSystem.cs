@@ -46,14 +46,20 @@ using UnityEngine;
     }
 
 
-   
+    private PowerType updatePower;
+    
     private void Update()
     {
         // todo check previous power if its not equal then assigne cur power
-        PlayerAnimationsHandler.instance.SetPlayerState(curPower);
+        if (curPower != updatePower)
+        {
+            PlayerAnimationsHandler.instance.SetPlayerState(curPower);
+            updatePower = curPower;
+        }
+        
+        
         RaycastHit hitInfo;
 
-       
         if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, BossEnemyDistance, bossMask))
         {
             if (hitInfo.collider != null && !runOnce && !powerAttack)
@@ -138,7 +144,7 @@ using UnityEngine;
         return pickupCount;
     }
     
-    void EnableFootTrailEffects(bool isDustEnable, bool isLightingEnable)
+    public void EnableFootTrailEffects(bool isDustEnable, bool isLightingEnable)
     {
         footDustFx.SetActive(isDustEnable);
         lightningFootFx.SetActive(isLightingEnable);
