@@ -15,19 +15,20 @@ using UnityEngine;
     
     [SerializeField] private LayerMask bossMask;
     [SerializeField] private LayerMask enemyMask;
-   
     
-   
     private Animator animator;
     
     public static bool runOnce;
 
     private static int pickupCount;
+
+    [SerializeField] private GameObject magePickupEffect;
     
     //custom class for handling curPower State
     
    public PowerType curPower;
 
+   private bool powerAttack;
     private void Awake()
     {
         instance = this;
@@ -48,14 +49,16 @@ using UnityEngine;
    
     private void Update()
     {
+        // todo check previous power if its not equal then assigne cur power
         PlayerAnimationsHandler.instance.SetPlayerState(curPower);
         RaycastHit hitInfo;
 
        
         if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, BossEnemyDistance, bossMask))
         {
-            if (hitInfo.collider != null && !runOnce)
+            if (hitInfo.collider != null && !runOnce && !powerAttack)
             {
+                powerAttack = true;
                 runOnce = true;
                 animator.SetTrigger(curPower.ToString());
                 
@@ -105,6 +108,7 @@ using UnityEngine;
         switch(curPower)
         {
             case PowerType.MagicAttack:
+                magePickupEffect.SetActive(true);
                 SetRaycastDistance(15f);
                 EnableFootTrailEffects(false, false);
                 break;
@@ -122,6 +126,7 @@ using UnityEngine;
                 break;
             
             case PowerType.SizeAttack:
+                magePickupEffect.SetActive(true);
                 SetRaycastDistance(7f);
                 EnableFootTrailEffects(false, false);
                 break;

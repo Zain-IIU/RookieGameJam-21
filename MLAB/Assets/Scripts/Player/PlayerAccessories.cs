@@ -11,7 +11,7 @@ public class PlayerAccessories
 
     [Header("Hammer Attack")]
     public GameObject[] hammerItems;
-
+    
     [Header("Speed Attack")]
     public GameObject[] speedItems;
 
@@ -23,4 +23,8 @@ public class PlayerAccessories
 
     [Header("Speed Fellow")]
     public GameObject[] speedFellows;
+    
+    [Header("Hammer Effect")]
+    public GameObject[] hammerFX;
+
 }

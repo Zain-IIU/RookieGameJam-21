@@ -11,8 +11,8 @@ public class RagDollEnemy : MonoBehaviour
     private Collider[] colliders;
 
     private Transform playerTarget;
-    [SerializeField]
-    bool isBoss;
+    [SerializeField] bool isBoss;
+    
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -25,7 +25,7 @@ public class RagDollEnemy : MonoBehaviour
     void Start()
     {
         if(!isBoss)
-        animator.SetTrigger("CowardEnemy");
+         animator.SetTrigger("CowardEnemy");
         foreach (Rigidbody rb in rigidBodies)
         {
             rb.isKinematic = true;
@@ -58,9 +58,11 @@ public class RagDollEnemy : MonoBehaviour
             col.enabled = true;
         }
 
+        // to do cache ragdoll coll and rigidbodies
+        
         GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
-
+        
     }
 
 

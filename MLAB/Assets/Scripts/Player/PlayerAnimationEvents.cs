@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     Rigidbody RB;
 
+    [SerializeField] private GameObject groundHammerAttackMoveFX;
+    [SerializeField] private Transform bossTransform;
 
     private void Start()
     {
@@ -34,7 +37,7 @@ public class PlayerAnimationEvents : MonoBehaviour
 
         foreach (Collider collider in colliders)
         {
-            if (collider != null)
+            if (collider.GetComponent<RagDollEnemy>() != null)
             {
                 
                 collider.GetComponent<RagDollEnemy>().EnableRagdoll();
@@ -46,8 +49,7 @@ public class PlayerAnimationEvents : MonoBehaviour
                 //    collider.GetComponent<Rigidbody>().isKinematic = true;
                 //    collider.GetComponent<RagDollEnemy>().EnableRagdoll();
                 //}
-
-
+                
             }
         }
       
@@ -87,6 +89,13 @@ public class PlayerAnimationEvents : MonoBehaviour
         Instantiate(hammerProjectile, projectilePoints.transform.position, Quaternion.identity);
     }
 
+    void EnableGroundLighting()
+    {
+        Transform lightingTrial = Instantiate(groundHammerAttackMoveFX, transform.position, Quaternion.identity).transform;
+        lightingTrial.DOMove(bossTransform.position, 2f);
+    }
+    
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
