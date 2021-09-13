@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Multiplier"))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             isClimbing = false;
             animator.SetTrigger("Flip");

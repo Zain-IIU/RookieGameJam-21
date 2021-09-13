@@ -97,6 +97,7 @@
             <e p="Pickup.cs" t="Include" />
             <e p="PowerType.cs" t="Include" />
           </e>
+          <e p="Multiplier.cs" t="Include" />
           <e p="Obstacles" t="Include">
             <e p="Obstacle.cs" t="Include" />
           </e>

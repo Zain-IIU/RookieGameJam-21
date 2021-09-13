@@ -7,7 +7,7 @@ public class PlayerAnimationEvents : MonoBehaviour
 {
     [SerializeField] private GameObject groundPunchPowerEffects;
     [SerializeField] private GameObject magicPunchPowerEffects;
-    [SerializeField] private GameObject speedEnableJuniorPlayers;
+    [SerializeField] private GameObject spikeGroundAttack;
 
     [SerializeField] GameObject magicProjectile;
     [SerializeField] GameObject hammerProjectile;
@@ -79,7 +79,7 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     public void SpeedPowerAttack()
     {
-        speedEnableJuniorPlayers.SetActive(true);
+        spikeGroundAttack.SetActive(true);
     }
 
     void HammerThrowAttack()
