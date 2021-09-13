@@ -22,7 +22,6 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     Rigidbody RB;
 
-    [SerializeField] private GameObject groundHammerAttackMoveFX;
     [SerializeField] private Transform bossTransform;
 
     private void Start()

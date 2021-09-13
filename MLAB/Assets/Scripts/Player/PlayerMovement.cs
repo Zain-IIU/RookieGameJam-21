@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] GameObject climbPoint;
     [SerializeField] GameObject runPoint;
+
+    private Animator animator;
     
     float xRot;
     float yRot;
@@ -21,11 +23,16 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool isPerformingAttack;
     Rigidbody RB;
+
+    public LayerMask groundLayer;
+    public float distToGround = 2f;
+    private bool isLanded;
     #endregion
 
     private void Start()
     {
         RB = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
     public void SetMoveSpeed(float newSpeed) => moveSpeed = newSpeed;
     public float GetMoveSpeed()
@@ -76,7 +83,12 @@ public class PlayerMovement : MonoBehaviour
                 transform.DORotateQuaternion(Quaternion.Euler(-90f, -90f, 90f), 0.25f);
         }
 
-      
+
+            if (Physics.Raycast(transform.position, Vector3.down, distToGround, groundLayer) && !isLanded)
+            {
+                isLanded = true;
+                animator.SetTrigger("Land");
+            }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.3f, 2.3f), transform.position.y,
             transform.position.z);
@@ -103,5 +115,19 @@ public class PlayerMovement : MonoBehaviour
             CameraManager.instance.PrioritizeWallCam(15, 10);
         }
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Multiplier"))
+        {
+            isClimbing = false;
+            animator.SetTrigger("Flip");
+            RB.AddForce(Vector3.back * 5f, ForceMode.Impulse);
+            RB.useGravity = true;
+            SetMoveSpeed(0f);
+            xRot = 0f;
+            CameraManager.instance.PrioritizeWallCam(15, 10);
+        }
+      
+    }
 }

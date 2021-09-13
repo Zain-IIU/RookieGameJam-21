@@ -12,6 +12,8 @@ TagManager:
   - RagDollEnemy
   - Projectile
   - Boss
+  - Ground
+  - Multiplier
   layers:
   - Default
   - TransparentFX
