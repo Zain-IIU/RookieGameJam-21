@@ -3,20 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="d2168c89-45b1-4ca8-95c6-e1ffb3abf542" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animators/Controllers/PlayerAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/Controllers/PlayerAnimationController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ParticleEffects/SwordPowerAttack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ParticleEffects/SwordPowerAttack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Animations/swat@Hard Landing.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Animations/swat@Hard Landing.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Animations/swat@Landing.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Animations/swat@Landing.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Prefabs/Combat/Explosions/Fireball/FireballExplosionRed.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Particle Effects/Polygon Arsenal 2/Prefabs/Combat/Explosions/Fireball/FireballExplosionRed.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/TornadoProjectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/TornadoProjectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Barrel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Barrel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BarrelRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BarrelRole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Obstacle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Obstacle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +59,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimationEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/ElementHandler.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraModification/CameraSplash.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraModification/CameraManager.cs" />
@@ -85,15 +94,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessories.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationBehavior/PlayerAttackBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Obstacle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BarrelRole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Obstacle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xMRqEIaGrUq3ImaU9kluJUa5oR" />
@@ -172,6 +183,8 @@
       <workItem from="1631394441447" duration="5203000" />
       <workItem from="1631466800212" duration="11197000" />
       <workItem from="1631497241120" duration="3524000" />
+      <workItem from="1631546364660" duration="2203000" />
+      <workItem from="1631549536109" duration="1285000" />
     </task>
     <servers />
   </component>

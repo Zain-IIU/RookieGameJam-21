@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     
     // todo attach hit effect later 
-    
+    [SerializeField] private bool isEnemyProjectile;
     [SerializeField] private float forceAmount = 30f;
    
     [SerializeField] private float timeToDestroyBullet = 1.5f;
@@ -80,6 +80,15 @@ public class Projectile : MonoBehaviour
         
         if (other.gameObject.CompareTag("Enemy"))
         {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player") && isEnemyProjectile)
+        {
+            Debug.Log("Tornado col det");
             Destroy(gameObject);
         }
     }

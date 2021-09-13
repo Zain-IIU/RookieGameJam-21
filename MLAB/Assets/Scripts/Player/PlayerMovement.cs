@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isClimbing = false;
             animator.SetTrigger("Flip");
-            RB.AddForce(Vector3.back * 5f, ForceMode.Impulse);
+            RB.AddForce(Vector3.back * 10f, ForceMode.Impulse);
             RB.useGravity = true;
             SetMoveSpeed(0f);
             xRot = 0f;

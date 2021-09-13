@@ -98,7 +98,7 @@ public class EnemyController : MonoBehaviour
                 break;
         }
 
-        if (transform.position.z + 3f< playerTransform.transform.position.z)
+        if (transform.position.z < playerTransform.transform.position.z  - 5f)
         {
             Destroy(gameObject);
         }

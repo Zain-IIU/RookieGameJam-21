@@ -28,13 +28,14 @@ public class Obstacle : MonoBehaviour
         }
     }
 
+    private bool fallOnce;
     private void OnTriggerEnter(Collider other)
     {
         bool playerTag = other.gameObject.CompareTag("Player");
 
-        if (!PlayerAttackSystem.runOnce && playerTag)
+        if (!fallOnce && playerTag)
         {
-            PlayerAttackSystem.runOnce = true;
+            fallOnce = true;
             other.gameObject.GetComponent<Animator>().SetTrigger("ObstacleSize");
             other.gameObject.GetComponent<PlayerMovement>().SetMoveSpeed(0f);
             PlayerAnimationsHandler.instance.ResetPlayerPowers(power);
