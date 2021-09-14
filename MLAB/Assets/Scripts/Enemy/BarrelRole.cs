@@ -33,18 +33,14 @@ public class BarrelRole : MonoBehaviour
         }
 
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!PlayerAttackSystem.runOnce && collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            PlayerAttackSystem.runOnce = true;
-            collision.gameObject.GetComponent<Animator>().SetTrigger("ObstacleSize");
-            collision.gameObject.GetComponent<PlayerMovement>().SetMoveSpeed(0f);
-            PlayerAnimationsHandler.instance.ResetPlayerPowers(PowerType.Null);
             Instantiate(explosionVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
+   
 }
 

@@ -28,7 +28,8 @@ public class GemPickup : MonoBehaviour
             gemImage.DORotate(targetPos.transform.localEulerAngles, 0.75f);
             gemImage.DOMove(targetPos.position, 0.75f).OnComplete(() =>
                 {
-                    UIManager.instance.SetGemScore(ScoreManager.instance.AddScore(gemPickupScore).ToString());
+                      UIManager.instance.SetGemScore(ScoreManager.instance.AddScore(gemPickupScore).ToString());
+                  
                     gemImage.gameObject.SetActive(false);
                     gemImage.anchoredPosition = new Vector2(-348f, -374.99f);
                     gemImage.transform.localEulerAngles = Vector3.zero;
