@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
             CameraManager.instance.PrioritizeWallCam(15, 10);
             GameManager.instance.isGameOver = true;
             UIManager.instance.OnLevelComplete();
-            //UIManager.instance.SetFinalScore(ScoreManager.instance.GetCurrentScore().ToString());
+         
         }
         if(other.gameObject.CompareTag("Multiplier"))
         {

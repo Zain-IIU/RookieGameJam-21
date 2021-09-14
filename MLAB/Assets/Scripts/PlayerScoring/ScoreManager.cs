@@ -5,7 +5,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
-    private int score;
+    private int score=0;
     public static int scoreMultiplier = 0;
 
     
@@ -21,6 +21,7 @@ public class ScoreManager : MonoBehaviour
         return score;
     }
     
+   
     public int GetCurrentScore()
     {
         return score*scoreMultiplier;
