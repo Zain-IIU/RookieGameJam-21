@@ -10,7 +10,7 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (performNormalAttack) return;
+        if (performNormalAttack || GameManager.instance.isGameOver) return;
         
         animator.GetComponent<PlayerMovement>().SetMoveSpeed(0f);
         CameraManager.instance.ToggleFollowCam(false);
@@ -39,7 +39,7 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        
-        PlayerAttackSystem.runOnce = false;
+        PlayerAttackSystem.instance.runOnce = false;
 
         if (performNormalAttack) return;
         PlayerMovement.isPerformingAttack = false;

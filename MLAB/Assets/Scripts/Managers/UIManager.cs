@@ -92,13 +92,13 @@ public class UIManager : MonoBehaviour
     public void OnLevelComplete()
     {
         PanelsTweenerEffect(levelCompletePanel);
-        gemImage.gameObject.SetActive(true);
+        /*gemImage.gameObject.SetActive(true);
         gemImage.DORotate(targetPos.transform.localEulerAngles, 0.75f);
         gemImage.DOMove(targetPos.position, 1.5f).OnComplete(() =>
         {
             SetFinalScore(ScoreManager.instance.GetCurrentScore().ToString());
             gemImage.gameObject.SetActive(false);
-        });
+        });*/
     }
     public void OnGameOver()
     {

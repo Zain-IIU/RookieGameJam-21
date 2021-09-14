@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -88,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isLanded = true;
                 animator.SetTrigger("Land");
+              
             }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.3f, 2.3f), transform.position.y,
@@ -126,12 +128,18 @@ public class PlayerMovement : MonoBehaviour
             xRot = 0f;
             CameraManager.instance.PrioritizeWallCam(15, 10);
             GameManager.instance.isGameOver = true;
-            UIManager.instance.OnLevelComplete();
+            StartCoroutine(EnableLevelCompletePanel());
         }
         
         if(other.gameObject.CompareTag("Multiplier"))
         {
             ScoreManager.instance.SetMultiliedScore();
         }
+    }
+
+    IEnumerator EnableLevelCompletePanel()
+    {
+        yield return new WaitForSeconds(2f);
+        UIManager.instance.OnLevelComplete();
     }
 }

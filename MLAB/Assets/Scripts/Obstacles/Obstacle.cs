@@ -11,16 +11,12 @@ public class Obstacle : MonoBehaviour
     PowerType power;
     
 
-    public static bool fallOnce;
-   
-    
+    private static bool fallOnce;
     
     private void OnTriggerEnter(Collider other)
     {
         bool playerTag = other.gameObject.CompareTag("Player");
-
-      
-
+        
         if(playerTag)
         {
             if (!fallOnce)

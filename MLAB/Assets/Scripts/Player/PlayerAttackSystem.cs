@@ -18,7 +18,7 @@ using UnityEngine;
     
     private Animator animator;
     
-    public static bool runOnce;
+    public bool runOnce;
 
     private static int pickupCount;
 
@@ -50,6 +50,8 @@ using UnityEngine;
     
     private void Update()
     {
+        
+        Debug.Log(runOnce);
         // todo check previous power if its not equal then assigne cur power
         if (curPower != updatePower)
         {
@@ -119,7 +121,7 @@ using UnityEngine;
                 EnableFootTrailEffects(false, false);
                 break;
             case PowerType.SwordAttack:
-                SetRaycastDistance(7f);
+                SetRaycastDistance(6f);
                 EnableFootTrailEffects(true, false);
                 break;
             case PowerType.GroundHammerAttack:
