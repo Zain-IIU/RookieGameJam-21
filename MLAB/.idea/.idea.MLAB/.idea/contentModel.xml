@@ -4,6 +4,7 @@
     <e p="C:\Users\KHIZAR\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\KHIZAR\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_MLAB.1363360594.00" t="ExcludeRecursive" />
     <e p="D:\Unity\My Game Projects\RookieGameJam-21\MLAB" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -55,6 +56,36 @@
               </e>
             </e>
           </e>
+          <e p="UI" t="Include">
+            <e p="ProceduralUIImage" t="Include">
+              <e p="Editor" t="Include">
+                <e p="FreeModifierEditor.cs" t="Include" />
+                <e p="ModifierUtility.cs" t="Include" />
+                <e p="ProceduralImageEditor.cs" t="Include" />
+                <e p="ProceduralImageEditorUtility.cs" t="Include" />
+              </e>
+              <e p="Resources" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="ProceduralImageRuntime.shader" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Attributes" t="Include">
+                  <e p="ModifierID.cs" t="Include" />
+                </e>
+                <e p="EmptySprite.cs" t="Include" />
+                <e p="Modifiers" t="Include">
+                  <e p="CustomPremadeModifier.cs" t="Include" />
+                  <e p="FreeModifier.cs" t="Include" />
+                  <e p="OnlyOneEdgeModifier.cs" t="Include" />
+                  <e p="RoundModifier.cs" t="Include" />
+                  <e p="UniformModifier.cs" t="Include" />
+                </e>
+                <e p="ProceduralImage.cs" t="Include" />
+                <e p="ProceduralImageModifier.cs" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
@@ -97,7 +128,6 @@
             <e p="Pickup.cs" t="Include" />
             <e p="PowerType.cs" t="Include" />
           </e>
-          <e p="Multiplier.cs" t="Include" />
           <e p="Obstacles" t="Include">
             <e p="Obstacle.cs" t="Include" />
           </e>
@@ -114,6 +144,11 @@
             <e p="PlayerAttackSystem.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerSpeedAttack.cs" t="Include" />
+          </e>
+          <e p="PlayerScoring" t="Include">
+            <e p="GemPickup.cs" t="Include" />
+            <e p="Multiplier.cs" t="Include" />
+            <e p="ScoreManager.cs" t="Include" />
           </e>
           <e p="Projectiles" t="Include">
             <e p="Projectile.cs" t="Include" />

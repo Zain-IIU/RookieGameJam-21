@@ -51,14 +51,15 @@ public class RagDollEnemy : MonoBehaviour
         {
             rb.isKinematic = false;
            
-            if (isBoss)
+            rb.AddForce(new Vector3(UnityEngine.Random.Range(-1f, 1f), 0f ,0f) + (-direction) * 25f + Vector3.up * 15f, ForceMode.Impulse);
+            /*if (isBoss)
             {
                 rb.AddForce(Vector3.left * 15f + Vector3.up * 15f, ForceMode.Impulse);
             }
             else
             {
-                rb.AddForce(new Vector3(UnityEngine.Random.Range(-1f, 1f), 0f ,0f) + (-direction) * 15f + Vector3.up * 10f, ForceMode.Impulse);
-            }
+               
+            }*/
             
         }
         

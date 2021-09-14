@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - Multiplier
   - Obstacle
+  - Gem
   layers:
   - Default
   - TransparentFX

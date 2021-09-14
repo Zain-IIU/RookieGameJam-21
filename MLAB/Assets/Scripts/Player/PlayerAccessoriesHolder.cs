@@ -114,7 +114,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
     {
         Vector3 equippedPos =  itemPos.localPosition;
         itemPos.transform
-            .DOLocalMove(equippedPos, 0.75f).From(new Vector3(10, -10f, 10f));
+            .DOLocalMove(equippedPos, 0.25f).From(new Vector3(10, -10f, 10f));
     }
 }
 
