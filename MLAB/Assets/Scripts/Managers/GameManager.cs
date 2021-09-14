@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     { 
         instance = this;
+
     }
 
     private void Update()

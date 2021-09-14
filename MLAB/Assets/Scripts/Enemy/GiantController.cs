@@ -16,10 +16,13 @@ public class GiantController : MonoBehaviour
     {
         EventManager.instance.OnPlayerEnter += ActivateAnimator;
     }
-
-   void ActivateAnimator(int id)
+    private void Update()
     {
-        if(id == ID)
+        if (GameManager.instance.isGameOver) Anim.SetBool("playerDead", true);
+    }
+    void ActivateAnimator(int id)
+    {
+        if(id == ID && !GameManager.instance.isGameOver)
          Anim.enabled = true;
     }
 }

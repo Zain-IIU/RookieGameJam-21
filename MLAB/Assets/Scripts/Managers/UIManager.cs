@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     
     [SerializeField] private CanvasGroup settingPanel;
     [SerializeField] private CanvasGroup levelCompletePanel;
+    [SerializeField] private CanvasGroup gameOverPanel;
     [SerializeField] private RectTransform settingButtonTransform;
 
     //for final score tweening
@@ -50,7 +51,7 @@ public class UIManager : MonoBehaviour
             PanelsTweenerEffect(settingPanel,true);
         
     }
-
+    
     public void SetGemScore(string newText)
     {
         gemScoreText.text = newText;
@@ -97,6 +98,10 @@ public class UIManager : MonoBehaviour
             SetFinalScore(ScoreManager.instance.GetCurrentScore().ToString());
             gemImage.gameObject.SetActive(false);
         });
+    }
+    public void OnGameOver()
+    {
+        PanelsTweenerEffect(gameOverPanel);
     }
     void PanelsTweenerEffect(CanvasGroup canvasGroup, bool isOn = false)
     {

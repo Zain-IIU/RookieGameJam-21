@@ -8,8 +8,8 @@ public class GiantTrigger : MonoBehaviour
     int ID;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
-        {
+        if(other.gameObject.CompareTag("Player") )
+        { 
             EventManager.instance.PlayerEntered(ID);
         }
     }

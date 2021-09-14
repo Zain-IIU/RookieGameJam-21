@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
       
         if (!GameManager.instance.isGameStarted || GameManager.instance.isGameOver) return;
-        if (isPerformingAttack) return;
+      //  if (isPerformingAttack) return;
         
         //for moving straight
         transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime),Space.Self);

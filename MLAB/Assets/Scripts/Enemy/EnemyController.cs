@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.instance.isGameStarted) return;
+        if (!GameManager.instance.isGameStarted || GameManager.instance.isGameOver) return;
         
         switch (enemyType)
         {
