@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     float xRot;
     float yRot;
 
-
+    
     bool isClimbing;
 
     public static bool isPerformingAttack;
@@ -127,6 +127,14 @@ public class PlayerMovement : MonoBehaviour
             SetMoveSpeed(0f);
             xRot = 0f;
             CameraManager.instance.PrioritizeWallCam(15, 10);
+            GameManager.instance.isGameOver = true;
+            UIManager.instance.OnLevelComplete();
+            //UIManager.instance.SetFinalScore(ScoreManager.instance.GetCurrentScore().ToString());
+        }
+        if(other.gameObject.CompareTag("Multiplier"))
+        {
+            ScoreManager.instance.SetMultiliedScore();
+            
         }
       
     }

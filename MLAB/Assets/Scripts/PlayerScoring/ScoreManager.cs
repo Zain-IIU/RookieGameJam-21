@@ -6,7 +6,10 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
 
     private int score;
+    public static int scoreMultiplier = 0;
+
     
+
     private void Awake()
     {
         instance = this;
@@ -18,4 +21,14 @@ public class ScoreManager : MonoBehaviour
         return score;
     }
     
+    public int GetCurrentScore()
+    {
+        return score*scoreMultiplier;
+    }
+
+    public void SetMultiliedScore()
+    {
+        scoreMultiplier++;
+    }
+
 }

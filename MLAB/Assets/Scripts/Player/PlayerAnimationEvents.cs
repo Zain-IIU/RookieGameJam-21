@@ -39,15 +39,7 @@ public class PlayerAnimationEvents : MonoBehaviour
             {
                 
                 collider.GetComponent<RagDollEnemy>().EnableRagdoll();
-              //  collider.attachedRigidbody.AddForce((Vector3.forward + Vector3.up) * forceAmount, ForceMode.Impulse);
-                //if (collider.GetComponent<RagDollEnemy>() != null)
-                //{
-                //    Debug.Log("Detected");
-                //    collider.GetComponent<Collider>().enabled = false;
-                //    collider.GetComponent<Rigidbody>().isKinematic = true;
-                //    collider.GetComponent<RagDollEnemy>().EnableRagdoll();
-                //}
-                
+                UIManager.instance.InGameTextTweener();
             }
         }
       
