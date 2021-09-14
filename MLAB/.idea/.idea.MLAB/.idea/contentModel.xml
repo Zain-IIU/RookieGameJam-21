@@ -18,10 +18,6 @@
             <e p="3D Items - Wand Pack" t="Include">
               <e p="Read me.txt" t="Include" />
             </e>
-            <e p="Meshtint Free Knight" t="Include">
-              <e p="Read me.txt" t="Include" />
-              <e p="www.meshtint.com.txt" t="Include" />
-            </e>
           </e>
           <e p="Particle Effects" t="Include">
             <e p="Polygon Arsenal 2" t="Include">

@@ -96,8 +96,6 @@ public class PlayerMovement : MonoBehaviour
 
 
     #endregion
-
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject==climbPoint)
@@ -129,13 +127,11 @@ public class PlayerMovement : MonoBehaviour
             CameraManager.instance.PrioritizeWallCam(15, 10);
             GameManager.instance.isGameOver = true;
             UIManager.instance.OnLevelComplete();
-         
         }
+        
         if(other.gameObject.CompareTag("Multiplier"))
         {
             ScoreManager.instance.SetMultiliedScore();
-            
         }
-      
     }
 }

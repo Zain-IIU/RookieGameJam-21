@@ -5,44 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MLAB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Accessories/PolygonIcons/Materials/PolygonIcons_Mat_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Accessories/PolygonIcons/Materials/PolygonIcons_Mat_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Accessories/PolygonIcons/Prefabs/SM_Icon_Gem_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Accessories/PolygonIcons/Prefabs/SM_Icon_Gem_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/Animations/ExplosiveLLC/Warrior Pack Bundle 1 FREE/Brute Warrior Mecanim Animation Pack/Animation Controller/Brute Warrior Animation Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/Animations/ExplosiveLLC/Warrior Pack Bundle 1 FREE/Brute Warrior Mecanim Animation Pack/Animation Controller/Brute Warrior Animation Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetPacks/UI/UI Sources/UI1/BGs/Background 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetPacks/UI/UI Sources/UI1/BGs/Background 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fog_Shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fog_Shader/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fog_Shader/Materials/PerspectiveFogMaterial_Warm_lvl.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Fog_Shader/Materials/PerspectiveFogMaterial_Warm_lvl.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Rock Colors 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Rock Colors 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Rock Colors 2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Rock Colors 2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Rock Colors 3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Rock Colors 3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Smoothstone 6.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Rocks and Stones/Smoothstone 6.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BarrelRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BarrelRole.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +39,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/ElementHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraModification/CameraSplash.cs" />
@@ -108,21 +74,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyDamage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessories.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ModifierSystem/PowerType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/AnimationBehavior/PlayerAttackBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BarrelRole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Obstacle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSpeedAttack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Multiplier.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScoring/ScoreManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScoring/GemPickup.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/RagDollEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAccessoriesHolder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BarrelRole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollisionTriggers.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackSystem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1xMRqEIaGrUq3ImaU9kluJUa5oR" />
@@ -205,6 +172,7 @@
       <workItem from="1631549536109" duration="1387000" />
       <workItem from="1631561087667" duration="4063000" />
       <workItem from="1631583158888" duration="9749000" />
+      <workItem from="1631632052656" duration="1562000" />
     </task>
     <servers />
   </component>

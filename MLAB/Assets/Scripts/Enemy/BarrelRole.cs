@@ -1,15 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
 
 public class BarrelRole : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float movingSpeed;
-    [SerializeField] private float anglerperRotation;
     [SerializeField] private float timetoDestroy;
     private float timer;
     [SerializeField] GameObject explosionVFX;

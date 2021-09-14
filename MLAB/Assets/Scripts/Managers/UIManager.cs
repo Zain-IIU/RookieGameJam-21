@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
    
     [SerializeField] private TextMeshProUGUI gemScoreText;
     [SerializeField] private TextMeshProUGUI finalScoreText;
+    
     [SerializeField] private RectTransform amazingText;
     public RectTransform gemScoreTransform;
     
@@ -74,8 +75,8 @@ public class UIManager : MonoBehaviour
     public void InGameTextTweener()
     {
         amazingText.gameObject.SetActive(true);
-        amazingText.DOAnchorPos(new Vector2(0, 350f), 0.75f);
-        amazingText.GetComponent<Image>().DOFade(0, 2.5f).OnComplete(() =>
+        amazingText.DOAnchorPos(new Vector2(0, 580f), 0.75f);
+        amazingText.GetComponent<Image>().DOFade(0, 0.75f).OnComplete(() =>
         {
             amazingText.DOAnchorPos(Vector2.zero, 3f);
             amazingText.gameObject.SetActive(false);

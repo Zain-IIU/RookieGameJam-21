@@ -50,7 +50,6 @@ using UnityEngine;
     
     private void Update()
     {
-        Debug.Log(runOnce);
         // todo check previous power if its not equal then assigne cur power
         if (curPower != updatePower)
         {
