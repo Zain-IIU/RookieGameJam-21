@@ -7,13 +7,18 @@ public class GemPickup : MonoBehaviour
 {
     [SerializeField] private RectTransform targetPos;
     [SerializeField] private RectTransform gemImage;
+    [SerializeField] private Ease gemEaseMove;
+    
     [SerializeField] private int gemPickupScore = 1;
-
+    
     private BoxCollider boxCollider;
-
+    private Camera mainCam;
+    
+    
     private void Awake()
     {
         boxCollider = GetComponent<BoxCollider>();
+        mainCam = Camera.main;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,17 +27,14 @@ public class GemPickup : MonoBehaviour
         {
             boxCollider.enabled = false;
             Destroy(gameObject);
-            gemImage.gameObject.SetActive(true);
 
-           
-            gemImage.DORotate(targetPos.transform.localEulerAngles, 0.75f);
-            gemImage.DOMove(targetPos.position, 0.75f).OnComplete(() =>
+            RectTransform gem = Instantiate(gemImage, mainCam.WorldToScreenPoint(other.transform.position + new Vector3(0, 1f, 0)), Quaternion.identity,
+                targetPos);
+            
+            gem.DOMove(targetPos.position, 0.75f).SetEase(gemEaseMove).OnComplete(() =>
                 {
                       UIManager.instance.SetGemScore(ScoreManager.instance.AddScore(gemPickupScore).ToString());
-                  
-                    gemImage.gameObject.SetActive(false);
-                    gemImage.anchoredPosition = new Vector2(-348f, -374.99f);
-                    gemImage.transform.localEulerAngles = Vector3.zero;
+                      Destroy(gem.gameObject);
                 });
         }
     }

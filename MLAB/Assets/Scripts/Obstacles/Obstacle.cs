@@ -12,7 +12,12 @@ public class Obstacle : MonoBehaviour
     
 
     private static bool fallOnce;
-    
+
+    private void Start()
+    {
+        fallOnce = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         bool playerTag = other.gameObject.CompareTag("Player");

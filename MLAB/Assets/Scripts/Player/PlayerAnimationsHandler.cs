@@ -12,12 +12,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
     Animator[] mageFellows;
     [SerializeField]
     PowerType curPlayerState;
-    [SerializeField]
-    LayerMask groundLayer;
-    [SerializeField]
-    Transform groundCheckPoint;
-
-    bool isGrounded;
+   
     private void Awake()
     {
         instance = this;
@@ -33,8 +28,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
     void Update()
     {
         SetMoveAnimation(curPlayerState);
-        isGrounded = Physics.CheckSphere(groundCheckPoint.position, 0.4f, groundLayer);
-        Anim.SetBool("inAir", !isGrounded);
+       
     }
 
     void SetMoveAnimation(PowerType powerType)
@@ -55,7 +49,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
         {
             case PowerType.MagicAttack:
                 Anim.SetTrigger("MageProjectileAttack");
-                MageFellowAnimations("MageProjectileAttack");
+                MageFellowAnimations("MageProjectileAttack", true);
                 break;
             case PowerType.SwordAttack:
                 Anim.SetTrigger("SwordNormalAttack");
@@ -71,22 +65,46 @@ public class PlayerAnimationsHandler : MonoBehaviour
 
     }
 
-    public void MageFellowAnimations(string animTrigger)
+    public void MageFellowAnimations(string animTrigger, bool isFellow)
     {
         foreach (var mageAnim in mageFellows)
         {
             if (mageAnim.gameObject.activeInHierarchy)
             {
-                mageAnim.SetTrigger(animTrigger);
+                if (isFellow)
+                {
+                    mageAnim.SetTrigger(animTrigger);
+                }
+                else
+                {
+                    mageAnim.ResetTrigger(animTrigger);
+                }
             }
         }
     }
 
     public void ResetPlayerSize()
     {
-        this.transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
+         transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
     }
 
+    public void ResetTransitions(PowerType playerState)
+    {
+        switch (playerState)
+        {
+            case PowerType.MagicAttack:
+                Anim.ResetTrigger("MageProjectileAttack");
+                MageFellowAnimations("MageProjectileAttack",false);
+                break;
+            case PowerType.SwordAttack:
+                Anim.ResetTrigger("SwordNormalAttack");
+                break;
+            case PowerType.GroundHammerAttack:
+                Anim.ResetTrigger("HammerProjectileAttack");
+                break;
+        }
+    }
+    
     public void ResetPlayerPowers(PowerType newPower)
     {
         PlayerAccessoriesHolder.instance.ResetAllAcessories();

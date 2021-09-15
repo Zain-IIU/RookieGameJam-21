@@ -4906,6 +4906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51b5f7cf6540e14f8737b15d6882fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnemyProjectile: 0
   forceAmount: 30
   timeToDestroyBullet: 1.5
   projectileDirection: 2
@@ -4936,7 +4937,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1257803293416508085
 GameObject:

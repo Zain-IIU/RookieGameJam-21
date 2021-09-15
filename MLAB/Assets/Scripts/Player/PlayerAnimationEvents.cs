@@ -37,12 +37,10 @@ public class PlayerAnimationEvents : MonoBehaviour
         {
             if (collider.GetComponent<RagDollEnemy>() != null)
             {
-                
                 collider.GetComponent<RagDollEnemy>().EnableRagdoll();
-                UIManager.instance.InGameTextTweener();
             }
         }
-      
+        UIManager.instance.InGameTextTweener();
     }
     public void JumpAttack()
     {

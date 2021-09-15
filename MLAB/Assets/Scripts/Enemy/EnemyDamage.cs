@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     //[SerializeField] private LayerMask enemyLayerMask;
+    [SerializeField] private float radius = 5f;
+    [SerializeField] private LayerMask enemyLayerMask;
 
     [SerializeField] private GameObject enemyDeadFX;
 
@@ -19,15 +21,27 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("Sword")) && ragDollEnemy!=null)
+        if (collision.gameObject.CompareTag("Projectile") && ragDollEnemy!=null)
+        {
+           
+            Collider[] colliders = Physics.OverlapSphere(transform.position, radius, enemyLayerMask);
+
+            foreach (Collider collider in colliders)
+            {
+                if (collider.GetComponent<RagDollEnemy>() != null)
+                {
+                    collider.GetComponent<RagDollEnemy>().EnableRagdoll();
+                }
+            }
+     
+            UIManager.instance.InGameTextTweener();
+        }
+
+        if (collision.gameObject.CompareTag("Sword") && ragDollEnemy != null)
         {
             ragDollEnemy.EnableRagdoll();
         }
 
-        //if (collision.gameObject.CompareTag("Sword"))
-        //{
-        //    ragDollEnemy.EnableRagdoll();
-        //}
 
         if (collision.gameObject.CompareTag("Player") && collision.transform.localScale != Vector3.one)
         {

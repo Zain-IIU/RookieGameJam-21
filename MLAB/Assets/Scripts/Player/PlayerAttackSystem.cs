@@ -18,7 +18,7 @@ using UnityEngine;
     
     private Animator animator;
     
-    public bool runOnce;
+   // public bool runOnce;
 
     private static int pickupCount;
 
@@ -51,7 +51,7 @@ using UnityEngine;
     private void Update()
     {
         
-        Debug.Log(runOnce);
+      
         // todo check previous power if its not equal then assigne cur power
         if (curPower != updatePower)
         {
@@ -64,15 +64,15 @@ using UnityEngine;
 
         if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, BossEnemyDistance, bossMask))
         {
-            if (hitInfo.collider != null && !runOnce && !powerAttack)
+            if (hitInfo.collider != null  && !powerAttack)
             {
                 powerAttack = true;
-                runOnce = true;
+               // runOnce = true;
                 animator.SetTrigger(curPower.ToString());
                 
                 if (curPower.ToString() == "MagicAttack")
                 {
-                    PlayerAnimationsHandler.instance.MageFellowAnimations(curPower.ToString());
+                    PlayerAnimationsHandler.instance.MageFellowAnimations(curPower.ToString(),true);
                 }
             }
         }
@@ -80,9 +80,9 @@ using UnityEngine;
         
         if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, singleEnemyDistance, enemyMask))
         {
-            if (hitInfo.collider != null && !runOnce  && curPower.ToString() != "SizeAttack")
+            if (hitInfo.collider != null && curPower.ToString() != "SizeAttack")
             {
-                runOnce = true;
+              //  runOnce = true;
                 //````````
                 PlayerAnimationsHandler.instance.SetTransitions(curPower);
                 //````````
@@ -121,7 +121,7 @@ using UnityEngine;
                 EnableFootTrailEffects(false, false);
                 break;
             case PowerType.SwordAttack:
-                SetRaycastDistance(6f);
+                SetRaycastDistance(4f);
                 EnableFootTrailEffects(true, false);
                 break;
             case PowerType.GroundHammerAttack:

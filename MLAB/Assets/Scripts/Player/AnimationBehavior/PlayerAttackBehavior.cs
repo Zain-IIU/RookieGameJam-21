@@ -38,14 +38,14 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       
-        PlayerAttackSystem.instance.runOnce = false;
+
+        PlayerAnimationsHandler.instance.ResetTransitions(PlayerAttackSystem.instance.curPower);
 
         if (performNormalAttack) return;
         PlayerMovement.isPerformingAttack = false;
         PlayerAnimationsHandler.instance.ResetPlayerPowers(PowerType.Null);
 
-       
+
         CameraManager.instance.ToggleFollowCam(true);
         CameraManager.instance.ToggleActionCam_01(false);
         CameraManager.instance.ToggleActionCam_02(false);

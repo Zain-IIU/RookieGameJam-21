@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
@@ -16,17 +18,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gemScoreText;
     [SerializeField] private TextMeshProUGUI finalScoreText;
     
-    [SerializeField] private RectTransform amazingText;
+    [SerializeField] private RectTransform[] feedBackText;
     public RectTransform gemScoreTransform;
     
     [SerializeField] private CanvasGroup settingPanel;
     [SerializeField] private CanvasGroup levelCompletePanel;
     [SerializeField] private CanvasGroup gameOverPanel;
     [SerializeField] private RectTransform settingButtonTransform;
-
-    //for final score tweening
-    [SerializeField] private RectTransform targetPos;
-    [SerializeField] private RectTransform gemImage;
 
     private GameManager gameManagerInstance;
 
@@ -56,7 +54,7 @@ public class UIManager : MonoBehaviour
     public void SetGemScore(string newText)
     {
         gemScoreText.text = newText;
-        gemScoreTransform.DOScale(1f, 0.1f).From(0.8f).SetEase(Ease.InFlash);
+        ScaleTweenerEffect(gemScoreTransform, 1f, 0.1f, 0.8f, Ease.InFlash);
     }
 
     public void SetFinalScore(string newText)
@@ -67,26 +65,28 @@ public class UIManager : MonoBehaviour
 
     public void OnSettingButtonPressed()
     {
-        settingButtonTransform.DOScale(1.5f, 0.25f).SetEase(mainMenuPanelEase);
+        ScaleTweenerEffect(settingButtonTransform, 1.5f, 0.25f, 1f, mainMenuPanelEase);
         PanelsTweenerEffect(mainMenuPanel,true);
         PanelsTweenerEffect(settingPanel);
     }
 
     public void InGameTextTweener()
     {
-        amazingText.gameObject.SetActive(true);
-        amazingText.DOAnchorPos(new Vector2(0, 580f), 0.75f);
-        amazingText.GetComponent<Image>().DOFade(0, 0.75f).OnComplete(() =>
+        int index = Random.Range(0, feedBackText.Length);
+        
+        Debug.Log(index);
+        feedBackText[index].gameObject.SetActive(true);
+        feedBackText[index].DOAnchorPos(new Vector2(0, 500f), 1f).SetEase(mainMenuPanelEase).OnComplete(() =>
         {
-            amazingText.DOAnchorPos(Vector2.zero, 3f);
-            amazingText.gameObject.SetActive(false);
+            feedBackText[index].DOAnchorPos(new Vector2(2000f, 500f), 2f).SetEase(mainMenuPanelEase);
+            feedBackText[index].DOAnchorPos(new Vector2(-2000f, 500f), 0).SetDelay(2f);
         });
     }
     public void OnCloseSettingButtonPressed()
     {
         PanelsTweenerEffect(settingPanel,true);
         PanelsTweenerEffect(mainMenuPanel);
-        settingButtonTransform.DOScale(1f, 0.25f).SetEase(mainMenuPanelEase);
+        ScaleTweenerEffect(settingButtonTransform, 1f, 0.25f, 1.5f, mainMenuPanelEase);
     }
 
     public void OnLevelComplete()
@@ -109,18 +109,18 @@ public class UIManager : MonoBehaviour
         if (!isOn)
         {
             canvasGroup.gameObject.SetActive(true);
-            canvasGroup.DOFade(1f, 0.35f).From(0f);
-            canvasGroup.transform.DOScale(Vector3.one, 0.3f).From(new Vector3(0.75f, 0.35f)).SetEase(mainMenuPanelEase);
+            canvasGroup.DOFade(1f, 0.75f).From(0f);
+            canvasGroup.transform.DOScale(Vector3.one, 0.75f).From(new Vector3(0.75f, 0.35f)).SetEase(mainMenuPanelEase);
         }
         else
         {
-            canvasGroup.DOFade(0f, 0.35f).From(1f).OnComplete(()=>canvasGroup.gameObject.SetActive(false));
+            canvasGroup.DOFade(0f, 0.75f).From(1f).OnComplete(()=>canvasGroup.gameObject.SetActive(false));
         }
     }
 
-    void ScaleTweenerEffect(RectTransform rectTransform, float endVal, float duration)
+    void ScaleTweenerEffect(RectTransform rectTransform, float endVal, float duration, float fromVal, Ease ease)
     {
-        rectTransform.DOScale(endVal, duration).SetEase(mainMenuPanelEase);
+        rectTransform.DOScale(endVal, duration).SetEase(ease);
         
     }
 }

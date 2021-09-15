@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     {
         RB = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+
+        isLanded = true;
     }
     public void SetMoveSpeed(float newSpeed) => moveSpeed = newSpeed;
     public float GetMoveSpeed()
@@ -60,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         
         // handling rotation
         
-            if (Input.GetMouseButton(0) )
+            if (Input.GetMouseButton(0) && !isPerformingAttack)
             {
             if (!isClimbing)
             {
@@ -84,13 +86,12 @@ public class PlayerMovement : MonoBehaviour
                 transform.DORotateQuaternion(Quaternion.Euler(-90f, -90f, 90f), 0.25f);
         }
 
-
-            if (Physics.Raycast(transform.position, Vector3.down, distToGround, groundLayer) && !isLanded)
-            {
-                isLanded = true;
-                animator.SetTrigger("Land");
-              
-            }
+        
+        if (Physics.Raycast(transform.position, Vector3.down, distToGround, groundLayer) && !isLanded)
+        {
+            isLanded = true;
+            animator.SetTrigger("Land");
+        }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.3f, 2.3f), transform.position.y,
             transform.position.z);
@@ -120,14 +121,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            xRot = 0f;
+            isLanded = false;
             isClimbing = false;
             animator.SetTrigger("Flip");
             RB.AddForce(Vector3.back * 10f, ForceMode.Impulse);
             RB.useGravity = true;
             SetMoveSpeed(0f);
-            xRot = 0f;
+          
             CameraManager.instance.PrioritizeWallCam(15, 10);
-            GameManager.instance.isGameOver = true;
             StartCoroutine(EnableLevelCompletePanel());
         }
         

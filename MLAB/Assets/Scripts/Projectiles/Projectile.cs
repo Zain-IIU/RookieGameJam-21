@@ -88,7 +88,6 @@ public class Projectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && isEnemyProjectile)
         {
-            Debug.Log("Tornado col det");
             Destroy(gameObject);
         }
     }
