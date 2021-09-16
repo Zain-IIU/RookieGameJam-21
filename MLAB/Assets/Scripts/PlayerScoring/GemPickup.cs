@@ -33,7 +33,7 @@ public class GemPickup : MonoBehaviour
             
             gem.DOMove(targetPos.position, 0.75f).SetEase(gemEaseMove).OnComplete(() =>
                 {
-                      UIManager.instance.SetGemScore(ScoreManager.instance.AddScore(gemPickupScore).ToString());
+                      UIManager.instance.SetGemScoreText(ScoreManager.instance.AddScore(gemPickupScore).ToString());
                       Destroy(gem.gameObject);
                 });
         }

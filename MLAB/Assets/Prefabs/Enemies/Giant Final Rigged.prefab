@@ -828,7 +828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5134574086568719269}
   - component: {fileID: 8518562882271756172}
-  - component: {fileID: 2951686201000769494}
+  - component: {fileID: 1543217686571733491}
   m_Layer: 0
   m_Name: SwordTriggerArea
   m_TagString: Untagged
@@ -863,7 +863,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2951686201000769494
+--- !u!114 &1543217686571733491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -872,13 +872,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2955835718769800249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df141c343618834c9bba75a6b3c655b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f4c6eaaab7747e68f9c9160b93a5f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveable: 0
   power: 0
-  amplitude: 2
-  occilation: 0.5
 --- !u!1 &3568973194411839780
 GameObject:
   m_ObjectHideFlags: 0

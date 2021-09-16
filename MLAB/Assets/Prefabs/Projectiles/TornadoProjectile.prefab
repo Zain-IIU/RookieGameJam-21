@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9213933852632474142}
   - component: {fileID: 2882873588201821592}
   - component: {fileID: 4787585797647462827}
-  - component: {fileID: 423795252852271804}
+  - component: {fileID: 4450413623942197678}
   m_Layer: 0
   m_Name: TornadoProjectile
   m_TagString: Untagged
@@ -4978,7 +4978,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5615189, y: 0.91669077, z: 2.654033}
   m_Center: {x: -0.089728326, y: -0.023334295, z: 1.4037626}
---- !u!114 &423795252852271804
+--- !u!114 &4450413623942197678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4987,13 +4987,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1166697705615292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df141c343618834c9bba75a6b3c655b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f4c6eaaab7747e68f9c9160b93a5f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveable: 0
   power: 0
-  amplitude: 2
-  occilation: 0.5
 --- !u!1 &1442534876973244
 GameObject:
   m_ObjectHideFlags: 0

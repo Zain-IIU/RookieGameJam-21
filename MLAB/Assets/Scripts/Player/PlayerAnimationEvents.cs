@@ -81,7 +81,7 @@ public class PlayerAnimationEvents : MonoBehaviour
     {
         groundPunchPowerEffects.SetActive(true);
 
-        Transform lightingTrial = Instantiate(powerAttackEffect, transform.position, Quaternion.identity).transform;
+        Transform lightingTrial = Instantiate(powerAttackEffect, transform.position + new Vector3(0, 1.2f, 0f), Quaternion.identity).transform;
         lightingTrial.DOMove(bossTransform.position, 2f);
     }
     

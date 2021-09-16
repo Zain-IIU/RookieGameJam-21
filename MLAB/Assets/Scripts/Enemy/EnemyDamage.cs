@@ -9,6 +9,7 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private LayerMask enemyLayerMask;
 
     [SerializeField] private GameObject enemyDeadFX;
+    [SerializeField] private GameObject hitDeadFX;
 
     private bool isDestroyed;
   
@@ -33,15 +34,10 @@ public class EnemyDamage : MonoBehaviour
                     collider.GetComponent<RagDollEnemy>().EnableRagdoll();
                 }
             }
-     
+
+            Instantiate(hitDeadFX, collision.contacts[0].point, hitDeadFX.transform.rotation, transform);
             UIManager.instance.InGameTextTweener();
         }
-
-        if (collision.gameObject.CompareTag("Sword") && ragDollEnemy != null)
-        {
-            ragDollEnemy.EnableRagdoll();
-        }
-
 
         if (collision.gameObject.CompareTag("Player") && collision.transform.localScale != Vector3.one)
         {
@@ -51,5 +47,15 @@ public class EnemyDamage : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.gameObject.CompareTag("Sword") && ragDollEnemy != null)
+        {
+            ragDollEnemy.EnableRagdoll();
+            Instantiate(hitDeadFX, transform.position, hitDeadFX.transform.rotation, transform);
+        }
 
+
+    }
 }

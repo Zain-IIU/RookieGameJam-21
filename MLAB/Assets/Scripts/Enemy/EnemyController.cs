@@ -24,6 +24,7 @@ public class EnemyController : MonoBehaviour
     
     private Transform playerTransform;
     private Animator animator;
+    private GameManager gameManager;
    
    
     [SerializeField] private float timeToAttack = 3f;
@@ -40,7 +41,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-       
+       gameManager = GameManager.instance;
         switch (enemyType)
         {
             case EnemyType.CowardEnemy:
@@ -66,7 +67,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.instance.isGameStarted || GameManager.instance.isGameOver) return;
+        if (!gameManager.isGameStarted || gameManager.isGameOver || gameManager.isLevelCompleted) return;
         
         switch (enemyType)
         {
@@ -98,7 +99,7 @@ public class EnemyController : MonoBehaviour
                 break;
         }
 
-        if (transform.position.z < playerTransform.transform.position.z  - 5f)
+        if (transform.position.z < playerTransform.transform.position.z - 5f)
         {
             Destroy(gameObject);
         }

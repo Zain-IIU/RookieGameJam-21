@@ -17,6 +17,8 @@ using UnityEngine;
     [SerializeField] private LayerMask enemyMask;
     
     private Animator animator;
+
+    public static bool runOnce;
     
    // public bool runOnce;
 
@@ -51,7 +53,6 @@ using UnityEngine;
     private void Update()
     {
         
-      
         // todo check previous power if its not equal then assigne cur power
         if (curPower != updatePower)
         {
@@ -78,11 +79,10 @@ using UnityEngine;
         }
         
         
-        if (Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, singleEnemyDistance, enemyMask))
+        if (!runOnce && Physics.Raycast(raypoint.position, raypoint.forward, out hitInfo, singleEnemyDistance, enemyMask))
         {
             if (hitInfo.collider != null && curPower.ToString() != "SizeAttack")
             {
-              //  runOnce = true;
                 //````````
                 PlayerAnimationsHandler.instance.SetTransitions(curPower);
                 //````````
@@ -96,6 +96,7 @@ using UnityEngine;
     
     public void SetCurPower(PowerType newPower)
     {
+        
         if (curPower != newPower) 
         {
             pickupCount = 0;
@@ -104,9 +105,8 @@ using UnityEngine;
         {
             pickupCount++;
         }
-
+      
         curPower = newPower;
-       
     }
 
     
@@ -143,6 +143,7 @@ using UnityEngine;
 
     public int GetPickupCount()
     {
+        UIManager.instance.SetPowerMeter(pickupCount + 1f);
         return pickupCount;
     }
     

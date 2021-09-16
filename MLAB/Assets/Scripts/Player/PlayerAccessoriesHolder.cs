@@ -99,6 +99,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
 
     public void ResetAllAcessories()
     {
+        UIManager.instance.ResetPowerMeter();
         for (int i = 0; i < 3; i++)
         {
             playerAccessories.swordItems[i].SetActive(false);

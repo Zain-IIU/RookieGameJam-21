@@ -13,12 +13,13 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] GameObject climbPoint;
     [SerializeField] GameObject runPoint;
-
+    [SerializeField] private Transform targetX10Point;
+    
     private Animator animator;
+    private GameManager gameManager;
     
     float xRot;
     float yRot;
-
     
     bool isClimbing;
 
@@ -28,13 +29,16 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float distToGround = 2f;
     private bool isLanded;
+    
+    
     #endregion
 
     private void Start()
     {
         RB = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-
+        gameManager = GameManager.instance;
+        
         isLanded = true;
     }
     public void SetMoveSpeed(float newSpeed) => moveSpeed = newSpeed;
@@ -49,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
       
-        if (!GameManager.instance.isGameStarted || GameManager.instance.isGameOver) return;
+        if (!gameManager.isGameStarted || gameManager.isGameOver || gameManager.isLevelCompleted) return;
       //  if (isPerformingAttack) return;
         
         //for moving straight
@@ -78,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
                 transform.DORotateQuaternion(Quaternion.Euler(xRot, -90, 90f), 0.15f);
             }
         }
-            else
-            {
-             if(!isClimbing)
+        else
+        {
+            if(!isClimbing)
                 transform.DORotateQuaternion(Quaternion.Euler(0f, 0f, 0f), 0.25f);
-             else
+            else
                 transform.DORotateQuaternion(Quaternion.Euler(-90f, -90f, 90f), 0.25f);
         }
 
@@ -91,22 +95,29 @@ public class PlayerMovement : MonoBehaviour
         {
             isLanded = true;
             animator.SetTrigger("Land");
+            GameManager.instance.LevelCompleted();
         }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.3f, 2.3f), transform.position.y,
             transform.position.z);
     }
 
-
+    
     #endregion
+
+    private bool reachedPeakPoint;
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject==climbPoint)
+        if(collision.gameObject==climbPoint && !reachedPeakPoint)
         {
             isClimbing = true;
             RB.useGravity = false;
             xRot = -90f;
             CameraManager.instance.PrioritizeWallCam(10, 15);
+            
+            RB.constraints = RigidbodyConstraints.None;
+            RB.freezeRotation = true;
+            RB.velocity = Vector3.zero;
         }
         if(collision.gameObject == runPoint)
         {
@@ -125,23 +136,30 @@ public class PlayerMovement : MonoBehaviour
             isLanded = false;
             isClimbing = false;
             animator.SetTrigger("Flip");
+     
             RB.AddForce(Vector3.back * 10f, ForceMode.Impulse);
             RB.useGravity = true;
+            
             SetMoveSpeed(0f);
-          
             CameraManager.instance.PrioritizeWallCam(15, 10);
-            StartCoroutine(EnableLevelCompletePanel());
         }
         
         if(other.gameObject.CompareTag("Multiplier"))
         {
             ScoreManager.instance.SetMultiliedScore();
+            if (ScoreManager.instance.GetMultipliedScore() > 9)
+            {
+                xRot = 0f;
+                reachedPeakPoint = true;
+                isClimbing = false;
+                transform.parent = targetX10Point;
+                transform.DORotateQuaternion(Quaternion.Euler(0f, 0f, 0f), 0.25f);
+                transform.localPosition = Vector3.zero;
+                SetMoveSpeed(0f);
+                animator.SetTrigger("LevelEnd");
+                GameManager.instance.LevelCompleted();
+            }
+           
         }
-    }
-
-    IEnumerator EnableLevelCompletePanel()
-    {
-        yield return new WaitForSeconds(2f);
-        UIManager.instance.OnLevelComplete();
     }
 }

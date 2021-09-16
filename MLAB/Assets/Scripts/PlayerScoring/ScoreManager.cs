@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -20,11 +21,17 @@ public class ScoreManager : MonoBehaviour
         score += newScore;
         return score;
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
     
    
-    public int GetCurrentScore()
+    public int GetMultipliedScore()
     {
-        return score*scoreMultiplier;
+       
+        return scoreMultiplier;
     }
 
     public void SetMultiliedScore()
