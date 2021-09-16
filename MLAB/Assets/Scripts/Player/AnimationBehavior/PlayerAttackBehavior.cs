@@ -51,7 +51,7 @@ public class PlayerAttackBehavior : StateMachineBehaviour
         CameraManager.instance.ToggleActionCam_01(false);
         CameraManager.instance.ToggleActionCam_02(false);
 
-        PlayerAttackSystem.instance.EnableFootTrailEffects(false, false);
+       // PlayerAttackSystem.instance.EnableFootTrailEffects(false, false);
     }
 
 

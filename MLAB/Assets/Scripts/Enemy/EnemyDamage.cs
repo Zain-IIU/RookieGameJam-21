@@ -11,8 +11,6 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private GameObject enemyDeadFX;
     [SerializeField] private GameObject hitDeadFX;
 
-    private bool isDestroyed;
-  
     private RagDollEnemy ragDollEnemy;
 
     private void Awake()

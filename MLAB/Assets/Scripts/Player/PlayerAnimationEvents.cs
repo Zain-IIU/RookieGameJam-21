@@ -15,7 +15,7 @@ public class PlayerAnimationEvents : MonoBehaviour
     [SerializeField] Transform projectilePoints;
     [SerializeField] private float radius = 5f;
     [SerializeField] private LayerMask enemyLayerMask;
-    
+
     [SerializeField] private float forceAmount = 10f;
 
     [SerializeField] private float jumpForce;
@@ -28,9 +28,10 @@ public class PlayerAnimationEvents : MonoBehaviour
     {
         RB = GetComponent<Rigidbody>();
     }
+
     public void DetectEnemiesInRange()
     {
-        
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius, enemyLayerMask);
 
         foreach (Collider collider in colliders)
@@ -40,23 +41,27 @@ public class PlayerAnimationEvents : MonoBehaviour
                 collider.GetComponent<RagDollEnemy>().EnableRagdoll();
             }
         }
+
         UIManager.instance.InGameTextTweener();
     }
+
     public void JumpAttack()
     {
-        RB.AddForce(Vector3.forward * jumpForce/2 + Vector3.up * jumpForce/2,ForceMode.Impulse);
+        RB.AddForce(Vector3.forward * jumpForce / 2 + Vector3.up * jumpForce / 2, ForceMode.Impulse);
     }
+
     public void MagicRangeAttack()
     {
         magicPunchPowerEffects.SetActive(true);
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius*2, enemyLayerMask);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius * 2, enemyLayerMask);
 
         foreach (Collider collider in colliders)
         {
             if (collider != null)
             {
-                collider.attachedRigidbody.AddForce(Vector3.forward * forceAmount + Vector3.up * forceAmount, ForceMode.Impulse);
+                collider.attachedRigidbody.AddForce(Vector3.forward * forceAmount + Vector3.up * forceAmount,
+                    ForceMode.Impulse);
             }
         }
 
@@ -64,7 +69,7 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     public void MagicAttackProjectile()
     {
-       Instantiate(magicProjectile, projectilePoints.transform.position, Quaternion.identity);
+        Instantiate(magicProjectile, projectilePoints.transform.position, Quaternion.identity);
     }
 
     public void SpeedPowerAttack()
@@ -81,14 +86,9 @@ public class PlayerAnimationEvents : MonoBehaviour
     {
         groundPunchPowerEffects.SetActive(true);
 
-        Transform lightingTrial = Instantiate(powerAttackEffect, transform.position + new Vector3(0, 1.2f, 0f), Quaternion.identity).transform;
+        Transform lightingTrial =
+            Instantiate(powerAttackEffect, transform.position + new Vector3(0, 1.2f, 0f), Quaternion.identity)
+                .transform;
         lightingTrial.DOMove(bossTransform.position, 2f);
-    }
-    
-    
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }

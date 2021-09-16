@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5600307521771832755}
   - component: {fileID: 5600307521771832752}
   - component: {fileID: 5600307521771832655}
+  - component: {fileID: 6659276955309728710}
   m_Layer: 0
   m_Name: MagicPickup
   m_TagString: Untagged
@@ -62,6 +63,19 @@ MonoBehaviour:
   scaleEase: 25
   easeTimer: 0.5
   increment: 0.25
+--- !u!114 &6659276955309728710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600307521771832654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8d77afb46f46be8e5164cd7dd9b40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
 --- !u!1 &5601744693870208597
 GameObject:
   m_ObjectHideFlags: 0

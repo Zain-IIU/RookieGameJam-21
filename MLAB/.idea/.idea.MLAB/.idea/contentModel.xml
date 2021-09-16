@@ -142,6 +142,7 @@
             <e p="Pickup.cs" t="Include" />
             <e p="PowerType.cs" t="Include" />
           </e>
+          <e p="ObjectDestroyer.cs" t="Include" />
           <e p="Obstacles" t="Include">
             <e p="Obstacles.cs" t="Include" />
           </e>
@@ -156,6 +157,7 @@
             <e p="PlayerAnimationEvents.cs" t="Include" />
             <e p="PlayerAnimationsHandler.cs" t="Include" />
             <e p="PlayerAttackSystem.cs" t="Include" />
+            <e p="PlayerHealthSystem.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerSpeedAttack.cs" t="Include" />
           </e>

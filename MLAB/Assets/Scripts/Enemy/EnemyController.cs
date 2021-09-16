@@ -31,6 +31,12 @@ public class EnemyController : MonoBehaviour
     private float timerCounter;
     
     bool isGiantPlayer;
+    private static readonly int StartRun = Animator.StringToHash("StartRun");
+    private static readonly int StopRun = Animator.StringToHash("StopRun");
+    private static readonly int CowardEnemy = Animator.StringToHash("CowardEnemy");
+    private static readonly int ShooterEnemy = Animator.StringToHash("ShooterEnemy");
+    private static readonly int ThrowerEnemy = Animator.StringToHash("ThrowerEnemy");
+
     private void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -45,25 +51,19 @@ public class EnemyController : MonoBehaviour
         switch (enemyType)
         {
             case EnemyType.CowardEnemy:
-                animator.SetTrigger("CowardEnemy");
+                animator.SetTrigger(CowardEnemy);
                 break;
             
             case EnemyType.Shooters:
-                animator.SetTrigger("ShooterEnemy");
+                animator.SetTrigger(ShooterEnemy);
                 break;
 
             case EnemyType.BarrelThrower:
-                animator.SetTrigger("ThrowerEnemy");
+                animator.SetTrigger(ThrowerEnemy);
                 break;
         }
     }
 
-    /*
-    void OnGameStart()
-    {
-        animator.SetTrigger("StartGame");
-
-    }*/
 
     void Update()
     {
@@ -75,7 +75,7 @@ public class EnemyController : MonoBehaviour
 
                 if (playerTransform.localScale != Vector3.one && DistanceCheck(minDistanceRange))
                 {
-                    animator.SetTrigger("StartRun");
+                    animator.SetTrigger(StartRun);
 
                     if (isRagdoll)
                     {
@@ -87,7 +87,7 @@ public class EnemyController : MonoBehaviour
                 }
                 else
                 {
-                    animator.SetTrigger("StopRun");
+                    animator.SetTrigger(StopRun);
                 }
                 break;
 
@@ -98,12 +98,6 @@ public class EnemyController : MonoBehaviour
                 EnemyAttack("Throw");
                 break;
         }
-
-        if (transform.position.z < playerTransform.transform.position.z - 5f)
-        {
-            Destroy(gameObject);
-        }
-        
     }
     
     void EnemyAttack(string trigger)
@@ -123,12 +117,12 @@ public class EnemyController : MonoBehaviour
             isGiantPlayer = true;
             transform.rotation = Quaternion.Euler(0, 0, 0);
            
-            animator.SetTrigger("StartRun");
+            animator.SetTrigger(StartRun);
             transform.Translate(Vector3.forward * (enemyRunSpeed * Time.deltaTime));
         }
         else
         {
-            animator.SetTrigger("StopRun");
+            animator.SetTrigger(StopRun);
         }
     }
 

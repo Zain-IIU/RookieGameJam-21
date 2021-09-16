@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     { 
         instance = this;
         cinemachineBrain.m_DefaultBlend.m_Time = 0.25f;
+        
         // todo checking to see if UI is blocking touches
         Input.simulateMouseWithTouches = true;
     }
@@ -38,10 +39,6 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void OnRestartButtonPress()
-    {
-        /*SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);*/
-    }
 
     public void LevelCompleted()
     {
@@ -52,4 +49,19 @@ public class GameManager : MonoBehaviour
         levelCompleteCam.gameObject.SetActive(true);
         levelCompleteCam.Priority = 25;
     }
+
+    public void OnGameOver()
+    {
+        isGameOver = true;
+        UIManager.instance.OnGameOver();  
+        cinemachineBrain.m_DefaultBlend.m_Time = 1f;
+        levelCompleteCam.gameObject.SetActive(true);
+        levelCompleteCam.Priority = 25;
+    }
+    
+    public void OnRestartButtonPress()
+    {
+        /*SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);*/
+    }
+
 }

@@ -12,17 +12,23 @@ public class PlayerAnimationsHandler : MonoBehaviour
     Animator[] mageFellows;
     [SerializeField]
     PowerType curPlayerState;
-   
+
+
+    private PlayerAccessoriesHolder playerAccessoriesHolder;
+    private PlayerAttackSystem playerAttackSystem;
+    private static readonly int MageRun = Animator.StringToHash("MageRun");
+    private static readonly int MageProjectileAttack = Animator.StringToHash("MageProjectileAttack");
+    private static readonly int SwordNormalAttack = Animator.StringToHash("SwordNormalAttack");
+    private static readonly int HammerProjectileAttack = Animator.StringToHash("HammerProjectileAttack");
+
     private void Awake()
     {
         instance = this;
-
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+        playerAccessoriesHolder = GetComponent<PlayerAccessoriesHolder>();
+        playerAttackSystem = GetComponent<PlayerAttackSystem>();
         Anim = GetComponent<Animator>();
     }
+
 
     // Update is called once per frame
     void Update()
@@ -35,11 +41,11 @@ public class PlayerAnimationsHandler : MonoBehaviour
     {
         if(powerType == PowerType.MagicAttack)
         {
-            Anim.SetBool("MageRun", true);
+            Anim.SetBool(MageRun, true);
         }
         else
         {
-            Anim.SetBool("MageRun", false);
+            Anim.SetBool(MageRun, false);
         }
     }
 
@@ -48,14 +54,14 @@ public class PlayerAnimationsHandler : MonoBehaviour
         switch (playerState)
         {
             case PowerType.MagicAttack:
-                Anim.SetTrigger("MageProjectileAttack");
+                Anim.SetTrigger(MageProjectileAttack);
                 MageFellowAnimations("MageProjectileAttack", true);
                 break;
             case PowerType.SwordAttack:
-                Anim.SetTrigger("SwordNormalAttack");
+                Anim.SetTrigger(SwordNormalAttack);
                 break;
             case PowerType.GroundHammerAttack:
-                Anim.SetTrigger("HammerProjectileAttack");
+                Anim.SetTrigger(HammerProjectileAttack);
                 break;
         }
     }
@@ -83,32 +89,29 @@ public class PlayerAnimationsHandler : MonoBehaviour
         }
     }
 
-    public void ResetPlayerSize()
-    {
-         transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
-    }
 
     public void ResetTransitions(PowerType playerState)
     {
         switch (playerState)
         {
             case PowerType.MagicAttack:
-                Anim.ResetTrigger("MageProjectileAttack");
+                Anim.ResetTrigger(MageProjectileAttack);
                 MageFellowAnimations("MageProjectileAttack",false);
                 break;
             case PowerType.SwordAttack:
-                Anim.ResetTrigger("SwordNormalAttack");
+                Anim.ResetTrigger(SwordNormalAttack);
                 break;
             case PowerType.GroundHammerAttack:
-                Anim.ResetTrigger("HammerProjectileAttack");
+                Anim.ResetTrigger(HammerProjectileAttack);
                 break;
         }
     }
     
     public void ResetPlayerPowers(PowerType newPower)
     {
-        PlayerAccessoriesHolder.instance.ResetAllAcessories();
-        PlayerAttackSystem.instance.SetCurPower(newPower);
+        playerAccessoriesHolder.ResetAllAcessories();
+        playerAttackSystem.SetCurPower(newPower);
+        
         if (curPlayerState==PowerType.SizeAttack)
            transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
         curPlayerState = newPower;

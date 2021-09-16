@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Animator animator;
     private GameManager gameManager;
+    private CameraManager cameraManager;
     
     float xRot;
     float yRot;
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         RB = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         gameManager = GameManager.instance;
+        cameraManager = CameraManager.instance;
         
         isLanded = true;
     }
@@ -106,6 +108,9 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     private bool reachedPeakPoint;
+    private static readonly int LevelEnd = Animator.StringToHash("LevelEnd");
+    private static readonly int Flip = Animator.StringToHash("Flip");
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject==climbPoint && !reachedPeakPoint)
@@ -113,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
             isClimbing = true;
             RB.useGravity = false;
             xRot = -90f;
-            CameraManager.instance.PrioritizeWallCam(10, 15);
+            cameraManager.PrioritizeWallCam(10, 15);
             
             RB.constraints = RigidbodyConstraints.None;
             RB.freezeRotation = true;
@@ -124,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
             isClimbing = false;
             RB.useGravity = true;
             xRot = 0f;
-            CameraManager.instance.PrioritizeWallCam(15, 10);
+            cameraManager.PrioritizeWallCam(15, 10);
         }
     }
 
@@ -135,18 +140,19 @@ public class PlayerMovement : MonoBehaviour
             xRot = 0f;
             isLanded = false;
             isClimbing = false;
-            animator.SetTrigger("Flip");
+            animator.SetTrigger(Flip);
      
             RB.AddForce(Vector3.back * 10f, ForceMode.Impulse);
             RB.useGravity = true;
             
             SetMoveSpeed(0f);
-            CameraManager.instance.PrioritizeWallCam(15, 10);
+            cameraManager.PrioritizeWallCam(15, 10);
         }
         
         if(other.gameObject.CompareTag("Multiplier"))
         {
             ScoreManager.instance.SetMultiliedScore();
+            
             if (ScoreManager.instance.GetMultipliedScore() > 9)
             {
                 xRot = 0f;
@@ -156,8 +162,8 @@ public class PlayerMovement : MonoBehaviour
                 transform.DORotateQuaternion(Quaternion.Euler(0f, 0f, 0f), 0.25f);
                 transform.localPosition = Vector3.zero;
                 SetMoveSpeed(0f);
-                animator.SetTrigger("LevelEnd");
-                GameManager.instance.LevelCompleted();
+                animator.SetTrigger(LevelEnd);
+                gameManager.LevelCompleted();
             }
            
         }

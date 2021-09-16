@@ -7,6 +7,8 @@ public class Pickup : MonoBehaviour
 {
     private PlayerMovement playerMovement;
 
+    private PlayerAttackSystem playerAttackSystem;
+    
     //Custom Class for Handling PlayerPowers
     public PowerType powerType;
 
@@ -27,9 +29,11 @@ public class Pickup : MonoBehaviour
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
     }
+    
 
     private void Start()
     {
+        playerAttackSystem = PlayerAttackSystem.instance;
         lastSize = playerSize = playerMovement.transform.localScale;
     }
 
@@ -37,10 +41,8 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
         {   
-            PlayerAttackSystem.instance.SetCurPower(powerType);
-            
-            PlayerAttackSystem.instance.SetPowerTrailEffect();
-
+            playerAttackSystem.SetCurPower(powerType);
+            playerAttackSystem.SetPowerTrailEffect();
             PlayerAccessoriesHolder.instance.SetAccesories(powerType);
             
             //normalizing sizeVal

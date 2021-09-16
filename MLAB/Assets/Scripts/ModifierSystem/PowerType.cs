@@ -6,5 +6,4 @@
     MultiplierAttack,
     SwordAttack,
     MagicAttack,
-   
 }

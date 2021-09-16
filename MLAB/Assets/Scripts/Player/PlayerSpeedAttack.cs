@@ -15,11 +15,18 @@ public class PlayerSpeedAttack : MonoBehaviour
     private bool isEnemyInRange;
 
     public bool miniPlayerForBoss;
+
+    private RagDollEnemy ragDollEnemy;
    
     private void Awake()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         boss = GameObject.FindGameObjectWithTag("Boss");
+    }
+
+    private void Start()
+    {
+        ragDollEnemy = boss.GetComponent<RagDollEnemy>();
     }
 
     private void OnEnable()
@@ -101,7 +108,7 @@ public class PlayerSpeedAttack : MonoBehaviour
         
         if (other.gameObject.CompareTag("Boss"))
         {
-            boss.GetComponent<RagDollEnemy>().EnableRagdoll();
+            ragDollEnemy.EnableRagdoll();
         }
     }
 
@@ -116,13 +123,5 @@ public class PlayerSpeedAttack : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-
-    /*
-    void OnBossCollision(Collision other)
-    {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
-    }
-    */
 
 }

@@ -44,12 +44,13 @@ using UnityEngine;
 
     private void OnGameStart()
     { 
-       animator.SetBool("hasStarted", true);
+       animator.SetBool(HasStarted, true);
     }
 
 
     private PowerType updatePower;
-    
+    private static readonly int HasStarted = Animator.StringToHash("hasStarted");
+
     private void Update()
     {
         
@@ -96,7 +97,6 @@ using UnityEngine;
     
     public void SetCurPower(PowerType newPower)
     {
-        
         if (curPower != newPower) 
         {
             pickupCount = 0;
@@ -118,15 +118,15 @@ using UnityEngine;
             case PowerType.MagicAttack:
                 magePickupEffect.SetActive(true);
                 SetRaycastDistance(15f);
-                EnableFootTrailEffects(false, false);
+              //  EnableFootTrailEffects(false, false);
                 break;
             case PowerType.SwordAttack:
                 SetRaycastDistance(4f);
-                EnableFootTrailEffects(true, false);
+              //  EnableFootTrailEffects(true, false);
                 break;
             case PowerType.GroundHammerAttack:
                 SetRaycastDistance(13f);
-                EnableFootTrailEffects(true, false);
+             //   EnableFootTrailEffects(true, false);
                 break;
             case PowerType.MultiplierAttack:
                 SetRaycastDistance(7f);
@@ -136,7 +136,7 @@ using UnityEngine;
             case PowerType.SizeAttack:
                 magePickupEffect.SetActive(true);
                 SetRaycastDistance(7f);
-                EnableFootTrailEffects(false, false);
+             //   EnableFootTrailEffects(false, false);
                 break;
         }
     }
@@ -149,8 +149,8 @@ using UnityEngine;
     
     public void EnableFootTrailEffects(bool isDustEnable, bool isLightingEnable)
     {
-        footDustFx.SetActive(isDustEnable);
-        lightningFootFx.SetActive(isLightingEnable);
+        /*footDustFx.SetActive(isDustEnable);
+        lightningFootFx.SetActive(isLightingEnable);*/
     }
 
 
