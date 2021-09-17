@@ -16,6 +16,7 @@ TagManager:
   - Multiplier
   - Obstacle
   - Gem
+  - PlayerSpine
   layers:
   - Default
   - TransparentFX

@@ -6,28 +6,34 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     private PlayerMovement playerMovement;
-
     private PlayerAttackSystem playerAttackSystem;
     
     //Custom Class for Handling PlayerPowers
     public PowerType powerType;
 
     public Ease scaleEase;
-
     public float easeTimer;
 
+    [SerializeField] Transform playerMusleSpineSize;
+    private static float musclePlayerSize = 1f;
+    private float musclePlayeIncrement = 0.8f;
+    
     private Vector3 playerSize;
+    private Vector3 lastSize;
 
     private static float sizeVal = 1f;
-    private static float speedVal;
    
     public float increment;
 
-    private Vector3 lastSize;
-    
+   
     private void Awake()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
+
+        if (playerMusleSpineSize == null)
+        {
+            playerMusleSpineSize = GameObject.FindGameObjectWithTag("PlayerSpine").transform;
+        }
     }
     
 
@@ -60,21 +66,32 @@ public class Pickup : MonoBehaviour
 
                   
                 playerModifier.transform.DOScale(playerSize, easeTimer).From(lastSize).SetEase(scaleEase);
+
+                if (playerMusleSpineSize.localScale != Vector3.one)
+                {
+                    playerMusleSpineSize.DOScale(1f, easeTimer).SetEase(scaleEase);
+                }
+                
                 lastSize = playerSize;
+            }
+            
+            else if (powerType == PowerType.MuscleAttack)
+            {
+                musclePlayerSize += musclePlayeIncrement;
+                playerMusleSpineSize.DOScale(musclePlayerSize, easeTimer).SetEase(scaleEase);
             }
             
             else
             {
+                if (playerMusleSpineSize.localScale != Vector3.one)
+                {
+                    playerMusleSpineSize.DOScale(1f, easeTimer).SetEase(scaleEase);
+                }
                 playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
                 playerModifier.SetMoveSpeed(10);
             }
             
             Destroy(gameObject);
         }
-        // todo add better pickups
-        // pickupFx.SetActive(true);
-     
-      
-      
     }
 }

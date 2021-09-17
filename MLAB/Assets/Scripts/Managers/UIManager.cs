@@ -2,6 +2,7 @@ using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -88,6 +89,8 @@ public class UIManager : MonoBehaviour
 
     public void OnSettingButtonPressed()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
         ScaleTweenerEffect(settingButtonTransform, 1.5f, 0.25f, 1f, mainMenuPanelEase);
         PanelsTweenerEffect(mainMenuPanel,true);
         PanelsTweenerEffect(settingPanel);
@@ -99,10 +102,10 @@ public class UIManager : MonoBehaviour
         int index = Random.Range(0, feedBackText.Length);
        
         feedBackText[index].gameObject.SetActive(true);
-        feedBackText[index].DOAnchorPos(new Vector2(0, 500f), 0.5f).SetEase(mainMenuPanelEase).OnComplete(() =>
+        feedBackText[index].DOAnchorPos(new Vector2(0, 500f), 0.8f).SetEase(mainMenuPanelEase).OnComplete(() =>
         {
-            feedBackText[index].DOAnchorPos(new Vector2(2000f, 500f), 0.5f).SetEase(mainMenuPanelEase);
-            feedBackText[index].DOAnchorPos(new Vector2(-2000f, 500f), 0).SetDelay(0.5f);
+            feedBackText[index].DOAnchorPos(new Vector2(2000f, 500f), 0.8f).SetEase(mainMenuPanelEase);
+            feedBackText[index].DOAnchorPos(new Vector2(-2000f, 500f), 0).SetDelay(0.8f);
           
         });
       
@@ -132,9 +135,15 @@ public class UIManager : MonoBehaviour
 
         float initialScore = 0f;
         float levelScore = ScoreManager.instance.GetScore();
+        float scoreTextScore = levelScore;
         while (index < ScoreManager.instance.GetScore())
         {
             RectTransform gemObj = Instantiate(levelCompleteGemImg,gemHolder.transform);
+            if (scoreTextScore > 0)
+            {
+                scoreTextScore -= 1f;
+                gemScoreText.text = scoreTextScore.ToString();
+            }
             gemObj.DOMove(gemTargetPos.position, 1f).From(gemInitialPos.position + new Vector3(Random.Range(-32f, 32f), Random.Range(16, 64f), 0f)) 
                 .SetEase(Ease.Linear).OnComplete(()=>
                 {
@@ -142,10 +151,12 @@ public class UIManager : MonoBehaviour
                     
                     if (initialScore < levelScore)
                     {
+                        
                         initialScore += 1f;
+                       
                         SetFinalScoreText("x " + initialScore * ScoreManager.instance.GetMultipliedScore());
+
                     }
-                    
                 });
             index++;
             yield return new WaitForSeconds(0.1f);

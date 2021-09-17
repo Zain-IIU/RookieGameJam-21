@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject levelCompleteFx;
     [SerializeField] private CinemachineVirtualCamera levelCompleteCam;
     [SerializeField] private CinemachineBrain cinemachineBrain;
+
+    private int sceneIndex;
     
     // Start is called before the first frame update
     void Awake()
@@ -30,12 +32,19 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        
         if (EventSystem.current.IsPointerOverGameObject()) return;
         
         if (!isGameStarted && Input.GetMouseButtonDown(0))
         {
             isGameStarted = true;
             OnGameStart?.Invoke();
+        }
+
+        
+        if (isGameOver && Input.GetMouseButtonDown(0))
+        {
+            TapToRetryPress();
         }
     }
     
@@ -59,9 +68,17 @@ public class GameManager : MonoBehaviour
         levelCompleteCam.Priority = 25;
     }
     
-    public void OnRestartButtonPress()
+    public void TapToRetryPress()
     {
-        /*SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);*/
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadNextLevel()
+    {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        
+        PlayerPrefs.SetInt("SceneIndex", sceneIndex);
+        SceneManager.LoadScene( PlayerPrefs.GetInt("SceneIndex", sceneIndex));
     }
 
 }

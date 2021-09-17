@@ -43,6 +43,13 @@ public class EnemyDamage : MonoBehaviour
             Instantiate(enemyDeadFX, transform.position, enemyDeadFX.transform.rotation);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Player") &&
+            PlayerAttackSystem.instance.GetCurrentPower() == PowerType.MuscleAttack)
+        {
+            ragDollEnemy.EnableRagdoll();
+            Instantiate(hitDeadFX, transform.position, hitDeadFX.transform.rotation, transform);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -13,6 +13,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
     [SerializeField]
     PowerType curPlayerState;
 
+    [SerializeField] private Transform playerSpine;
 
     private PlayerAccessoriesHolder playerAccessoriesHolder;
     private PlayerAttackSystem playerAttackSystem;
@@ -27,6 +28,11 @@ public class PlayerAnimationsHandler : MonoBehaviour
         playerAccessoriesHolder = GetComponent<PlayerAccessoriesHolder>();
         playerAttackSystem = GetComponent<PlayerAttackSystem>();
         Anim = GetComponent<Animator>();
+
+        if (playerSpine == null)
+        {
+            playerSpine = GameObject.FindGameObjectWithTag("PlayerSpine").transform;
+        }
     }
 
 
@@ -114,7 +120,9 @@ public class PlayerAnimationsHandler : MonoBehaviour
         
         if (curPlayerState==PowerType.SizeAttack)
            transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.InBounce);
+        if (curPlayerState == PowerType.MuscleAttack)
+            playerSpine.DOScale(1f, 0.25f).SetEase(Ease.InBounce);
+            
         curPlayerState = newPower;
-
     }
 }

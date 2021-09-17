@@ -27,4 +27,7 @@ public class PlayerAccessories
     [Header("Hammer Effect")]
     public GameObject[] hammerFX;
 
+    [Header("Muscle Attack")] 
+    public GameObject[] muscleItems;
+
 }

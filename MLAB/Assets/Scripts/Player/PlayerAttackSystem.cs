@@ -109,6 +109,11 @@ using UnityEngine;
         curPower = newPower;
     }
 
+    public PowerType GetCurrentPower()
+    {
+        return curPower;
+    }
+
     
     //incrementing each power
     public void SetPowerTrailEffect()

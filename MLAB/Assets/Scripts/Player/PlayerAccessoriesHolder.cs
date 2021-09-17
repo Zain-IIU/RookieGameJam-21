@@ -45,6 +45,11 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                 playerAccessories.speedFellows[playerAttackSystem.GetPickupCount()].SetActive(true);
                 playerAccessories.speedItems[playerAttackSystem.GetPickupCount()].SetActive(true);               
                 break;
+            
+            case PowerType.MuscleAttack:
+                playerAccessories.muscleItems[playerAttackSystem.GetPickupCount()].SetActive(true);
+                AccessoryPositioningEffect(playerAccessories.muscleItems[playerAttackSystem.GetPickupCount()].transform);
+                break;
         }
         ResetOtherAccessories(true,powerType);
     }
@@ -61,6 +66,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                     playerAccessories.speedItems[i].SetActive(!toEnable);
                     playerAccessories.speedFellows[i].SetActive(!toEnable);
                     playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    playerAccessories.muscleItems[i].SetActive(!toEnable);
                     break;
 
                 
@@ -69,7 +75,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                     playerAccessories.hammerItems[i].SetActive(!toEnable);
                     playerAccessories.speedItems[i].SetActive(!toEnable);
                     playerAccessories.speedFellows[i].SetActive(!toEnable);
-                   
+                    playerAccessories.muscleItems[i].SetActive(!toEnable);
                     break;
                 case PowerType.SwordAttack:
                     playerAccessories.hammerItems[i].SetActive(!toEnable);
@@ -77,6 +83,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                     playerAccessories.speedItems[i].SetActive(!toEnable);
                     playerAccessories.speedFellows[i].SetActive(!toEnable);
                     playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    playerAccessories.muscleItems[i].SetActive(!toEnable);
                     break;
                 case PowerType.GroundHammerAttack:
                     playerAccessories.swordItems[i].SetActive(!toEnable);
@@ -84,11 +91,22 @@ public class PlayerAccessoriesHolder : MonoBehaviour
                     playerAccessories.speedItems[i].SetActive(!toEnable);
                     playerAccessories.speedFellows[i].SetActive(!toEnable);
                     playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    playerAccessories.muscleItems[i].SetActive(!toEnable);
                     break;
                 case PowerType.MultiplierAttack:
                     playerAccessories.swordItems[i].SetActive(!toEnable);
                     playerAccessories.hammerItems[i].SetActive(!toEnable);
                     playerAccessories.magicitems[i].SetActive(!toEnable);
+                    playerAccessories.mageFellows[i].SetActive(!toEnable);
+                    playerAccessories.muscleItems[i].SetActive(!toEnable);
+                    break;
+                
+                case PowerType.MuscleAttack:
+                    playerAccessories.swordItems[i].SetActive(!toEnable);
+                    playerAccessories.hammerItems[i].SetActive(!toEnable);
+                    playerAccessories.magicitems[i].SetActive(!toEnable);
+                    playerAccessories.speedItems[i].SetActive(!toEnable);
+                    playerAccessories.speedFellows[i].SetActive(!toEnable);
                     playerAccessories.mageFellows[i].SetActive(!toEnable);
                     break;
              
@@ -108,6 +126,7 @@ public class PlayerAccessoriesHolder : MonoBehaviour
             playerAccessories.speedItems[i].SetActive(false);
             playerAccessories.speedFellows[i].SetActive(false);
             playerAccessories.mageFellows[i].SetActive(false);
+            playerAccessories.muscleItems[i].SetActive(false);
         }
     }
 

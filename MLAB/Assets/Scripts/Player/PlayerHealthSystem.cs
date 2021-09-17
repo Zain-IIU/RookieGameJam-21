@@ -3,7 +3,11 @@ using UnityEngine;
 public class PlayerHealthSystem : MonoBehaviour
 {
       public static PlayerHealthSystem instance;
-    
+
+      private PlayerMovement playerMovement;
+      private PlayerAnimationsHandler playerAnimationsHandler;
+      private Collider mainCollider;
+      
         [SerializeField]
         int totalHealth;
     
@@ -11,11 +15,15 @@ public class PlayerHealthSystem : MonoBehaviour
     
     
         Animator Anim;
-    
+        private static readonly int ObstacleSize = Animator.StringToHash("ObstacleSize");
+
         private void Awake()
         {
             instance = this;
-    
+            playerMovement = GetComponent<PlayerMovement>();
+            playerAnimationsHandler = GetComponent<PlayerAnimationsHandler>();
+            mainCollider = GetComponent<Collider>();
+
         }
         private void Start()
         {
@@ -27,20 +35,20 @@ public class PlayerHealthSystem : MonoBehaviour
             curHealth -= amount;
     
             if (curHealth <= 50 && curHealth>0)
-            {
+            { 
                 PlayerAnimationsHandler.instance.ResetPlayerPowers(PowerType.Null);
-               Anim.SetTrigger("ObstacleSize");
-               GetComponent<PlayerMovement>().SetMoveSpeed(0f);
+               Anim.SetTrigger(ObstacleSize);
+               playerMovement.SetMoveSpeed(0f);
             }
             else
             {
                 GameManager.instance.OnGameOver();
-                PlayerAnimationsHandler.instance.ResetPlayerPowers(PowerType.Null);
+                playerAnimationsHandler.ResetPlayerPowers(PowerType.Null);
                 Anim.SetTrigger("ObstacleSize");
                 Anim.SetBool("isGameOver", GameManager.instance.isGameOver);
-                GetComponent<PlayerMovement>().SetMoveSpeed(0f);
-                GetComponent<Rigidbody>().useGravity = false;
-                GetComponent<Collider>().enabled = false;
+                playerMovement.SetMoveSpeed(0f);
+                mainCollider.attachedRigidbody.useGravity = false;
+                mainCollider.enabled = false;
             }
         }
    
