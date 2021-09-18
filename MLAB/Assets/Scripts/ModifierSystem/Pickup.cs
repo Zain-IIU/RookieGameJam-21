@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class Pickup : MonoBehaviour
 
     [SerializeField] Transform playerMusleSpineSize;
     private static float musclePlayerSize = 1f;
-    private float musclePlayeIncrement = 0.8f;
+    [SerializeField] private float musclePlayeIncrement = 0.3f;
     
     private Vector3 playerSize;
     private Vector3 lastSize;
@@ -54,44 +55,82 @@ public class Pickup : MonoBehaviour
             //normalizing sizeVal
             if (powerType == PowerType.SizeAttack)
             {
-                if (sizeVal > 2.5)
-                    sizeVal = 1;
-
-                playerModifier.SetMoveSpeed(10);
-                sizeVal += increment;
-                playerSize = new Vector3(sizeVal, sizeVal, sizeVal);
-                playerSize.x = Mathf.Clamp(playerSize.x, 1f, 2.5f);
-                playerSize.y = Mathf.Clamp(playerSize.x, 1f, 2.5f);
-                playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2.5f);
-
-                  
-                playerModifier.transform.DOScale(playerSize, easeTimer).From(lastSize).SetEase(scaleEase);
-
-                if (playerMusleSpineSize.localScale != Vector3.one)
-                {
-                    playerMusleSpineSize.DOScale(1f, easeTimer).SetEase(scaleEase);
-                }
-                
-                lastSize = playerSize;
+                SizeAttackPickup(playerModifier);
             }
             
             else if (powerType == PowerType.MuscleAttack)
             {
-                musclePlayerSize += musclePlayeIncrement;
-                playerMusleSpineSize.DOScale(musclePlayerSize, easeTimer).SetEase(scaleEase);
+                MuscleAttackPickup();
+            }
+            
+            else if (powerType == PowerType.Timer)
+            {
+                UIManager.instance.SetTimerClockValue();
+                Time.timeScale = 0.25f;
+                Time.fixedDeltaTime = Time.timeScale * 0.02f;
+                playerModifier.SetMoveSpeed(40f);
+               
             }
             
             else
             {
-                if (playerMusleSpineSize.localScale != Vector3.one)
-                {
-                    playerMusleSpineSize.DOScale(1f, easeTimer).SetEase(scaleEase);
-                }
-                playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
-                playerModifier.SetMoveSpeed(10);
+                ResetPlayer(playerModifier);
             }
             
             Destroy(gameObject);
+        }
+    }
+
+    private void SizeAttackPickup(PlayerMovement playerModifier)
+    {
+        ResetTimer();
+        if (sizeVal > 2.5)
+            sizeVal = 1;
+
+        playerModifier.SetMoveSpeed(10);
+        sizeVal += increment;
+        playerSize = new Vector3(sizeVal, sizeVal, sizeVal);
+        playerSize.x = Mathf.Clamp(playerSize.x, 1f, 2.5f);
+        playerSize.y = Mathf.Clamp(playerSize.x, 1f, 2.5f);
+        playerSize.z = Mathf.Clamp(playerSize.x, 1f, 2.5f);
+
+
+        playerModifier.transform.DOScale(playerSize, easeTimer).From(lastSize).SetEase(scaleEase);
+
+        if (playerMusleSpineSize.localScale != Vector3.one)
+        {
+            playerMusleSpineSize.DOScale(1f, easeTimer).SetEase(scaleEase);
+        }
+
+        lastSize = playerSize;
+    }
+
+    private void ResetPlayer(PlayerMovement playerModifier)
+    {
+        ResetTimer();
+        if (playerMusleSpineSize.localScale != Vector3.one)
+        {
+            playerMusleSpineSize.DOScale(1f, easeTimer).SetEase(scaleEase);
+        }
+        playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
+        playerModifier.SetMoveSpeed(10);
+    }
+
+    private void MuscleAttackPickup()
+    {
+        ResetTimer();
+        musclePlayerSize += musclePlayeIncrement;
+        playerMusleSpineSize.DOScale(musclePlayerSize, easeTimer).SetEase(scaleEase);
+    }
+
+    private void ResetTimer()
+    {
+        if (Time.timeScale < 1f)
+        {
+            playerMovement.SetMoveSpeed(10f);
+            Time.timeScale = 1f;
+            Time.fixedDeltaTime = 0.02f;
+            UIManager.instance.timerClock.gameObject.SetActive(false);
         }
     }
 }

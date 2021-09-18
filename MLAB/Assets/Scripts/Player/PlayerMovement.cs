@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     
     [SerializeField] GameObject climbPoint;
-    [SerializeField] GameObject runPoint;
     [SerializeField] private Transform targetX10Point;
     
     private Animator animator;
@@ -30,8 +29,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float distToGround = 2f;
     private bool isLanded;
-    
-    
+
+
     #endregion
 
     private void Start()
@@ -60,14 +59,14 @@ public class PlayerMovement : MonoBehaviour
         
         //for moving straight
         transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime),Space.Self);
-
+        
         if (Input.GetMouseButtonDown(0))
         {
             return;
         }
         
         // handling rotation
-        
+       
             if (Input.GetMouseButton(0) && !isPerformingAttack)
             {
             if (!isClimbing)
@@ -86,10 +85,18 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if(!isClimbing)
+            if (!isClimbing)
+            {
+                yRot = 0f;
                 transform.DORotateQuaternion(Quaternion.Euler(0f, 0f, 0f), 0.25f);
+            }
+
             else
+            {
+                yRot = 0f;
                 transform.DORotateQuaternion(Quaternion.Euler(-90f, -90f, 90f), 0.25f);
+            }
+              
         }
 
         
@@ -123,13 +130,6 @@ public class PlayerMovement : MonoBehaviour
             RB.constraints = RigidbodyConstraints.None;
             RB.freezeRotation = true;
             RB.velocity = Vector3.zero;
-        }
-        if(collision.gameObject == runPoint)
-        {
-            isClimbing = false;
-            RB.useGravity = true;
-            xRot = 0f;
-            cameraManager.PrioritizeWallCam(15, 10);
         }
     }
 

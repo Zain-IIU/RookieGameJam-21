@@ -23,9 +23,6 @@ public class PlayerAccessories
 
     [Header("Speed Fellow")]
     public GameObject[] speedFellows;
-    
-    [Header("Hammer Effect")]
-    public GameObject[] hammerFX;
 
     [Header("Muscle Attack")] 
     public GameObject[] muscleItems;

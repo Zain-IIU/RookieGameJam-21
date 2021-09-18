@@ -6,5 +6,6 @@
     MultiplierAttack,
     SwordAttack,
     MagicAttack,
-    MuscleAttack
+    MuscleAttack,
+    Timer
 }

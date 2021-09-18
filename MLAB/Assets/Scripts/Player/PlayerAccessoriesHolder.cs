@@ -38,7 +38,6 @@ public class PlayerAccessoriesHolder : MonoBehaviour
             case PowerType.GroundHammerAttack:
                 playerAccessories.hammerItems[playerAttackSystem.GetPickupCount()].SetActive(true);
                 AccessoryPositioningEffect(playerAccessories.hammerItems[playerAttackSystem.GetPickupCount()].transform);
-                playerAccessories.hammerFX[playerAttackSystem.GetPickupCount()].SetActive(true);
                 break;
 
             case PowerType.MultiplierAttack:

@@ -7,13 +7,18 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
 
     private int score=0;
-    public static int scoreMultiplier = 0;
+    public static int scoreMultiplier;
 
     
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        scoreMultiplier = 0;
     }
 
     public int AddScore(int newScore)

@@ -34,7 +34,6 @@ public class EnemyDamage : MonoBehaviour
             }
 
             Instantiate(hitDeadFX, collision.contacts[0].point, hitDeadFX.transform.rotation, transform);
-            UIManager.instance.InGameTextTweener();
         }
 
         if (collision.gameObject.CompareTag("Player") && collision.transform.localScale != Vector3.one)

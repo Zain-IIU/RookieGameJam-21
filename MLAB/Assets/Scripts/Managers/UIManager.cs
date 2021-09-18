@@ -44,6 +44,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private Image powerSlider;
     [SerializeField] private GameObject maxPowerIndicator;
+
+    public Image timerClock;
+    [SerializeField] private PlayerMovement playerMovement;
     
     private GameManager gameManagerInstance;
     
@@ -102,10 +105,10 @@ public class UIManager : MonoBehaviour
         int index = Random.Range(0, feedBackText.Length);
        
         feedBackText[index].gameObject.SetActive(true);
-        feedBackText[index].DOAnchorPos(new Vector2(0, 500f), 0.8f).SetEase(mainMenuPanelEase).OnComplete(() =>
+        feedBackText[index].DOAnchorPos(new Vector2(0, 500f), 1.25f).SetEase(mainMenuPanelEase).OnComplete(() =>
         {
-            feedBackText[index].DOAnchorPos(new Vector2(2000f, 500f), 0.8f).SetEase(mainMenuPanelEase);
-            feedBackText[index].DOAnchorPos(new Vector2(-2000f, 500f), 0).SetDelay(0.8f);
+            feedBackText[index].DOAnchorPos(new Vector2(2000f, 500f), 1f).SetEase(mainMenuPanelEase);
+            feedBackText[index].DOAnchorPos(new Vector2(-2000f, 500f), 0).SetDelay(0.1f);
           
         });
       
@@ -220,7 +223,22 @@ public class UIManager : MonoBehaviour
         rectTransform.DOScale(endVal, duration).From(fromVal).SetEase(ease);
         
     }
-    
+
+
+    public void SetTimerClockValue()
+    {
+        timerClock.gameObject.SetActive(true);
+        timerClock.DOFillAmount(0f, 2f).OnComplete(
+            () =>
+            {
+                timerClock.gameObject.SetActive(false);
+                timerClock.fillAmount = 1f;
+                Time.timeScale = 1f;
+                Time.fixedDeltaTime = 0.02f;
+                playerMovement.SetMoveSpeed(10f);
+            }
+        );
+    }
     
     public void OnGameOver()
     {

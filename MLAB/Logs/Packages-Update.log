@@ -46,3 +46,11 @@ The following packages were added:
   com.unity.ugui@1.0.0
 The following packages were updated:
   com.unity.render-pipelines.universal from version 10.5.0 to 10.5.1
+
+=== Sat Sep 18 07:07:23 2021
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.formats.fbx@3.2.1-preview.2

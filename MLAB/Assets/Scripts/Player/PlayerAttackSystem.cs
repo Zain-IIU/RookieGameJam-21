@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
  public class PlayerAttackSystem : MonoBehaviour
@@ -8,9 +7,6 @@ using UnityEngine;
     [SerializeField] private Transform raypoint;
     [SerializeField] private float BossEnemyDistance;
 
-    [SerializeField] private GameObject footDustFx;
-    [SerializeField] private GameObject lightningFootFx;
-    
     [SerializeField] private float singleEnemyDistance;
     
     [SerializeField] private LayerMask bossMask;
@@ -123,25 +119,23 @@ using UnityEngine;
             case PowerType.MagicAttack:
                 magePickupEffect.SetActive(true);
                 SetRaycastDistance(15f);
-              //  EnableFootTrailEffects(false, false);
                 break;
             case PowerType.SwordAttack:
                 SetRaycastDistance(4f);
-              //  EnableFootTrailEffects(true, false);
                 break;
             case PowerType.GroundHammerAttack:
                 SetRaycastDistance(13f);
-             //   EnableFootTrailEffects(true, false);
                 break;
             case PowerType.MultiplierAttack:
                 SetRaycastDistance(7f);
-                EnableFootTrailEffects(false, false);
                 break;
             
             case PowerType.SizeAttack:
                 magePickupEffect.SetActive(true);
                 SetRaycastDistance(7f);
-             //   EnableFootTrailEffects(false, false);
+                break;
+            case PowerType.MuscleAttack:
+                magePickupEffect.SetActive(true);
                 break;
         }
     }
@@ -151,13 +145,6 @@ using UnityEngine;
         UIManager.instance.SetPowerMeter(pickupCount + 1f);
         return pickupCount;
     }
-    
-    public void EnableFootTrailEffects(bool isDustEnable, bool isLightingEnable)
-    {
-        /*footDustFx.SetActive(isDustEnable);
-        lightningFootFx.SetActive(isLightingEnable);*/
-    }
-
 
     private void SetRaycastDistance(float newDistance)
     {

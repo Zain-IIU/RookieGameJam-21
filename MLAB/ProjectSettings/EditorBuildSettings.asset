@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 01.unity
     guid: 1a86a0c95687c6348b635a99395c5b4d
+  - enabled: 1
+    path: Assets/Scenes/Level Test Scenes/Level Mechanics Implementation 02.unity
+    guid: ab24942ecaa6dc440a47f8488539eb21
   m_configObjects: {}
