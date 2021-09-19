@@ -49,7 +49,7 @@ public class Pickup : MonoBehaviour
         if (other.gameObject.TryGetComponent(out PlayerMovement playerModifier))
         {   
             playerAttackSystem.SetCurPower(powerType);
-            playerAttackSystem.SetPowerTrailEffect();
+            playerAttackSystem.SetEffectAndRayDistance();
             PlayerAccessoriesHolder.instance.SetAccesories(powerType);
             
             //normalizing sizeVal
@@ -66,9 +66,9 @@ public class Pickup : MonoBehaviour
             else if (powerType == PowerType.Timer)
             {
                 UIManager.instance.SetTimerClockValue();
-                Time.timeScale = 0.25f;
-                Time.fixedDeltaTime = Time.timeScale * 0.02f;
-                playerModifier.SetMoveSpeed(40f);
+                //Time.timeScale = 0.25f;
+               // Time.fixedDeltaTime = Time.timeScale * 0.02f;
+               // playerModifier.SetMoveSpeed(40f);
                
             }
             
@@ -83,11 +83,11 @@ public class Pickup : MonoBehaviour
 
     private void SizeAttackPickup(PlayerMovement playerModifier)
     {
-        ResetTimer();
+      //  ResetTimer();
         if (sizeVal > 2.5)
             sizeVal = 1;
 
-        playerModifier.SetMoveSpeed(10);
+        playerModifier.SetMoveSpeed(10f);
         sizeVal += increment;
         playerSize = new Vector3(sizeVal, sizeVal, sizeVal);
         playerSize.x = Mathf.Clamp(playerSize.x, 1f, 2.5f);
@@ -107,30 +107,30 @@ public class Pickup : MonoBehaviour
 
     private void ResetPlayer(PlayerMovement playerModifier)
     {
-        ResetTimer();
+       //  ResetTimer();
         if (playerMusleSpineSize.localScale != Vector3.one)
         {
             playerMusleSpineSize.DOScale(1f, easeTimer).SetEase(scaleEase);
         }
         playerModifier.transform.DOScale(Vector3.one, easeTimer).SetEase(scaleEase);
-        playerModifier.SetMoveSpeed(10);
+        playerModifier.SetMoveSpeed(10f);
     }
 
     private void MuscleAttackPickup()
     {
-        ResetTimer();
+        // ResetTimer();
         musclePlayerSize += musclePlayeIncrement;
         playerMusleSpineSize.DOScale(musclePlayerSize, easeTimer).SetEase(scaleEase);
     }
 
     private void ResetTimer()
     {
-        if (Time.timeScale < 1f)
+        /*if (Time.timeScale < 1f)
         {
             playerMovement.SetMoveSpeed(10f);
             Time.timeScale = 1f;
             Time.fixedDeltaTime = 0.02f;
             UIManager.instance.timerClock.gameObject.SetActive(false);
-        }
+        }*/
     }
 }

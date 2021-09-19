@@ -96,7 +96,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
     }
 
 
-    public void ResetTransitions(PowerType playerState)
+    /*public void ResetTransitions(PowerType playerState)
     {
         switch (playerState)
         {
@@ -111,7 +111,7 @@ public class PlayerAnimationsHandler : MonoBehaviour
                 Anim.ResetTrigger(HammerProjectileAttack);
                 break;
         }
-    }
+    }*/
     
     public void ResetPlayerPowers(PowerType newPower)
     {

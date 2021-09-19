@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] float rotationSpeed = 5f;
     [SerializeField] float moveSpeed;
-    
+   
     [SerializeField] GameObject climbPoint;
     [SerializeField] private Transform targetX10Point;
     
@@ -29,8 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float distToGround = 2f;
     private bool isLanded;
-
-
+ 
     #endregion
 
     private void Start()
@@ -42,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
         
         isLanded = true;
     }
-    public void SetMoveSpeed(float newSpeed) => moveSpeed = newSpeed;
+    //public void SetMoveSpeed(float newSpeed) => moveSpeed = newSpeed;
+    public void SetMoveSpeed(float newMoveSpeed) => moveSpeed = newMoveSpeed;
+    
     public float GetMoveSpeed()
     {
         return moveSpeed;
@@ -53,12 +53,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
         if (!gameManager.isGameStarted || gameManager.isGameOver || gameManager.isLevelCompleted) return;
-      //  if (isPerformingAttack) return;
+        //  if (isPerformingAttack) return;
         
         //for moving straight
-        transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime),Space.Self);
+        transform.Translate(Vector3.forward * (moveSpeed * Time.deltaTime));
         
         if (Input.GetMouseButtonDown(0))
         {
@@ -67,13 +66,14 @@ public class PlayerMovement : MonoBehaviour
         
         // handling rotation
        
-            if (Input.GetMouseButton(0) && !isPerformingAttack)
-            {
+        if (Input.GetMouseButton(0) && !isPerformingAttack)
+        {
             if (!isClimbing)
             {
                 yRot += Input.GetAxis("Mouse X") * rotationSpeed;
                 yRot = Mathf.Clamp(yRot, -20f, 20f);
                 transform.DORotateQuaternion(Quaternion.Euler(0f, yRot, 0f), 0.15f);
+              // transform.rotation = Quaternion.Euler(0f, yRot, 0f);
             }
 
             else
@@ -109,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.3f, 2.3f), transform.position.y,
             transform.position.z);
+
     }
 
     
@@ -141,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
             isLanded = false;
             isClimbing = false;
             animator.SetTrigger(Flip);
-     
+            AudioManager.instance.Play("Boo");
             RB.AddForce(Vector3.back * 10f, ForceMode.Impulse);
             RB.useGravity = true;
             
@@ -169,3 +170,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+

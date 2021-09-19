@@ -21,6 +21,7 @@ using UnityEngine;
     private static int pickupCount;
 
     [SerializeField] private GameObject magePickupEffect;
+    [SerializeField] private GameObject invincibleEffect;
     
     //custom class for handling curPower State
     
@@ -112,7 +113,7 @@ using UnityEngine;
 
     
     //incrementing each power
-    public void SetPowerTrailEffect()
+    public void SetEffectAndRayDistance()
     {
         switch(curPower)
         {
@@ -136,6 +137,9 @@ using UnityEngine;
                 break;
             case PowerType.MuscleAttack:
                 magePickupEffect.SetActive(true);
+                break;
+            case PowerType.Timer:
+                invincibleEffect.SetActive(true);
                 break;
         }
     }

@@ -9,10 +9,8 @@ public class PlayerRunBehavior : StateMachineBehaviour
     {
         PlayerAttackSystem.runOnce = false;
         CameraManager.instance.ToggleFollowCam(true);
-
-        if (animator.GetComponent<PlayerAttackSystem>().GetCurrentPower() != PowerType.Timer)
-        {
-            animator.GetComponent<PlayerMovement>().SetMoveSpeed(10f);
-        }
+       
+        animator.GetComponent<PlayerMovement>().SetMoveSpeed(10f);
+   
     }
 }

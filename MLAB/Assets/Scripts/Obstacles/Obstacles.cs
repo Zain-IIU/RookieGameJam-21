@@ -6,28 +6,48 @@ public class Obstacles : MonoBehaviour
 {
     [SerializeField] private GameObject obstacleHitFx;
     private Collider obstacleCol;
-    
+
     public bool isWall;
-    
+    public bool isDestructibleObstacles;
+
     public GameObject spinningSpikeColGroup;
-    
+
     private void Awake()
     {
         obstacleCol = GetComponent<Collider>();
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (isDestructibleObstacles && other.gameObject.GetComponent<PlayerAttackSystem>().GetCurrentPower() == PowerType.Timer)
+            {
+                
+                Debug.Log(other.gameObject.name);
+                other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                other.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                
+                Vector3 dir = other.transform.position - transform.position;
+                dir.Normalize();
+
+                other.gameObject.GetComponent<Rigidbody>().AddForce(-dir * 10f, ForceMode.Impulse);
+            }
+
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        ResetTimer();
-        if(other.gameObject.TryGetComponent(out PlayerAttackSystem playerAttackSystem))
+        if (other.gameObject.TryGetComponent(out PlayerAttackSystem playerAttackSystem))
         {
             if (spinningSpikeColGroup != null)
             {
                 spinningSpikeColGroup.SetActive(false);
             }
-            
+
             obstacleCol.enabled = false;
-            
+
             if (isWall)
             {
                 HandleWallBreak(playerAttackSystem);
@@ -57,10 +77,10 @@ public class Obstacles : MonoBehaviour
                 {
                     wallRb.useGravity = true;
                     wallRb.isKinematic = false;
-                            
+
                     Vector3 dir = t.position - transform.position;
                     dir.Normalize();
-                        
+
                     //  wallRb.AddForce(-dir * 6f, ForceMode.Impulse);
                     wallRb.AddForce(Vector3.forward * 7f, ForceMode.Impulse);
                     wallRb.AddForce(Vector3.up * 2f, ForceMode.Impulse);
@@ -69,13 +89,4 @@ public class Obstacles : MonoBehaviour
             }
         }
     }
-
-    void ResetTimer()
-    {
-        if (Time.timeScale < 1f)
-        {
-            Time.timeScale = 1f;
-            Time.fixedDeltaTime = 0.02f;
-        }
-    }
-}   
+}

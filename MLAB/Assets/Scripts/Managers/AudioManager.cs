@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -9,8 +7,6 @@ public class AudioManager : MonoBehaviour
    
    	public Sound[] sounds;
    
-   	public Sound sound;
-   	
    	void Awake ()
    	{
    		if (instance != null)
@@ -42,5 +38,13 @@ public class AudioManager : MonoBehaviour
    		
    		s.source.Play();
    	}
+
+
+    public void Stop(string sound)
+    {
+	    Sound s = Array.Find(sounds, item => item.name == sound);
+   		
+	    s.source.Stop();
+    }
    	
 }

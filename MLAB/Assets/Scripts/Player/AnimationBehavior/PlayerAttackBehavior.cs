@@ -40,7 +40,7 @@ public class PlayerAttackBehavior : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerAttackSystem.runOnce = false;
-        PlayerAnimationsHandler.instance.ResetTransitions(PlayerAttackSystem.instance.curPower);
+      //  PlayerAnimationsHandler.instance.ResetTransitions(PlayerAttackSystem.instance.curPower);
 
         if (performNormalAttack) return;
         PlayerMovement.isPerformingAttack = false;

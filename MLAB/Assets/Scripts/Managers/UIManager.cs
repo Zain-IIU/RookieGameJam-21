@@ -47,13 +47,15 @@ public class UIManager : MonoBehaviour
 
     public Image timerClock;
     [SerializeField] private PlayerMovement playerMovement;
-    
+    [SerializeField] private GameObject levelCompleteFx;
+   
     private GameManager gameManagerInstance;
     
     #endregion
     private void Awake()
     {
         instance = this;
+        playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     private void Start()
@@ -155,6 +157,7 @@ public class UIManager : MonoBehaviour
                     if (initialScore < levelScore)
                     {
                         
+                        AudioManager.instance.Play("GemAdding");
                         initialScore += 1f;
                        
                         SetFinalScoreText("x " + initialScore * ScoreManager.instance.GetMultipliedScore());
@@ -164,6 +167,10 @@ public class UIManager : MonoBehaviour
             index++;
             yield return new WaitForSeconds(0.1f);
         }
+
+        AudioManager.instance.Stop("Boo");
+        AudioManager.instance.Play("Confetti");
+        levelCompleteFx.SetActive(true);
         nextButtonTransform.gameObject.SetActive(true);
         nextButtonTransform.DOScale(1.25f, 1f).From(1f).SetEase(nextButtonEase).SetLoops(-1, LoopType.Yoyo);
 
@@ -228,13 +235,11 @@ public class UIManager : MonoBehaviour
     public void SetTimerClockValue()
     {
         timerClock.gameObject.SetActive(true);
-        timerClock.DOFillAmount(0f, 2f).OnComplete(
+        timerClock.DOFillAmount(0f, 8f).OnComplete(
             () =>
             {
                 timerClock.gameObject.SetActive(false);
                 timerClock.fillAmount = 1f;
-                Time.timeScale = 1f;
-                Time.fixedDeltaTime = 0.02f;
                 playerMovement.SetMoveSpeed(10f);
             }
         );

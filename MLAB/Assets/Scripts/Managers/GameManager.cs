@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public Action OnGameStart;
 
-    [SerializeField] private GameObject levelCompleteFx;
+   
     [SerializeField] private CinemachineVirtualCamera levelCompleteCam;
     [SerializeField] private CinemachineBrain cinemachineBrain;
 
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         cinemachineBrain.m_DefaultBlend.m_Time = 1f;
         isLevelCompleted = true;
         UIManager.instance.OnLevelComplete();
-        levelCompleteFx.SetActive(true);
+        
         levelCompleteCam.gameObject.SetActive(true);
         levelCompleteCam.Priority = 25;
     }

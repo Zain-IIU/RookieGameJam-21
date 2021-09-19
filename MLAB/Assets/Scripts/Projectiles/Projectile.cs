@@ -82,6 +82,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -90,5 +91,6 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }
